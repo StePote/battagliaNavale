@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnInizia" Content="Gioca" HorizontalAlignment="Left" Height="50" Margin="346,302,0,0" VerticalAlignment="Top" Width="110"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="305*"/>
+            <RowDefinition Height="114*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnInizia" Content="Gioca" HorizontalAlignment="Left" Height="50" Margin="306,300,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Click="btnInizia_Click"/>
         <Label Content="BATTAGLIA NAVALE" HorizontalAlignment="Left" Height="42" Margin="256,21,0,0" VerticalAlignment="Top" Width="344" FontSize="30" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+        <TextBox x:Name="nomeUtente" HorizontalAlignment="Left" Height="38" Margin="64,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Grid.Row="1"/>
+        <Label Content="Inserisci il nome utente del tuo avversario:" HorizontalAlignment="Left" Height="28" Margin="14,286,0,0" VerticalAlignment="Top" Width="235" Grid.RowSpan="2" Background="White"/>
+        <Button x:Name="btnIscrizione" HorizontalAlignment="Left" Margin="479,301,0,0" VerticalAlignment="Top" Width="110" Height="50" Grid.RowSpan="2" Content="Iscriviti al nostro &#xD;&#xA;         gioco!" Click="btnIscrizione_Click"/>
     </Grid>
 </Window>

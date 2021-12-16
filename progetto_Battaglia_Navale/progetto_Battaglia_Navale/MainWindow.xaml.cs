@@ -25,5 +25,15 @@ namespace progetto_Battaglia_Navale
             InitializeComponent();
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
         }
+        private void btnInizia_Click(object sender, RoutedEventArgs e)
+        {
+            paginaDiGioco finestra = new paginaDiGioco();
+            finestra.Show();
+        }
+
+        private void btnIscrizione_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
