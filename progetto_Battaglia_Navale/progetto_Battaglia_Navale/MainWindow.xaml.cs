@@ -29,11 +29,15 @@ namespace progetto_Battaglia_Navale
         {
             paginaDiGioco finestra = new paginaDiGioco();
             finestra.Show();
+            this.Close();
         }
 
         private void btnIscrizione_Click(object sender, RoutedEventArgs e)
         {
-
+            iscrizione finestra = new iscrizione();
+            finestra.Show();
+            this.Close();
+            
         }
     }
 }

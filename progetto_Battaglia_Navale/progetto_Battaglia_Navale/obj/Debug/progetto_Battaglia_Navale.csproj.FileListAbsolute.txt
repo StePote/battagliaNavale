@@ -29,3 +29,7 @@ C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNaval
 C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.pdb
 C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.g.cs
 C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.baml
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.g.cs
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.baml
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.g.cs
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.baml

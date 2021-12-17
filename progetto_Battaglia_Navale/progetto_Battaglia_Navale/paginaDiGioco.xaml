@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="paginaDiGioco" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="134" Margin="143,73,0,0" TextWrapping="Wrap" Text="CIOAOAOOOAA" VerticalAlignment="Top" Width="167"/>
-
+        <Button x:Name="btnIndietro" Content="Torna indietro" HorizontalAlignment="Left" Height="30" Margin="701,0,0,0" VerticalAlignment="Top" Width="81" Click="Button_Click"/>
     </Grid>
 </Window>
