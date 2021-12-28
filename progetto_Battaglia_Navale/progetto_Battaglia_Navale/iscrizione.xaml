@@ -13,16 +13,18 @@
             <ColumnDefinition Width="23*"/>
             <ColumnDefinition Width="742*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Nome:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="76,212,0,0" VerticalAlignment="Top" Width="47" Background="White"/>
-        <Label Content="Cognome:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="253,212,0,0" VerticalAlignment="Top" Width="65" Background="#FFFBFBFB"/>
-        <Label Content="Email:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="435,213,0,0" VerticalAlignment="Top" Width="45" Background="#FFFDFDFD"/>
-        <TextBox x:Name="txtNome" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="46,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-        <TextBox x:Name="txtCognome" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="231,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-        <TextBox x:Name="txtEmail" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="402,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Nome:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="141,212,0,0" VerticalAlignment="Top" Width="47" Background="White"/>
+        <Label Content="Cognome:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="318,212,0,0" VerticalAlignment="Top" Width="65" Background="#FFFBFBFB"/>
+        <Label Content="Email:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="500,213,0,0" VerticalAlignment="Top" Width="45" Background="#FFFDFDFD"/>
+        <TextBox x:Name="txtNome" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="111,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="txtCognome" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="296,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="txtEmail" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="467,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
         <Button x:Name="btnIscrizione" Content="Conferma Iscrizione" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="307,315,0,0" VerticalAlignment="Top" Width="110" Click="btnIscrizione_Click"/>
-        <Label Content="Password:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="577,213,0,0" VerticalAlignment="Top" Width="65" Background="#FFFDFDFD"/>
-        <TextBox x:Name="txtPassword" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="554,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Password:" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="642,213,0,0" VerticalAlignment="Top" Width="65" Background="#FFFDFDFD"/>
+        <TextBox x:Name="txtPassword" Grid.Column="3" HorizontalAlignment="Left" Height="50" Margin="619,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
         <Button x:Name="btnIndietro" Content="Torna indietro" HorizontalAlignment="Left" Height="30" Margin="650,0,0,0" VerticalAlignment="Top" Width="82" Click="Button_Click" Grid.Column="3"/>
+        <Label Content="Nome utente:&#xD;&#xA;(con quale nome vuoi &#xD;&#xA;farti riconoscere &#xD;&#xA;dai tuoi amici?)" Grid.Column="2" HorizontalAlignment="Left" Height="73" Margin="1,169,0,0" VerticalAlignment="Top" Width="126" Background="White" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtNomeUtente" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="8,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

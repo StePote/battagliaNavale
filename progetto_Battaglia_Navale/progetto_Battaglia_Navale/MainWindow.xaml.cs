@@ -37,7 +37,6 @@ namespace progetto_Battaglia_Navale
             iscrizione finestra = new iscrizione();
             finestra.Show();
             this.Close();
-            
         }
     }
 }
