@@ -132,6 +132,11 @@ namespace progetto_Battaglia_Navale
         {
             InitializeComponent();
             campoNavi();
+            lblCac.Content = 1;
+            lblCor.Content = 1;
+            lblPor.Content = 1;
+            lblSot.Content = 2;
+            ButtonsNotEnabled();
             //this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
         }
 
@@ -1008,6 +1013,238 @@ namespace progetto_Battaglia_Navale
             grid.Children.Add(j8);
             grid.Children.Add(j9);
             grid.Children.Add(j10);
+        }
+
+        public void ButtonsNotEnabled()
+        {
+            a1.IsEnabled = false;
+            a2.IsEnabled = false;
+            a3.IsEnabled = false;
+            a4.IsEnabled = false;
+            a5.IsEnabled = false;
+            a6.IsEnabled = false;
+            a7.IsEnabled = false;
+            a8.IsEnabled = false;
+            a9.IsEnabled = false;
+            a10.IsEnabled = false;
+
+            b1.IsEnabled = false;
+            b2.IsEnabled = false;
+            b3.IsEnabled = false;
+            b4.IsEnabled = false;
+            b5.IsEnabled = false;
+            b6.IsEnabled = false;
+            b7.IsEnabled = false;
+            b8.IsEnabled = false;
+            b9.IsEnabled = false;
+            b10.IsEnabled = false;
+
+            c1.IsEnabled = false;
+            c2.IsEnabled = false;
+            c3.IsEnabled = false;
+            c4.IsEnabled = false;
+            c5.IsEnabled = false;
+            c6.IsEnabled = false;
+            c7.IsEnabled = false;
+            c8.IsEnabled = false;
+            c9.IsEnabled = false;
+            c10.IsEnabled = false;
+
+            d1.IsEnabled = false;
+            d2.IsEnabled = false;
+            d3.IsEnabled = false;
+            d4.IsEnabled = false;
+            d5.IsEnabled = false;
+            d6.IsEnabled = false;
+            d7.IsEnabled = false;
+            d8.IsEnabled = false;
+            d9.IsEnabled = false;
+            d10.IsEnabled = false;
+
+            e1.IsEnabled = false;
+            e2.IsEnabled = false;
+            e3.IsEnabled = false;
+            e4.IsEnabled = false;
+            e5.IsEnabled = false;
+            e6.IsEnabled = false;
+            e7.IsEnabled = false;
+            e8.IsEnabled = false;
+            e9.IsEnabled = false;
+            e10.IsEnabled = false;
+
+            f1.IsEnabled = false;
+            f2.IsEnabled = false;
+            f3.IsEnabled = false;
+            f4.IsEnabled = false;
+            f5.IsEnabled = false;
+            f6.IsEnabled = false;
+            f7.IsEnabled = false;
+            f8.IsEnabled = false;
+            f9.IsEnabled = false;
+            f10.IsEnabled = false;
+
+            g1.IsEnabled = false;
+            g2.IsEnabled = false;
+            g3.IsEnabled = false;
+            g4.IsEnabled = false;
+            g5.IsEnabled = false;
+            g6.IsEnabled = false;
+            g7.IsEnabled = false;
+            g8.IsEnabled = false;
+            g9.IsEnabled = false;
+            g10.IsEnabled = false;
+
+            h1.IsEnabled = false;
+            h2.IsEnabled = false;
+            h3.IsEnabled = false;
+            h4.IsEnabled = false;
+            h5.IsEnabled = false;
+            h6.IsEnabled = false;
+            h7.IsEnabled = false;
+            h8.IsEnabled = false;
+            h9.IsEnabled = false;
+            h10.IsEnabled = false;
+
+            i1.IsEnabled = false;
+            i2.IsEnabled = false;
+            i3.IsEnabled = false;
+            i4.IsEnabled = false;
+            i5.IsEnabled = false;
+            i6.IsEnabled = false;
+            i7.IsEnabled = false;
+            i8.IsEnabled = false;
+            i9.IsEnabled = false;
+            i10.IsEnabled = false;
+
+            j1.IsEnabled = false;
+            j2.IsEnabled = false;
+            j3.IsEnabled = false;
+            j4.IsEnabled = false;
+            j5.IsEnabled = false;
+            j6.IsEnabled = false;
+            j7.IsEnabled = false;
+            j8.IsEnabled = false;
+            j9.IsEnabled = false;
+            j10.IsEnabled = false;
+        }
+
+        public void ButtonsEnabled()
+        {
+            a1.IsEnabled = true;
+            a2.IsEnabled = true;
+            a3.IsEnabled = true;
+            a4.IsEnabled = true;
+            a5.IsEnabled = true;
+            a6.IsEnabled = true;
+            a7.IsEnabled = true;
+            a8.IsEnabled = true;
+            a9.IsEnabled = true;
+            a10.IsEnabled = true;
+
+            b1.IsEnabled = true;
+            b2.IsEnabled = true;
+            b3.IsEnabled = true;
+            b4.IsEnabled = true;
+            b5.IsEnabled = true;
+            b6.IsEnabled = true;
+            b7.IsEnabled = true;
+            b8.IsEnabled = true;
+            b9.IsEnabled = true;
+            b10.IsEnabled = true;
+
+            c1.IsEnabled = true;
+            c2.IsEnabled = true;
+            c3.IsEnabled = true;
+            c4.IsEnabled = true;
+            c5.IsEnabled = true;
+            c6.IsEnabled = true;
+            c7.IsEnabled = true;
+            c8.IsEnabled = true;
+            c9.IsEnabled = true;
+            c10.IsEnabled = true;
+
+            d1.IsEnabled = true;
+            d2.IsEnabled = true;
+            d3.IsEnabled = true;
+            d4.IsEnabled = true;
+            d5.IsEnabled = true;
+            d6.IsEnabled = true;
+            d7.IsEnabled = true;
+            d8.IsEnabled = true;
+            d9.IsEnabled = true;
+            d10.IsEnabled = true;
+
+            e1.IsEnabled = true;
+            e2.IsEnabled = true;
+            e3.IsEnabled = true;
+            e4.IsEnabled = true;
+            e5.IsEnabled = true;
+            e6.IsEnabled = true;
+            e7.IsEnabled = true;
+            e8.IsEnabled = true;
+            e9.IsEnabled = true;
+            e10.IsEnabled = true;
+
+            f1.IsEnabled = true;
+            f2.IsEnabled = true;
+            f3.IsEnabled = true;
+            f4.IsEnabled = true;
+            f5.IsEnabled = true;
+            f6.IsEnabled = true;
+            f7.IsEnabled = true;
+            f8.IsEnabled = true;
+            f9.IsEnabled = true;
+            f10.IsEnabled = true;
+
+            g1.IsEnabled = true;
+            g2.IsEnabled = true;
+            g3.IsEnabled = true;
+            g4.IsEnabled = true;
+            g5.IsEnabled = true;
+            g6.IsEnabled = true;
+            g7.IsEnabled = true;
+            g8.IsEnabled = true;
+            g9.IsEnabled = true;
+            g10.IsEnabled = true;
+
+            h1.IsEnabled = true;
+            h2.IsEnabled = true;
+            h3.IsEnabled = true;
+            h4.IsEnabled = true;
+            h5.IsEnabled = true;
+            h6.IsEnabled = true;
+            h7.IsEnabled = true;
+            h8.IsEnabled = true;
+            h9.IsEnabled = true;
+            h10.IsEnabled = true;
+
+            i1.IsEnabled = true;
+            i2.IsEnabled = true;
+            i3.IsEnabled = true;
+            i4.IsEnabled = true;
+            i5.IsEnabled = true;
+            i6.IsEnabled = true;
+            i7.IsEnabled = true;
+            i8.IsEnabled = true;
+            i9.IsEnabled = true;
+            i10.IsEnabled = true;
+
+            j1.IsEnabled = true;
+            j2.IsEnabled = true;
+            j3.IsEnabled = true;
+            j4.IsEnabled = true;
+            j5.IsEnabled = true;
+            j6.IsEnabled = true;
+            j7.IsEnabled = true;
+            j8.IsEnabled = true;
+            j9.IsEnabled = true;
+            j10.IsEnabled = true;
+        }
+
+        private void btnCac_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonsEnabled();
+
         }
     }
 }
