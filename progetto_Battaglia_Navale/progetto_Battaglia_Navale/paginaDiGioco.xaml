@@ -8,5 +8,6 @@
         Title="paginaDiGioco" Height="450" Width="800">
     <Grid>
         <Button x:Name="btnIndietro" Content="Torna indietro" HorizontalAlignment="Left" Height="30" Margin="701,0,0,0" VerticalAlignment="Top" Width="81" Click="Button_Click"/>
+        <Grid x:Name="grid" HorizontalAlignment="Left" Height="100" Margin="2,5,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
