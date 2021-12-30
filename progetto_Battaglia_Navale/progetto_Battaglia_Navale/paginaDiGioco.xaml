@@ -13,17 +13,17 @@
         <Button x:Name="btnCac" Content="Inserisci" HorizontalAlignment="Left" Margin="693,88,0,0" VerticalAlignment="Top" Width="75" Click="btnCac_Click"/>
         <Label x:Name="lblCac" Content="" HorizontalAlignment="Left" Margin="641,89,0,0" VerticalAlignment="Top"/>
         <Label Content="Sottomarino" HorizontalAlignment="Left" Margin="528,116,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSot" Content="Inserisci" HorizontalAlignment="Left" Margin="693,119,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSot" Content="Inserisci" HorizontalAlignment="Left" Margin="693,119,0,0" VerticalAlignment="Top" Width="75" Click="btnSot_Click"/>
         <Label x:Name="lblSot" Content="" HorizontalAlignment="Left" Margin="641,120,0,0" VerticalAlignment="Top"/>
         <Label Content="Corazzate" HorizontalAlignment="Left" Margin="528,144,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnCor" Content="Inserisci" HorizontalAlignment="Left" Margin="693,147,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnCor" Content="Inserisci" HorizontalAlignment="Left" Margin="693,147,0,0" VerticalAlignment="Top" Width="75" Click="btnCor_Click"/>
         <Label x:Name="lblCor" Content="" HorizontalAlignment="Left" Margin="641,148,0,0" VerticalAlignment="Top"/>
         <Label Content="Portaerei" HorizontalAlignment="Left" Margin="528,172,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnPor" Content="Inserisci" HorizontalAlignment="Left" Margin="693,175,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnPor" Content="Inserisci" HorizontalAlignment="Left" Margin="693,175,0,0" VerticalAlignment="Top" Width="75" Click="btnPor_Click"/>
         <Label x:Name="lblPor" Content="" HorizontalAlignment="Left" Margin="641,176,0,0" VerticalAlignment="Top"/>
         <Label Content="Nome navi:" HorizontalAlignment="Left" Margin="527,57,0,0" VerticalAlignment="Top"/>
         <Label Content="Legenda:&#xD;&#xA;- Cacciatorpediniere:&#xD;&#xA;grandezza= 2 caselle | num. navi disponibili=1&#xD;&#xA;&#xD;&#xA;-Sottomarino:&#xD;&#xA;grandezza=3 caselle | num. navi disponibili=2&#xD;&#xA;&#xD;&#xA;-Corazzate:&#xD;&#xA;grandezza=4 caselle | num. navi disponibili=1&#xD;&#xA;&#xD;&#xA;-Portaerei:&#xD;&#xA;grandezza=5 caselle | num. navi disponibili=1" HorizontalAlignment="Left" Height="209" Margin="523,208,-2,0" VerticalAlignment="Top" Width="271"/>
-        <Button x:Name="btnConferma" Content="Conferma" HorizontalAlignment="Left" Margin="570,37,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnAnnulla" Content="Annulla" HorizontalAlignment="Left" Margin="666,38,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnConferma" Content="Conferma" HorizontalAlignment="Left" Margin="570,37,0,0" VerticalAlignment="Top" Width="75" Click="btnConferma_Click"/>
+        <Button x:Name="btnAnnulla" Content="Annulla" HorizontalAlignment="Left" Margin="666,38,0,0" VerticalAlignment="Top" Width="75" Click="btnAnnulla_Click"/>
     </Grid>
 </Window>

@@ -128,6 +128,13 @@ namespace progetto_Battaglia_Navale
         Button j8 = new Button();
         Button j9 = new Button();
         Button j10 = new Button();
+        string NaveScelta;
+        string[] VettCacciatorpediniere;
+        string[] VettSottomarino1;
+        string[] VettSottomarino2;
+        string[] VettCorazzate;
+        string[] VettPortaerei;
+        int countSott;
         public paginaDiGioco()
         {
             InitializeComponent();
@@ -136,7 +143,14 @@ namespace progetto_Battaglia_Navale
             lblCor.Content = 1;
             lblPor.Content = 1;
             lblSot.Content = 2;
+            NaveScelta = "";
             ButtonsNotEnabled();
+            VettCacciatorpediniere = new string[2];
+            VettSottomarino1 = new string[3];
+            VettSottomarino2 = new string[3];
+            VettCorazzate = new string[4];
+            VettPortaerei = new string[5];
+            countSott = 0;
             //this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
         }
 
@@ -1244,7 +1258,166 @@ namespace progetto_Battaglia_Navale
         private void btnCac_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
+            NaveScelta = "Cacciatorpediniere";
+            btnCor.IsEnabled = false;
+            btnPor.IsEnabled = false;
+            btnSot.IsEnabled = false;
+            a1.Click += A1_Click;
+            b1.Click += B1_Click;
+        }
 
+        private void B1_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void A1_Click(object sender, RoutedEventArgs e)
+        {
+            if (a1.Content.ToString() != "CA" && a1.Content.ToString() != "S" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "P")
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    a1.Content = "CA";
+                    VettCacciatorpediniere[0] = "A1";
+                    ButtonsNotEnabled();
+                    b1.IsEnabled = true;
+                    a2.IsEnabled = true;
+                    b1.Click += a1_b1_Click;
+                    a2.Click += a1_a2_Click;
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    a1.Content = "S";
+                    if (countSott == 0)
+                        VettSottomarino1[0] = "A1";
+                    else if (countSott == 1)
+                        VettSottomarino2[0] = "A1";
+                    ButtonsNotEnabled();
+                    b1.IsEnabled = true;
+                    c1.IsEnabled = true;
+                    a2.IsEnabled = true;
+                    a3.IsEnabled = true;
+                    b1.Click += a1_b1_Click_sottomarino;
+                    a2.Click += a1_a2_Click_sottomarino;
+                }
+            }
+            else
+                MessageBox.Show("Casella già selezionata", "Attention!");
+        }
+
+        private void a1_a2_Click_sottomarino(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = false;
+            c1.IsEnabled = false;
+            a2.Content = "S";
+            a3.Content = "S";
+            if (countSott == 0)
+            {
+                VettSottomarino1[1] = "A2";
+                VettSottomarino1[2] = "A3";
+            }
+            else if (countSott == 1)
+            {
+                VettSottomarino2[1] = "A2";
+                VettSottomarino2[2] = "A3";
+            }
+        }
+        private void a1_b1_Click_sottomarino(object sender, RoutedEventArgs e)
+        {
+            a2.IsEnabled = false;
+            a3.IsEnabled = false;
+            b1.Content = "S";
+            c1.Content = "S";
+
+            if (countSott == 0)
+            {
+                VettSottomarino1[1] = "B1";
+                VettSottomarino1[2] = "C1";
+            }
+            else if (countSott == 1)
+            {
+                VettSottomarino1[1] = "B1";
+                VettSottomarino1[2] = "C1";
+            }
+        }
+        private void a1_a2_Click(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = false;
+            a2.Content = "CA";
+            VettCacciatorpediniere[1] = "A2";
+            btnCac.IsEnabled = false;
+        }
+        private void a1_b1_Click(object sender, RoutedEventArgs e)
+        {
+            a2.IsEnabled = false;
+            b1.Content = "CA";
+            VettCacciatorpediniere[1] = "B1";
+            btnCac.IsEnabled = false;
+        }
+        private void btnSot_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonsEnabled();
+            NaveScelta = "Sottomarino";
+
+            a1.Click += A1_Click;
+            b1.Click += B1_Click;
+        }
+
+        private void btnCor_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonsEnabled();
+            NaveScelta = "Corazzate";
+        }
+
+        private void btnPor_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonsEnabled();
+            NaveScelta = "Portaerei";
+        }
+
+        private void btnAnnulla_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow finestra2 = new MainWindow();
+            finestra2.Show();
+            this.Close();
+        }
+
+        private void btnConferma_Click(object sender, RoutedEventArgs e)
+        {
+            if (VettCacciatorpediniere[0] == null && VettCacciatorpediniere[1] == null && VettCorazzate[0] == null && VettCorazzate[1] == null && VettCorazzate[2] == null && VettCorazzate[3] == null && VettPortaerei[0] == null && VettPortaerei[1] == null && VettPortaerei[2] == null && VettPortaerei[3] == null && VettPortaerei[4] == null && VettSottomarino1[0] == null && VettSottomarino1[1] == null && VettSottomarino1[2] == null && VettSottomarino2[0] == null && VettSottomarino2[1] == null && VettSottomarino2[2] == null)
+                MessageBox.Show("Errore imprevisto", "errore");
+            else
+                ButtonsEnabled();
+            if (VettCacciatorpediniere[0] != null && VettCacciatorpediniere[1] != null)
+            {
+                btnCor.IsEnabled = false;
+                lblCac.Content = 0;
+            }
+            else
+                btnCac.IsEnabled = true;
+
+            if (VettCorazzate[0] != null && VettCorazzate[1] != null && VettCorazzate[2] != null && VettCorazzate[3] != null)
+            {
+                btnCor.IsEnabled = false;
+                lblCor.Content = 0;
+            }
+            else
+                btnCor.IsEnabled = true;
+
+            if (VettPortaerei[0] != null && VettPortaerei[1] != null && VettPortaerei[2] != null && VettPortaerei[3] != null && VettPortaerei[4] != null)
+            {
+                btnPor.IsEnabled = false;
+                lblPor.Content = 0;
+            }
+            else
+                btnPor.IsEnabled = true;
+            if (VettSottomarino1[0] != null && VettSottomarino1[1] != null && VettSottomarino1[2] != null && VettSottomarino2[0] != null && VettSottomarino2[1] != null && VettSottomarino2[2] != null)
+            {
+                btnSot.IsEnabled = false;
+                lblSot.Content = 0;
+            }
+            else
+                btnSot.IsEnabled = true;
         }
     }
 }
