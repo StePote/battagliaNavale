@@ -151,6 +151,7 @@ namespace progetto_Battaglia_Navale
             VettCorazzate = new string[4];
             VettPortaerei = new string[5];
             countSott = 0;
+            btnConferma.IsEnabled = false;
             //this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
         }
 
@@ -1258,12 +1259,20 @@ namespace progetto_Battaglia_Navale
         private void btnCac_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
+            controlloBottoniGiaSelezionati();
             NaveScelta = "Cacciatorpediniere";
             btnCor.IsEnabled = false;
             btnPor.IsEnabled = false;
             btnSot.IsEnabled = false;
+            btnCac.IsEnabled = false;
             a1.Click += A1_Click;
             b1.Click += B1_Click;
+            a2.Click += A2_Click;
+        }
+
+        private void A2_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void B1_Click(object sender, RoutedEventArgs e)
@@ -1300,9 +1309,86 @@ namespace progetto_Battaglia_Navale
                     b1.Click += a1_b1_Click_sottomarino;
                     a2.Click += a1_a2_Click_sottomarino;
                 }
+                else if (NaveScelta == "Portaerei")
+                {
+                    a1.Content = "P";
+                    VettPortaerei[0] = "A1";
+                    ButtonsNotEnabled();
+                    b1.IsEnabled = true;
+                    c1.IsEnabled = true;
+                    d1.IsEnabled = true;
+                    e1.IsEnabled = true;
+                    a2.IsEnabled = true;
+                    a3.IsEnabled = true;
+                    a4.IsEnabled = true;
+                    a5.IsEnabled = true;
+                    b1.Click += a1_b1_Click_portaerei;
+                    a2.Click += a1_a2_Click_portaerei;
+                }
             }
             else
                 MessageBox.Show("Casella già selezionata", "Attention!");
+        }
+
+        private void a1_b1_Click_portaerei(object sender, RoutedEventArgs e)
+        {
+            a2.IsEnabled = false;
+            a3.IsEnabled = false;
+            a4.IsEnabled = false;
+            a5.IsEnabled = false;
+            b1.Content = "P";
+            c1.Content = "P";
+            d1.Content = "P";
+            e1.Content = "P";
+            VettPortaerei[1] = "B1";
+            VettPortaerei[2] = "C1";
+            VettPortaerei[3] = "D1";
+            VettPortaerei[4] = "E1";
+            btnConferma.IsEnabled = true;
+        }
+
+        private void a1_a2_Click_portaerei(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = false;
+            c1.IsEnabled = false;
+            d1.IsEnabled = false;
+            e1.IsEnabled = false;
+            a2.Content = "P";
+            a3.Content = "P";
+            a4.Content = "P";
+            a5.Content = "P";
+            VettPortaerei[1] = "A2";
+            VettPortaerei[2] = "A3";
+            VettPortaerei[3] = "A4";
+            VettPortaerei[4] = "A5";
+            btnConferma.IsEnabled = true;
+        }
+        private void a1_a2_Click_corazzate(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = false;
+            c1.IsEnabled = false;
+            d1.IsEnabled = false;
+            a2.Content = "CO";
+            a3.Content = "CO";
+            a4.Content = "CO";
+            VettCorazzate[1] = "A2";
+            VettCorazzate[2] = "A3";
+            VettCorazzate[3] = "A4";
+            btnConferma.IsEnabled = true;
+        }
+
+        private void a1_b1_Click_corazzate(object sender, RoutedEventArgs e)
+        {
+            a2.IsEnabled = false;
+            a3.IsEnabled = false;
+            a4.IsEnabled = false;
+            b1.Content = "CO";
+            c1.Content = "CO";
+            d1.Content = "CO";
+            VettCorazzate[1] = "B1";
+            VettCorazzate[2] = "C1";
+            VettCorazzate[2] = "D1";
+            btnConferma.IsEnabled = true;
         }
 
         private void a1_a2_Click_sottomarino(object sender, RoutedEventArgs e)
@@ -1321,6 +1407,7 @@ namespace progetto_Battaglia_Navale
                 VettSottomarino2[1] = "A2";
                 VettSottomarino2[2] = "A3";
             }
+            btnConferma.IsEnabled = true;
         }
         private void a1_b1_Click_sottomarino(object sender, RoutedEventArgs e)
         {
@@ -1339,6 +1426,7 @@ namespace progetto_Battaglia_Navale
                 VettSottomarino1[1] = "B1";
                 VettSottomarino1[2] = "C1";
             }
+            btnConferma.IsEnabled = true;
         }
         private void a1_a2_Click(object sender, RoutedEventArgs e)
         {
@@ -1346,6 +1434,7 @@ namespace progetto_Battaglia_Navale
             a2.Content = "CA";
             VettCacciatorpediniere[1] = "A2";
             btnCac.IsEnabled = false;
+            btnConferma.IsEnabled = true;
         }
         private void a1_b1_Click(object sender, RoutedEventArgs e)
         {
@@ -1353,10 +1442,16 @@ namespace progetto_Battaglia_Navale
             b1.Content = "CA";
             VettCacciatorpediniere[1] = "B1";
             btnCac.IsEnabled = false;
+            btnConferma.IsEnabled = true;
         }
         private void btnSot_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
+            btnCor.IsEnabled = false;
+            btnPor.IsEnabled = false;
+            btnSot.IsEnabled = false;
+            btnCac.IsEnabled = false;
+            controlloBottoniGiaSelezionati();
             NaveScelta = "Sottomarino";
 
             a1.Click += A1_Click;
@@ -1366,13 +1461,26 @@ namespace progetto_Battaglia_Navale
         private void btnCor_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
+            controlloBottoniGiaSelezionati();
             NaveScelta = "Corazzate";
+            btnCor.IsEnabled = false;
+            btnPor.IsEnabled = false;
+            btnSot.IsEnabled = false;
+            btnCac.IsEnabled = false;
+            a1.Click += A1_Click;
+            b1.Click += B1_Click;
         }
 
         private void btnPor_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
             NaveScelta = "Portaerei";
+            btnCor.IsEnabled = false;
+            btnPor.IsEnabled = false;
+            btnSot.IsEnabled = false;
+            btnCac.IsEnabled = false;
+            a1.Click += A1_Click;
+            b1.Click += B1_Click;
         }
 
         private void btnAnnulla_Click(object sender, RoutedEventArgs e)
@@ -1380,6 +1488,7 @@ namespace progetto_Battaglia_Navale
             MainWindow finestra2 = new MainWindow();
             finestra2.Show();
             this.Close();
+            btnConferma.IsEnabled = false;
         }
 
         private void btnConferma_Click(object sender, RoutedEventArgs e)
@@ -1387,7 +1496,10 @@ namespace progetto_Battaglia_Navale
             if (VettCacciatorpediniere[0] == null && VettCacciatorpediniere[1] == null && VettCorazzate[0] == null && VettCorazzate[1] == null && VettCorazzate[2] == null && VettCorazzate[3] == null && VettPortaerei[0] == null && VettPortaerei[1] == null && VettPortaerei[2] == null && VettPortaerei[3] == null && VettPortaerei[4] == null && VettSottomarino1[0] == null && VettSottomarino1[1] == null && VettSottomarino1[2] == null && VettSottomarino2[0] == null && VettSottomarino2[1] == null && VettSottomarino2[2] == null)
                 MessageBox.Show("Errore imprevisto", "errore");
             else
+            {
                 ButtonsEnabled();
+                controlloBottoniGiaSelezionati();
+            }
             if (VettCacciatorpediniere[0] != null && VettCacciatorpediniere[1] != null)
             {
                 btnCor.IsEnabled = false;
@@ -1418,6 +1530,532 @@ namespace progetto_Battaglia_Navale
             }
             else
                 btnSot.IsEnabled = true;
+
+            btnConferma.IsEnabled = false;
+
+            NaveScelta = "";
+        }
+
+        private void controlloBottoniGiaSelezionati()
+        {
+            if(a1.Content.ToString() != "A1")
+            {
+                a1.IsEnabled = false;
+            }
+
+            if (a2.Content.ToString() != "A2")
+            {
+                a2.IsEnabled = false;
+            }
+
+            if (a3.Content.ToString() != "A3")
+            {
+                a3.IsEnabled = false;
+            }
+
+            if (a4.Content.ToString() != "A4")
+            {
+                a4.IsEnabled = false;
+            }
+
+            if (a5.Content.ToString() != "A5")
+            {
+                a5.IsEnabled = false;
+            }
+
+            if (a6.Content.ToString() != "A6")
+            {
+                a6.IsEnabled = false;
+            }
+
+            if (a7.Content.ToString() != "A7")
+            {
+                a7.IsEnabled = false;
+            }
+
+            if (a8.Content.ToString() != "A8")
+            {
+                a8.IsEnabled = false;
+            }
+
+            if (a9.Content.ToString() != "A9")
+            {
+                a9.IsEnabled = false;
+            }
+
+            if (a10.Content.ToString() != "A10")
+            {
+                a10.IsEnabled = false;
+            }
+
+
+
+            if (b1.Content.ToString() != "B1")
+            {
+                b1.IsEnabled = false;
+            }
+
+            if (b2.Content.ToString() != "B2")
+            {
+                b2.IsEnabled = false;
+            }
+
+            if (b3.Content.ToString() != "B3")
+            {
+                b3.IsEnabled = false;
+            }
+
+            if (b4.Content.ToString() != "B4")
+            {
+                b4.IsEnabled = false;
+            }
+
+            if (b5.Content.ToString() != "B5")
+            {
+                b5.IsEnabled = false;
+            }
+
+            if (b6.Content.ToString() != "B6")
+            {
+                b6.IsEnabled = false;
+            }
+
+            if (b7.Content.ToString() != "B7")
+            {
+                b7.IsEnabled = false;
+            }
+
+            if (b8.Content.ToString() != "B8")
+            {
+                b8.IsEnabled = false;
+            }
+
+            if (b9.Content.ToString() != "B9")
+            {
+                b9.IsEnabled = false;
+            }
+
+            if (b10.Content.ToString() != "B10")
+            {
+                b10.IsEnabled = false;
+            }
+
+
+            if (c1.Content.ToString() != "C1")
+            {
+                c1.IsEnabled = false;
+            }
+
+            if (c2.Content.ToString() != "C2")
+            {
+                c2.IsEnabled = false;
+            }
+
+            if (c3.Content.ToString() != "C3")
+            {
+                c3.IsEnabled = false;
+            }
+
+            if (c4.Content.ToString() != "C4")
+            {
+                c4.IsEnabled = false;
+            }
+
+            if (c5.Content.ToString() != "C5")
+            {
+                c5.IsEnabled = false;
+            }
+
+            if (c6.Content.ToString() != "C6")
+            {
+                c6.IsEnabled = false;
+            }
+
+            if (c7.Content.ToString() != "C7")
+            {
+                c7.IsEnabled = false;
+            }
+
+            if (c8.Content.ToString() != "C8")
+            {
+                c8.IsEnabled = false;
+            }
+
+            if (c9.Content.ToString() != "C9")
+            {
+                c9.IsEnabled = false;
+            }
+
+            if (c10.Content.ToString() != "C10")
+            {
+                c10.IsEnabled = false;
+            }
+
+
+
+            if (d1.Content.ToString() != "D1")
+            {
+                d1.IsEnabled = false;
+            }
+
+            if (d2.Content.ToString() != "D2")
+            {
+                d2.IsEnabled = false;
+            }
+
+            if (d3.Content.ToString() != "D3")
+            {
+                d3.IsEnabled = false;
+            }
+
+            if (d4.Content.ToString() != "D4")
+            {
+                d4.IsEnabled = false;
+            }
+
+            if (d5.Content.ToString() != "D5")
+            {
+                d5.IsEnabled = false;
+            }
+
+            if (d6.Content.ToString() != "D6")
+            {
+                d6.IsEnabled = false;
+            }
+
+            if (d7.Content.ToString() != "D7")
+            {
+                d7.IsEnabled = false;
+            }
+
+            if (d8.Content.ToString() != "D8")
+            {
+                d8.IsEnabled = false;
+            }
+
+            if (d9.Content.ToString() != "D9")
+            {
+                d9.IsEnabled = false;
+            }
+
+            if (d10.Content.ToString() != "D10")
+            {
+                d10.IsEnabled = false;
+            }
+
+
+
+
+            if (e1.Content.ToString() != "E1")
+            {
+                e1.IsEnabled = false;
+            }
+
+            if (e2.Content.ToString() != "E2")
+            {
+                e2.IsEnabled = false;
+            }
+
+            if (e3.Content.ToString() != "E3")
+            {
+                e3.IsEnabled = false;
+            }
+
+            if (e4.Content.ToString() != "E4")
+            {
+                e4.IsEnabled = false;
+            }
+
+            if (e5.Content.ToString() != "E5")
+            {
+                e5.IsEnabled = false;
+            }
+
+            if (e6.Content.ToString() != "E6")
+            {
+                e6.IsEnabled = false;
+            }
+
+            if (e7.Content.ToString() != "E7")
+            {
+                e7.IsEnabled = false;
+            }
+
+            if (e8.Content.ToString() != "E8")
+            {
+                e8.IsEnabled = false;
+            }
+
+            if (e9.Content.ToString() != "E9")
+            {
+                e9.IsEnabled = false;
+            }
+
+            if (e10.Content.ToString() != "E10")
+            {
+                e10.IsEnabled = false;
+            }
+
+
+            if (f1.Content.ToString() != "F1")
+            {
+                f1.IsEnabled = false;
+            }
+
+            if (f2.Content.ToString() != "F2")
+            {
+                f2.IsEnabled = false;
+            }
+
+            if (f3.Content.ToString() != "F3")
+            {
+                f3.IsEnabled = false;
+            }
+
+            if (f4.Content.ToString() != "F4")
+            {
+                f4.IsEnabled = false;
+            }
+
+            if (f5.Content.ToString() != "F5")
+            {
+                f5.IsEnabled = false;
+            }
+
+            if (f6.Content.ToString() != "F6")
+            {
+                f6.IsEnabled = false;
+            }
+
+            if (f7.Content.ToString() != "F7")
+            {
+                f7.IsEnabled = false;
+            }
+
+            if (f8.Content.ToString() != "F8")
+            {
+                f8.IsEnabled = false;
+            }
+
+            if (f9.Content.ToString() != "F9")
+            {
+                f9.IsEnabled = false;
+            }
+
+            if (f10.Content.ToString() != "F10")
+            {
+                f10.IsEnabled = false;
+            }
+
+
+
+            if (g1.Content.ToString() != "G1")
+            {
+                g1.IsEnabled = false;
+            }
+
+            if (g2.Content.ToString() != "G2")
+            {
+                g2.IsEnabled = false;
+            }
+
+            if (g3.Content.ToString() != "G3")
+            {
+                g3.IsEnabled = false;
+            }
+
+            if (g4.Content.ToString() != "G4")
+            {
+                g4.IsEnabled = false;
+            }
+
+            if (g5.Content.ToString() != "G5")
+            {
+                g5.IsEnabled = false;
+            }
+
+            if (g6.Content.ToString() != "G6")
+            {
+                g6.IsEnabled = false;
+            }
+
+            if (g7.Content.ToString() != "G7")
+            {
+                g7.IsEnabled = false;
+            }
+
+            if (g8.Content.ToString() != "G8")
+            {
+                g8.IsEnabled = false;
+            }
+
+            if (g9.Content.ToString() != "G9")
+            {
+                g9.IsEnabled = false;
+            }
+
+            if (g10.Content.ToString() != "G10")
+            {
+                g10.IsEnabled = false;
+            }
+
+
+
+
+            if (h1.Content.ToString() != "H1")
+            {
+                h1.IsEnabled = false;
+            }
+
+            if (h2.Content.ToString() != "H2")
+            {
+                h2.IsEnabled = false;
+            }
+
+            if (h3.Content.ToString() != "H3")
+            {
+                h3.IsEnabled = false;
+            }
+
+            if (h4.Content.ToString() != "H4")
+            {
+                h4.IsEnabled = false;
+            }
+
+            if (h5.Content.ToString() != "H5")
+            {
+                h5.IsEnabled = false;
+            }
+
+            if (h6.Content.ToString() != "H6")
+            {
+                h6.IsEnabled = false;
+            }
+
+            if (h7.Content.ToString() != "H7")
+            {
+                h7.IsEnabled = false;
+            }
+
+            if (h8.Content.ToString() != "H8")
+            {
+                h8.IsEnabled = false;
+            }
+
+            if (h9.Content.ToString() != "H9")
+            {
+                h9.IsEnabled = false;
+            }
+
+            if (h10.Content.ToString() != "H10")
+            {
+                h10.IsEnabled = false;
+            }
+
+
+
+
+            if (i1.Content.ToString() != "I1")
+            {
+                i1.IsEnabled = false;
+            }
+
+            if (i2.Content.ToString() != "I2")
+            {
+                i2.IsEnabled = false;
+            }
+
+            if (i3.Content.ToString() != "I3")
+            {
+                i3.IsEnabled = false;
+            }
+
+            if (i4.Content.ToString() != "I4")
+            {
+                i4.IsEnabled = false;
+            }
+
+            if (i5.Content.ToString() != "I5")
+            {
+                i5.IsEnabled = false;
+            }
+
+            if (i6.Content.ToString() != "I6")
+            {
+                i6.IsEnabled = false;
+            }
+
+            if (i7.Content.ToString() != "I7")
+            {
+                i7.IsEnabled = false;
+            }
+
+            if (i8.Content.ToString() != "I8")
+            {
+                i8.IsEnabled = false;
+            }
+
+            if (i9.Content.ToString() != "I9")
+            {
+                i9.IsEnabled = false;
+            }
+
+            if (i10.Content.ToString() != "I10")
+            {
+                i10.IsEnabled = false;
+            }
+
+
+
+            if (j1.Content.ToString() != "J1")
+            {
+                j1.IsEnabled = false;
+            }
+
+            if (j2.Content.ToString() != "J2")
+            {
+                j2.IsEnabled = false;
+            }
+
+            if (j3.Content.ToString() != "J3")
+            {
+                j3.IsEnabled = false;
+            }
+
+            if (j4.Content.ToString() != "J4")
+            {
+                j4.IsEnabled = false;
+            }
+
+            if (j5.Content.ToString() != "J5")
+            {
+                j5.IsEnabled = false;
+            }
+
+            if (j6.Content.ToString() != "J6")
+            {
+                j6.IsEnabled = false;
+            }
+
+            if (j7.Content.ToString() != "J7")
+            {
+                j7.IsEnabled = false;
+            }
+
+            if (j8.Content.ToString() != "J8")
+            {
+                j8.IsEnabled = false;
+            }
+
+            if (j9.Content.ToString() != "J9")
+            {
+                j9.IsEnabled = false;
+            }
+
+            if (j10.Content.ToString() != "J10")
+            {
+                j10.IsEnabled = false;
+            }
         }
     }
 }
