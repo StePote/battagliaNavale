@@ -29,7 +29,7 @@ namespace progetto_Battaglia_Navale
         Button a8 = new Button();
         Button a9 = new Button();
         Button a10 = new Button();
-        
+
         Button b1 = new Button();
         Button b2 = new Button();
         Button b3 = new Button();
@@ -40,7 +40,7 @@ namespace progetto_Battaglia_Navale
         Button b8 = new Button();
         Button b9 = new Button();
         Button b10 = new Button();
-        
+
         Button c1 = new Button();
         Button c2 = new Button();
         Button c3 = new Button();
@@ -51,7 +51,7 @@ namespace progetto_Battaglia_Navale
         Button c8 = new Button();
         Button c9 = new Button();
         Button c10 = new Button();
-        
+
         Button d1 = new Button();
         Button d2 = new Button();
         Button d3 = new Button();
@@ -62,7 +62,7 @@ namespace progetto_Battaglia_Navale
         Button d8 = new Button();
         Button d9 = new Button();
         Button d10 = new Button();
-        
+
         Button e1 = new Button();
         Button e2 = new Button();
         Button e3 = new Button();
@@ -73,7 +73,7 @@ namespace progetto_Battaglia_Navale
         Button e8 = new Button();
         Button e9 = new Button();
         Button e10 = new Button();
-        
+
         Button f1 = new Button();
         Button f2 = new Button();
         Button f3 = new Button();
@@ -84,7 +84,7 @@ namespace progetto_Battaglia_Navale
         Button f8 = new Button();
         Button f9 = new Button();
         Button f10 = new Button();
-        
+
         Button g1 = new Button();
         Button g2 = new Button();
         Button g3 = new Button();
@@ -95,7 +95,7 @@ namespace progetto_Battaglia_Navale
         Button g8 = new Button();
         Button g9 = new Button();
         Button g10 = new Button();
-        
+
         Button h1 = new Button();
         Button h2 = new Button();
         Button h3 = new Button();
@@ -106,7 +106,7 @@ namespace progetto_Battaglia_Navale
         Button h8 = new Button();
         Button h9 = new Button();
         Button h10 = new Button();
-        
+
         Button i1 = new Button();
         Button i2 = new Button();
         Button i3 = new Button();
@@ -117,7 +117,7 @@ namespace progetto_Battaglia_Navale
         Button i8 = new Button();
         Button i9 = new Button();
         Button i10 = new Button();
-        
+
         Button j1 = new Button();
         Button j2 = new Button();
         Button j3 = new Button();
@@ -135,6 +135,7 @@ namespace progetto_Battaglia_Navale
         string[] VettCorazzate;
         string[] VettPortaerei;
         int countSott;
+        string bottoneScelto;
         public paginaDiGioco()
         {
             InitializeComponent();
@@ -152,6 +153,7 @@ namespace progetto_Battaglia_Navale
             VettPortaerei = new string[5];
             countSott = 0;
             btnConferma.IsEnabled = false;
+            bottoneScelto = "";
             //this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
         }
 
@@ -195,13 +197,13 @@ namespace progetto_Battaglia_Navale
 
             RowDefinition r1 = new RowDefinition();
             RowDefinition r2 = new RowDefinition();
-            RowDefinition r3= new RowDefinition();
+            RowDefinition r3 = new RowDefinition();
             RowDefinition r4 = new RowDefinition();
             RowDefinition r5 = new RowDefinition();
             RowDefinition r6 = new RowDefinition();
             RowDefinition r7 = new RowDefinition();
             RowDefinition r8 = new RowDefinition();
-            RowDefinition r9= new RowDefinition();
+            RowDefinition r9 = new RowDefinition();
             RowDefinition r10 = new RowDefinition();
             RowDefinition r11 = new RowDefinition();
             grid.RowDefinitions.Add(r1);
@@ -402,7 +404,7 @@ namespace progetto_Battaglia_Navale
 
         public void setButton()
         {
-            
+
 
             a1.Content = "A1";
             a1.FontSize = 12;
@@ -418,12 +420,12 @@ namespace progetto_Battaglia_Navale
             a3.FontSize = 12;
             Grid.SetRow(a3, 3);
             Grid.SetColumn(a3, 1);
-            
+
             a4.Content = "A4";
             a4.FontSize = 12;
             Grid.SetRow(a4, 4);
             Grid.SetColumn(a4, 1);
-            
+
 
             a5.Content = "A5";
             a5.FontSize = 12;
@@ -434,22 +436,22 @@ namespace progetto_Battaglia_Navale
             a6.FontSize = 12;
             Grid.SetRow(a6, 6);
             Grid.SetColumn(a6, 1);
-            
+
             a7.Content = "A7";
             a7.FontSize = 12;
             Grid.SetRow(a7, 7);
             Grid.SetColumn(a7, 1);
-            
+
             a8.Content = "A8";
             a8.FontSize = 12;
             Grid.SetRow(a8, 8);
             Grid.SetColumn(a8, 1);
-            
+
             a9.Content = "A9";
             a9.FontSize = 12;
             Grid.SetRow(a9, 9);
             Grid.SetColumn(a9, 1);
-            
+
             a10.Content = "A10";
             a10.FontSize = 12;
             Grid.SetRow(a10, 10);
@@ -1268,182 +1270,293 @@ namespace progetto_Battaglia_Navale
             a1.Click += A1_Click;
             b1.Click += B1_Click;
             a2.Click += A2_Click;
+
         }
 
+        //FARE CONTROLLI SE BOTTONI CHE SI TROVANO NELLA DIREZIONE DEL 2 BOTTONE SELEZIONATO SONO GIA' STATI SELEZIONATI
         private void A2_Click(object sender, RoutedEventArgs e)
+        {
+            if (NaveScelta == "Cacciatorpediniere")
+            {
+                if (VettCacciatorpediniere[0] == null)
+                {
+                    a2.Content = "CA";
+                    VettCacciatorpediniere[0] = "A2";
+                    ButtonsNotEnabled();
+                    a3.IsEnabled = true;
+                    a1.IsEnabled = true;
+                    b2.IsEnabled = true;
+                    b1.Click += B1_Click;
+                    a2.Click += A2_Click;
+                    a3.Click += A3_Click;
+                }
+                else
+                {
+                    a2.Content = "CA";
+                    VettCacciatorpediniere[1] = "A2";
+                    btnCac.IsEnabled = false;
+                    btnConferma.IsEnabled = true;
+                }
+            }
+            else if (NaveScelta == "Sottomarino")
+            {
+                if (countSott == 1)
+                {
+                    if (VettSottomarino1[0] == null)
+                    {
+                        a2.Content = "S";
+                        ButtonsNotEnabled();
+                        VettSottomarino1[0] = "A2";
+                        a3.IsEnabled = true;
+                        b2.IsEnabled = true;
+                        b1.Click += B1_Click;
+                        a3.Click += A3_Click;
+                    }
+                    else
+                    {
+                        if (bottoneScelto == "a1")
+                        {
+                            VettSottomarino1[1] = "A2";
+                            VettSottomarino1[2] = "A3";
+                            a2.Content = "S";
+                            a3.Content = "S";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "a3")
+                        {
+                            VettSottomarino1[1] = "A2";
+                            VettSottomarino1[2] = "A1";
+                            a2.Content = "S";
+                            a1.Content = "S";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (countSott == 2)
+                {
+                    if (VettSottomarino2[0] == null)
+                    {
+                        a2.Content = "S";
+                        ButtonsNotEnabled();
+                        VettSottomarino1[0] = "A2";
+                        a3.IsEnabled = true;
+                        b2.IsEnabled = true;
+                        b1.Click += B1_Click;
+                        a3.Click += A3_Click;
+                    }
+                    else
+                    {
+                        if (bottoneScelto == "a1")
+                        {
+                            VettSottomarino1[1] = "A2";
+                            VettSottomarino1[2] = "A3";
+                            a2.Content = "S";
+                            a3.Content = "S";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "a3")
+                        {
+                            VettSottomarino1[1] = "A2";
+                            VettSottomarino1[2] = "A1";
+                            a2.Content = "S";
+                            a1.Content = "S";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+            }
+            else if (NaveScelta == "Corazzate")
+            {
+                if (VettCorazzate[0] == null)
+                {
+                    a2.Content = "CO";
+                    VettCorazzate[0] = "A2";
+                    ButtonsNotEnabled();
+                    b2.IsEnabled = true;
+                    a3.IsEnabled = true;
+                }
+                else
+                {
+                    VettCorazzate[1] = "A2";
+                    VettCorazzate[2] = "A3";
+                    VettCorazzate[3] = "A4";
+                    a2.Content = "CO";
+                    a3.Content = "CO";
+                    a4.Content = "CO";
+                    btnConferma.IsEnabled = true;
+                }
+            }
+            else if (NaveScelta == "Portaerei")
+            {
+                if (VettPortaerei[0] == null)
+                {
+                    a2.Content = "P";
+                    VettPortaerei[0] = "A2";
+                    ButtonsNotEnabled();
+                    b2.IsEnabled = true;
+                    a3.IsEnabled = true;
+                }
+                else
+                {
+                    VettPortaerei[1] = "A2";
+                    VettPortaerei[2] = "A3";
+                    VettPortaerei[3] = "A4";
+                    VettPortaerei[4] = "A5";
+                    a2.Content = "P";
+                    a3.Content = "P";
+                    a4.Content = "P";
+                    a5.Content = "P";
+                    btnConferma.IsEnabled = true;
+                }
+
+            }
+            bottoneScelto = "a2";
+        }
+
+        private void A3_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
         private void B1_Click(object sender, RoutedEventArgs e)
         {
-           
+
         }
 
         private void A1_Click(object sender, RoutedEventArgs e)
         {
-            if (a1.Content.ToString() != "CA" && a1.Content.ToString() != "S" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "P")
+            if (NaveScelta == "Cacciatorpediniere")
             {
-                if (NaveScelta == "Cacciatorpediniere")
+                if (VettCacciatorpediniere[0] == null)
                 {
                     a1.Content = "CA";
                     VettCacciatorpediniere[0] = "A1";
                     ButtonsNotEnabled();
                     b1.IsEnabled = true;
                     a2.IsEnabled = true;
-                    b1.Click += a1_b1_Click;
-                    a2.Click += a1_a2_Click;
+                    b1.Click += B1_Click;
+                    a2.Click += A2_Click;
                 }
-                else if (NaveScelta == "Sottomarino")
+                else
                 {
-                    a1.Content = "S";
-                    if (countSott == 0)
+                    a1.Content = "CA";
+                    VettCacciatorpediniere[1] = "A1";
+                    btnCac.IsEnabled = false;
+                    btnConferma.IsEnabled = true;
+                }
+                //a1.Content = "CA";
+                //VettCacciatorpediniere[0] = "A1";
+                //ButtonsNotEnabled();
+                //b1.IsEnabled = true;
+                //a2.IsEnabled = true;
+                //b1.Click += a1_b1_Click;
+                //a2.Click += a1_a2_Click;
+            }
+            else if (NaveScelta == "Sottomarino")
+            {
+                if (countSott == 1)
+                {
+                    if (VettSottomarino1[0] == null)
+                    {
+                        a1.Content = "S";
+                        ButtonsNotEnabled();
                         VettSottomarino1[0] = "A1";
-                    else if (countSott == 1)
-                        VettSottomarino2[0] = "A1";
+                        b1.IsEnabled = true;
+                        a2.IsEnabled = true;
+                        b1.Click += B1_Click;
+                        a2.Click += A2_Click;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Impossibile scegliere questa casella: non ci sono abbastanza caselle per inserire una nave in questa direzione", "Error");
+                    }
+                }
+                else if (countSott == 2)
+                {
+                    if (VettSottomarino2[0] == null)
+                    {
+                        a1.Content = "S";
+                        ButtonsNotEnabled();
+                        VettSottomarino1[0] = "A1";
+                        b1.IsEnabled = true;
+                        a2.IsEnabled = true;
+                        b1.Click += B1_Click;
+                        a2.Click += A2_Click;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Impossibile scegliere questa casella: non ci sono abbastanza caselle per inserire una nave in questa direzione", "Error");
+                    }
+                }
+
+                //a1.Content = "S";
+                //if (countSott == 1)
+                //    VettSottomarino1[0] = "A1";
+                //else if (countSott == 2)
+                //    VettSottomarino2[0] = "A1";
+                //ButtonsNotEnabled();
+                //b1.IsEnabled = true;
+                //c1.IsEnabled = true;
+                //a2.IsEnabled = true;
+                //a3.IsEnabled = true;
+                //b1.Click += a1_b1_Click_sottomarino;
+                //a2.Click += a1_a2_Click_sottomarino;
+            }
+            else if (NaveScelta == "Corazzate")
+            {
+                if (VettCorazzate[0] == null)
+                {
+                    a1.Content = "CO";
+                    VettCorazzate[0] = "A1";
                     ButtonsNotEnabled();
                     b1.IsEnabled = true;
-                    c1.IsEnabled = true;
                     a2.IsEnabled = true;
-                    a3.IsEnabled = true;
-                    b1.Click += a1_b1_Click_sottomarino;
-                    a2.Click += a1_a2_Click_sottomarino;
+                    b1.Click += B1_Click;
+                    a2.Click += A2_Click;
                 }
-                else if (NaveScelta == "Portaerei")
+                else
+                {
+                    MessageBox.Show("Impossibile scegliere questa casella: non ci sono abbastanza caselle per inserire una nave in questa direzione", "Error");
+                }
+            }
+            else if (NaveScelta == "Portaerei")
+            {
+                if (VettPortaerei[0] == null)
                 {
                     a1.Content = "P";
                     VettPortaerei[0] = "A1";
                     ButtonsNotEnabled();
                     b1.IsEnabled = true;
-                    c1.IsEnabled = true;
-                    d1.IsEnabled = true;
-                    e1.IsEnabled = true;
                     a2.IsEnabled = true;
-                    a3.IsEnabled = true;
-                    a4.IsEnabled = true;
-                    a5.IsEnabled = true;
-                    b1.Click += a1_b1_Click_portaerei;
-                    a2.Click += a1_a2_Click_portaerei;
+                    b1.Click += B1_Click;
+                    a2.Click += A2_Click;
                 }
+                else
+                {
+                    MessageBox.Show("Impossibile scegliere questa casella: non ci sono abbastanza caselle per inserire una nave in questa direzione", "Error");
+                }
+
+
+
+
+
+                //a1.Content = "P";
+                //VettPortaerei[0] = "A1";
+                //ButtonsNotEnabled();
+                //b1.IsEnabled = true;
+                //c1.IsEnabled = true;
+                //d1.IsEnabled = true;
+                //e1.IsEnabled = true;
+                //a2.IsEnabled = true;
+                //a3.IsEnabled = true;
+                //a4.IsEnabled = true;
+                //a5.IsEnabled = true;
+                //b1.Click += a1_b1_Click_portaerei;
+                //a2.Click += a1_a2_Click_portaerei;
             }
-            else
-                MessageBox.Show("Casella già selezionata", "Attention!");
+            bottoneScelto = "a1";
         }
 
-        private void a1_b1_Click_portaerei(object sender, RoutedEventArgs e)
-        {
-            a2.IsEnabled = false;
-            a3.IsEnabled = false;
-            a4.IsEnabled = false;
-            a5.IsEnabled = false;
-            b1.Content = "P";
-            c1.Content = "P";
-            d1.Content = "P";
-            e1.Content = "P";
-            VettPortaerei[1] = "B1";
-            VettPortaerei[2] = "C1";
-            VettPortaerei[3] = "D1";
-            VettPortaerei[4] = "E1";
-            btnConferma.IsEnabled = true;
-        }
-
-        private void a1_a2_Click_portaerei(object sender, RoutedEventArgs e)
-        {
-            b1.IsEnabled = false;
-            c1.IsEnabled = false;
-            d1.IsEnabled = false;
-            e1.IsEnabled = false;
-            a2.Content = "P";
-            a3.Content = "P";
-            a4.Content = "P";
-            a5.Content = "P";
-            VettPortaerei[1] = "A2";
-            VettPortaerei[2] = "A3";
-            VettPortaerei[3] = "A4";
-            VettPortaerei[4] = "A5";
-            btnConferma.IsEnabled = true;
-        }
-        private void a1_a2_Click_corazzate(object sender, RoutedEventArgs e)
-        {
-            b1.IsEnabled = false;
-            c1.IsEnabled = false;
-            d1.IsEnabled = false;
-            a2.Content = "CO";
-            a3.Content = "CO";
-            a4.Content = "CO";
-            VettCorazzate[1] = "A2";
-            VettCorazzate[2] = "A3";
-            VettCorazzate[3] = "A4";
-            btnConferma.IsEnabled = true;
-        }
-
-        private void a1_b1_Click_corazzate(object sender, RoutedEventArgs e)
-        {
-            a2.IsEnabled = false;
-            a3.IsEnabled = false;
-            a4.IsEnabled = false;
-            b1.Content = "CO";
-            c1.Content = "CO";
-            d1.Content = "CO";
-            VettCorazzate[1] = "B1";
-            VettCorazzate[2] = "C1";
-            VettCorazzate[2] = "D1";
-            btnConferma.IsEnabled = true;
-        }
-
-        private void a1_a2_Click_sottomarino(object sender, RoutedEventArgs e)
-        {
-            b1.IsEnabled = false;
-            c1.IsEnabled = false;
-            a2.Content = "S";
-            a3.Content = "S";
-            if (countSott == 0)
-            {
-                VettSottomarino1[1] = "A2";
-                VettSottomarino1[2] = "A3";
-            }
-            else if (countSott == 1)
-            {
-                VettSottomarino2[1] = "A2";
-                VettSottomarino2[2] = "A3";
-            }
-            btnConferma.IsEnabled = true;
-        }
-        private void a1_b1_Click_sottomarino(object sender, RoutedEventArgs e)
-        {
-            a2.IsEnabled = false;
-            a3.IsEnabled = false;
-            b1.Content = "S";
-            c1.Content = "S";
-
-            if (countSott == 0)
-            {
-                VettSottomarino1[1] = "B1";
-                VettSottomarino1[2] = "C1";
-            }
-            else if (countSott == 1)
-            {
-                VettSottomarino1[1] = "B1";
-                VettSottomarino1[2] = "C1";
-            }
-            btnConferma.IsEnabled = true;
-        }
-        private void a1_a2_Click(object sender, RoutedEventArgs e)
-        {
-            b1.IsEnabled = false;
-            a2.Content = "CA";
-            VettCacciatorpediniere[1] = "A2";
-            btnCac.IsEnabled = false;
-            btnConferma.IsEnabled = true;
-        }
-        private void a1_b1_Click(object sender, RoutedEventArgs e)
-        {
-            a2.IsEnabled = false;
-            b1.Content = "CA";
-            VettCacciatorpediniere[1] = "B1";
-            btnCac.IsEnabled = false;
-            btnConferma.IsEnabled = true;
-        }
         private void btnSot_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
@@ -1453,7 +1566,9 @@ namespace progetto_Battaglia_Navale
             btnCac.IsEnabled = false;
             controlloBottoniGiaSelezionati();
             NaveScelta = "Sottomarino";
-
+            countSott++;
+            if (countSott == 1)
+                lblSot.Content = 1;
             a1.Click += A1_Click;
             b1.Click += B1_Click;
         }
@@ -1474,6 +1589,7 @@ namespace progetto_Battaglia_Navale
         private void btnPor_Click(object sender, RoutedEventArgs e)
         {
             ButtonsEnabled();
+            controlloBottoniGiaSelezionati();
             NaveScelta = "Portaerei";
             btnCor.IsEnabled = false;
             btnPor.IsEnabled = false;
@@ -1538,7 +1654,7 @@ namespace progetto_Battaglia_Navale
 
         private void controlloBottoniGiaSelezionati()
         {
-            if(a1.Content.ToString() != "A1")
+            if (a1.Content.ToString() != "A1")
             {
                 a1.IsEnabled = false;
             }
