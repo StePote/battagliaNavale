@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,10 +21,19 @@ namespace progetto_Battaglia_Navale
     /// </summary>
     public partial class MainWindow : Window
     {
+        ThreadInvia ti;
+        ThreadRicevi tr;
         public MainWindow()
         {
             InitializeComponent();
+            ti = new ThreadInvia();
+            tr = new ThreadRicevi();
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
+            Thread t = new Thread(new ThreadStart(ti.invia));
+            t.Start();
+
+            Thread t2 = new Thread(new ThreadStart(tr.ricevi));
+            t2.Start();
         }
         private void btnInizia_Click(object sender, RoutedEventArgs e)
         {

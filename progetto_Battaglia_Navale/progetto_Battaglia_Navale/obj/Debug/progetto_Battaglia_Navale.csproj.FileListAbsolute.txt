@@ -35,3 +35,22 @@ E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\o
 E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.baml
 C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.g.cs
 C:\Users\Stefano Potenza\Desktop\SCUOLA\TECNOLOGIA\LABORATORIO\5C\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.baml
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\bin\Debug\progetto_Battaglia_Navale.exe.config
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\bin\Debug\progetto_Battaglia_Navale.exe
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\bin\Debug\progetto_Battaglia_Navale.pdb
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.csprojAssemblyReference.cache
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.g.cs
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\MainWindow.g.cs
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.g.cs
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\App.g.cs
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale_MarkupCompile.cache
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale_MarkupCompile.lref
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\iscrizione.baml
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\MainWindow.baml
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\paginaDiGioco.baml
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.g.resources
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.Properties.Resources.resources
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.csproj.GenerateResource.cache
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.exe
+C:\Users\Kevin\Desktop\kevin\tecnologie\5c\progetto_battagliaNavale\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.pdb

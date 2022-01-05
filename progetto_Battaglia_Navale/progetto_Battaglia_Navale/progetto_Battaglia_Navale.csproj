@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ThreadInvia.cs" />
+    <Compile Include="ThreadRicevi.cs" />
     <Compile Include="Utente.cs" />
     <Page Include="iscrizione.xaml">
       <SubType>Designer</SubType>
