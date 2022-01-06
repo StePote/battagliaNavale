@@ -15,10 +15,10 @@ namespace progetto_Battaglia_Navale
         {
             UdpClient client = new UdpClient(666);
 
-            IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 666);
-            byte[] dataReceived = client.Receive(ref riceveEP);
-            String risposta = Encoding.ASCII.GetString(dataReceived);
-            MessageBox.Show(risposta);
+            //IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 666);
+            //byte[] dataReceived = client.Receive(ref riceveEP);
+            //String risposta = Encoding.ASCII.GetString(dataReceived);
+            //MessageBox.Show(risposta);
         }
     }
 }

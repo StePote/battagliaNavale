@@ -11,9 +11,9 @@ namespace progetto_Battaglia_Navale
     public class ThreadInvia
     {
         public void invia() {
-            UdpClient client = new UdpClient();
-            byte[] data = Encoding.ASCII.GetBytes("CIAO SERVER");
-            client.Send(data, data.Length, "localhost", 666);
+            //UdpClient client = new UdpClient();
+            //byte[] data = Encoding.ASCII.GetBytes("CIAO SERVER");
+            //client.Send(data, data.Length, "localhost", 666);
         }
     }
 }
