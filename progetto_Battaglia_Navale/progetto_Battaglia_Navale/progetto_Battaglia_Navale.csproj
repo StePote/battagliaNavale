@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="paginaDiGioco.xaml.cs">
+      <DependentUpon>paginaDiGioco.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThreadInvia.cs" />
     <Compile Include="ThreadRicevi.cs" />
     <Compile Include="Utente.cs" />
@@ -83,9 +86,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="paginaDiGioco.xaml.cs">
-      <DependentUpon>paginaDiGioco.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
