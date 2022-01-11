@@ -3332,6 +3332,17 @@ namespace progetto_Battaglia_Navale
                             d4.Content = "P";
                             e4.Content = "P";
                             btnConferma.IsEnabled = true;
+                        }else if (bottoneScelto == "e5")
+                        {
+                            VettPortaerei[1] = "E4";
+                            VettPortaerei[2] = "E3";
+                            VettPortaerei[3] = "E2";
+                            VettPortaerei[4] = "E1";
+                            e1.Content = "P";
+                            e2.Content = "P";
+                            e3.Content = "P";
+                            e4.Content = "P";
+                            btnConferma.IsEnabled = true;
                         }
 
                     }
@@ -11624,13 +11635,13 @@ namespace progetto_Battaglia_Navale
                             c9.Content = "CO";
                             btnConferma.IsEnabled = true;
                         }
-                        else if (bottoneScelto == "e8")
+                        else if (bottoneScelto == "e10")
                         {
-                            VettCorazzate[1] = "E7";
-                            VettCorazzate[2] = "E6";
-                            VettCorazzate[3] = "E5";
-                            e5.Content = "CO";
-                            e6.Content = "CO";
+                            VettCorazzate[1] = "E9";
+                            VettCorazzate[2] = "E8";
+                            VettCorazzate[3] = "E7";
+                            e9.Content = "CO";
+                            e8.Content = "CO";
                             e7.Content = "CO";
                             btnConferma.IsEnabled = true;
                         }
@@ -12926,9 +12937,9 @@ namespace progetto_Battaglia_Navale
                             else if (bottoneScelto == "e9")
                             {
                                 VettSottomarino1[1] = "E8";
-                                VettSottomarino1[2] = "E9";
+                                VettSottomarino1[2] = "E7";
                                 e8.Content = "S1";
-                                e9.Content = "S1";
+                                e7.Content = "S1";
                                 btnConferma.IsEnabled = true;
                             }
                         }
@@ -13005,9 +13016,9 @@ namespace progetto_Battaglia_Navale
                             else if (bottoneScelto == "e9")
                             {
                                 VettSottomarino2[1] = "E8";
-                                VettSottomarino2[2] = "E9";
+                                VettSottomarino2[2] = "E7";
                                 e8.Content = "S2";
-                                e9.Content = "S2";
+                                e7.Content = "S2";
                                 btnConferma.IsEnabled = true;
                             }
                         }
@@ -17435,8 +17446,8 @@ namespace progetto_Battaglia_Navale
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
-                            e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+                            e6.IsEnabled = true;
+                            e6.Click += E6_Click;
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
@@ -17488,8 +17499,8 @@ namespace progetto_Battaglia_Navale
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
-                                e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+                                e6.IsEnabled = true;
+                                e6.Click += E6_Click;
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
@@ -17567,8 +17578,8 @@ namespace progetto_Battaglia_Navale
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
-                                e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+                                e6.IsEnabled = true;
+                                e6.Click += E6_Click;
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
@@ -17647,8 +17658,8 @@ namespace progetto_Battaglia_Navale
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
-                            e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+                            e6.IsEnabled = true;
+                            e6.Click += E6_Click;
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")

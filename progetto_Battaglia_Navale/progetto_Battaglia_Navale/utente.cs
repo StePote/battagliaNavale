@@ -50,6 +50,28 @@ namespace progetto_Battaglia_Navale
             frase = nomeUtente + ";" + nome + ";" + cognome + ";" + email + ";" + password + ";";
             return frase;
         }
+
+        public bool controlloDuplicati(string _email,string _nomeUtente)
+        {
+            bool controllo = false;
+            foreach(string line in System.IO.File.ReadLines(@"progetto_Battaglia_Navale\bin\Debug1\utenti.txt"))
+            {
+                if (line != "")
+                {
+                    string[] str = line.Split(';');
+                    nomeUtente = str[0];
+                    nome = str[1];
+                    cognome = str[2];
+                    email = str[3];
+                    password = str[4];
+
+                    if (email == _email || nomeUtente == _nomeUtente)
+                        controllo = true;
+                }
+            }
+            return controllo;
+        }
+
         public void FromCSV(string frase)
         {
             string[] str = frase.Split(';');

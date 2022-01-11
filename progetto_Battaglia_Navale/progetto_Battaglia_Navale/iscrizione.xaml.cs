@@ -40,50 +40,11 @@ namespace progetto_Battaglia_Navale
             utente.Password = txtPassword.Text;
 
             if (txtNome.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtCognome.Text != ""&& txtNomeUtente.Text != "")
-            { 
+            {
+                if (utente.controlloDuplicati(txtEmail.Text, txtNomeUtente.Text) == true)
+                    MessageBox.Show("Nome utente e password già presenti", "Error");
+                else
                 Scrittura();
-                //implememtare classe con CSV per scrivere e leggere da file
-
-                //try
-                //{
-                //    SmtpClient mySmtpClient = new SmtpClient("my.smtp.exampleserver.net");
-
-                //    // set smtp-client with basicAuthentication
-                //    mySmtpClient.UseDefaultCredentials = false;
-                //    System.Net.NetworkCredential basicAuthenticationInfo = new System.Net.NetworkCredential("username", "password");
-                //    mySmtpClient.Credentials = basicAuthenticationInfo;
-
-                //    // add from,to mailaddresses
-                //    MailAddress from = new MailAddress("battagliaNavale@gmail.com", "TestFromName");
-                //    MailAddress to = new MailAddress(txtEmail.Text, "TestToName");
-                //    MailMessage myMail = new System.Net.Mail.MailMessage(from, to);
-
-                //    // add ReplyTo
-                //    MailAddress replyTo = new MailAddress("battagliaNavale@gmail.com");
-                //    myMail.ReplyToList.Add(replyTo);
-
-                //    // set subject and encoding
-                //    myMail.Subject = "Your registration is confirmed." + "\n" + "Name: " + txtNome + "\n" + "Surname: " + txtNome;
-                //    myMail.SubjectEncoding = System.Text.Encoding.UTF8;
-
-                //    // set body-message and encoding
-                //    myMail.Body = "<b>Test Mail</b><br>using <b>HTML</b>.";
-                //    myMail.BodyEncoding = System.Text.Encoding.UTF8;
-                //    // text or html
-                //    myMail.IsBodyHtml = true;
-
-                //    mySmtpClient.Send(myMail);
-                //}
-                //catch (SmtpException ex)
-                //{
-                //    throw new ApplicationException
-                //      ("SmtpException has occured: " + ex.Message);
-                //}
-                //catch (Exception ex)
-                //{
-                //    throw ex;
-                //}
-
             }
             else
                 MessageBox.Show("Errore nella registrazione.\nAssicurarsi di aver inserito tutti i campi e riprovare.", "Error");
