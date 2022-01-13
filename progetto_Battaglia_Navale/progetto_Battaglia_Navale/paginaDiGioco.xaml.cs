@@ -3354,11 +3354,6 @@ namespace progetto_Battaglia_Navale
                 c = false;
         }
 
-        private void F4_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void B3_Click(object sender, RoutedEventArgs e)
         {
             if (c == false)
@@ -4767,11 +4762,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F3_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void A1_Click(object sender, RoutedEventArgs e)
@@ -8510,11 +8500,6 @@ namespace progetto_Battaglia_Navale
                 c = false;
         }
 
-        private void F1_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void D2_Click(object sender, RoutedEventArgs e)
         {
             if (c == false)
@@ -9173,11 +9158,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F2_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void B10_Click(object sender, RoutedEventArgs e)
@@ -10349,11 +10329,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F10_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void B9_Click(object sender, RoutedEventArgs e)
@@ -11730,11 +11705,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F9_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void B8_Click(object sender, RoutedEventArgs e)
@@ -13188,11 +13158,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F8_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void B7_Click(object sender, RoutedEventArgs e)
@@ -14718,11 +14683,6 @@ namespace progetto_Battaglia_Navale
             }
             else
                 c = false;
-        }
-
-        private void F7_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void B6_Click(object sender, RoutedEventArgs e)
@@ -16274,11 +16234,6 @@ namespace progetto_Battaglia_Navale
                 c = false;
         }
 
-        private void F6_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void B5_Click(object sender, RoutedEventArgs e)
         {
             if (c == false)
@@ -17828,7 +17783,3678 @@ namespace progetto_Battaglia_Navale
                 c = false;
         }
 
+        private void F1_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
+                        {
+                            e1.IsEnabled = true;
+                            e1.Click += E1_Click;
+                            controllo = true;
+                        }
+                        if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
+                        {
+                            g1.IsEnabled = true;
+                            g1.Click += G1_Click;
+                            controllo = true;
+                        }
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+                            f2.Click += F2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f1.Content = "CA";
+                            VettCacciatorpediniere[0] = "F1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f1.Content = "CA";
+                        VettCacciatorpediniere[1] = "F1";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            bool controllo = false;
+                            ButtonsNotEnabled();
+                            if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
+                            {
+                                e1.IsEnabled = true;
+                                e1.Click += E1_Click;
+                                controllo = true;
+                            }
+                            if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
+                            {
+                                g1.IsEnabled = true;
+                                g1.Click += G1_Click;
+                                controllo = true;
+                            }
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f1.Content = "S1";
+                                VettSottomarino1[0] = "F1";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            VettSottomarino1[1] = "F1";
+                            VettSottomarino1[2] = "G1";
+                            f1.Content = "S1";
+                            g1.Content = "S1";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            bool controllo = false;
+                            ButtonsNotEnabled();
+                            if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
+                            {
+                                e1.IsEnabled = true;
+                                e1.Click += E1_Click;
+                                controllo = true;
+                            }
+                            if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
+                            {
+                                g1.IsEnabled = true;
+                                g1.Click += G1_Click;
+                                controllo = true;
+                            }
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f1.Content = "S1";
+                                VettSottomarino2[0] = "F1";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            VettSottomarino2[1] = "F1";
+                            VettSottomarino2[2] = "G1";
+                            f1.Content = "S2";
+                            g1.Content = "S2";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
+                        {
+                            e1.IsEnabled = true;
+                            e1.Click += E1_Click;
+                            controllo = true;
+                        }
+                        if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P")
+                        {
+                            g1.IsEnabled = true;
+                            g1.Click += G1_Click;
+                            controllo = true;
+                        }
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+                            f2.Click += F2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f1.Content = "CO";
+                            VettCorazzate[0] = "F1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        VettCorazzate[1] = "F1";
+                        VettCorazzate[2] = "G1";
+                        VettCorazzate[3] = "H1";
+                        f1.Content = "CO";
+                        g1.Content = "CO";
+                        h1.Content = "CO";
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
+                        {
+                            e1.IsEnabled = true;
+                            e1.Click += E1_Click;
+                            controllo = true;
+                        }
+                        if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P" && j1.Content.ToString() != "CA" && j1.Content.ToString() != "CO" && j1.Content.ToString() != "S1" && j1.Content.ToString() != "S2" && j1.Content.ToString() != "P")
+                        {
+                            g1.IsEnabled = true;
+                            g1.Click += G1_Click;
+                            controllo = true;
+                        }
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+                            f2.Click += F2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f1.Content = "P";
+                            VettPortaerei[0] = "F1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        VettPortaerei[1] = "F1";
+                        VettPortaerei[2] = "G1";
+                        VettPortaerei[3] = "H1";
+                        VettPortaerei[4] = "I1";
+                        f1.Content = "P";
+                        g1.Content = "P";
+                        h1.Content = "P";
+                        i1.Content = "P";
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                bottoneScelto = "f1";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G1_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void F2_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                        {
+                            f1.IsEnabled = true;
+                            f1.Click += F1_Click;
+                            controllo = true;
+                        }
+                        if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+                            f3.Click += F3_Click;
+                            controllo = true;
+                        }
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
+                        {
+                            e2.IsEnabled = true;
+                            e2.Click += E2_Click;
+                            controllo = true;
+                        }
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+                            g2.Click += G2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f2.Content = "CA";
+                            VettCacciatorpediniere[0] = "F2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f2.Content = "CA";
+                        VettCacciatorpediniere[1] = "F2";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+                                f3.Click += F3_Click;
+                                controllo = true;
+                            }
+                            if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
+                            {
+                                e2.IsEnabled = true;
+                                e2.Click += E2_Click;
+                                controllo = true;
+                            }
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+                                g2.Click += G2_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f2.Content = "S1";
+                                VettSottomarino1[0] = "F2";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e2")
+                            {
+                                VettSottomarino1[1] = "F2";
+                                VettSottomarino1[2] = "G2";
+                                f2.Content = "S1";
+                                g2.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino1[1] = "F2";
+                                VettSottomarino1[2] = "F1";
+                                f2.Content = "S1";
+                                f1.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g2")
+                            {
+                                VettSottomarino1[1] = "F2";
+                                VettSottomarino1[2] = "E2";
+                                f2.Content = "S1";
+                                e2.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f1")
+                            {
+                                VettSottomarino1[1] = "F2";
+                                VettSottomarino1[2] = "F3";
+                                f2.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+                                f3.Click += F3_Click;
+                                controllo = true;
+                            }
+                            if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
+                            {
+                                e2.IsEnabled = true;
+                                e2.Click += E2_Click;
+                                controllo = true;
+                            }
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+                                g2.Click += G2_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f2.Content = "S2";
+                                VettSottomarino2[0] = "F2";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e2")
+                            {
+                                VettSottomarino2[1] = "F2";
+                                VettSottomarino2[2] = "G2";
+                                f2.Content = "S2";
+                                g2.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino2[1] = "F2";
+                                VettSottomarino2[2] = "F1";
+                                f2.Content = "S2";
+                                f1.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g2")
+                            {
+                                VettSottomarino2[1] = "F2";
+                                VettSottomarino2[2] = "E2";
+                                f2.Content = "S2";
+                                e2.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f1")
+                            {
+                                VettSottomarino2[1] = "F2";
+                                VettSottomarino2[2] = "F3";
+                                f2.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+                            f3.Click += F3_Click;
+                            controllo = true;
+                        }
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+                            g2.Click += G2_Click;
+                            controllo = true;
+                        }
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
+                        {
+                            e2.IsEnabled = true;
+                            e2.Click += E2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f2.Content = "CO";
+                            VettCorazzate[0] = "F2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e2")
+                        {
+                            VettCorazzate[1] = "F2";
+                            VettCorazzate[2] = "G2";
+                            VettCorazzate[3] = "H2";
+                            f2.Content = "CO";
+                            g2.Content = "CO";
+                            h2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f1")
+                        {
+                            VettCorazzate[1] = "F2";
+                            VettCorazzate[2] = "F3";
+                            VettCorazzate[3] = "F4";
+                            f2.Content = "CO";
+                            f3.Content = "CO";
+                            f4.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g2")
+                        {
+                            VettCorazzate[1] = "F2";
+                            VettCorazzate[2] = "E2";
+                            VettCorazzate[3] = "D2";
+                            f2.Content = "CO";
+                            e2.Content = "CO";
+                            d2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P" && j2.Content.ToString() != "CA" && j2.Content.ToString() != "CO" && j2.Content.ToString() != "S1" && j2.Content.ToString() != "S2" && j2.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+                            g2.Click += G2_Click;
+                            controllo = true;
+                        }
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
+                        {
+                            e2.IsEnabled = true;
+                            e2.Click += E2_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f2.Content = "P";
+                            VettPortaerei[0] = "F2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e2")
+                        {
+                            VettPortaerei[1] = "F2";
+                            VettPortaerei[2] = "G2";
+                            VettPortaerei[3] = "H2";
+                            VettPortaerei[4] = "I2";
+                            f2.Content = "P";
+                            g2.Content = "P";
+                            h2.Content = "P";
+                            i2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f1")
+                        {
+                            VettPortaerei[1] = "F2";
+                            VettPortaerei[2] = "F3";
+                            VettPortaerei[3] = "F4";
+                            VettPortaerei[4] = "F5";
+                            f2.Content = "P";
+                            f3.Content = "P";
+                            f4.Content = "P";
+                            f5.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g2")
+                        {
+                            VettPortaerei[1] = "F2";
+                            VettPortaerei[2] = "E2";
+                            VettPortaerei[3] = "D2";
+                            VettPortaerei[4] = "C2";
+                            f2.Content = "P";
+                            e2.Content = "P";
+                            d2.Content = "P";
+                            c2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f2";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G2_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void F4_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+                            f3.Click += F3_Click;
+                            controllo = true;
+                        }
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
+                        {
+                            e4.IsEnabled = true;
+                            e4.Click += E4_Click;
+                            controllo = true;
+                        }
+                        if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                        {
+                            g4.IsEnabled = true;
+                            g4.Click += G4_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f4.Content = "CA";
+                            VettCacciatorpediniere[0] = "F4";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f4.Content = "CA";
+                        VettCacciatorpediniere[1] = "F4";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+                                f3.Click += F3_Click;
+                                controllo = true;
+                            }
+                            if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
+                            {
+                                f5.IsEnabled = true;
+                                f5.Click += F5_Click;
+                                controllo = true;
+                            }
+                            if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
+                            {
+                                g4.IsEnabled = true;
+                                g4.Click += G4_Click;
+                                controllo = true;
+                            }
+                            if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
+                            {
+                                e4.IsEnabled = true;
+                                e4.Click += E4_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f4.Content = "S1";
+                                VettSottomarino1[0] = "F4";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e4")
+                            {
+                                VettSottomarino1[1] = "F4";
+                                VettSottomarino1[2] = "G4";
+                                f4.Content = "S1";
+                                g4.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f5")
+                            {
+                                VettSottomarino1[1] = "F4";
+                                VettSottomarino1[2] = "F3";
+                                f4.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g4")
+                            {
+                                VettSottomarino1[1] = "F4";
+                                VettSottomarino1[2] = "E4";
+                                f4.Content = "S1";
+                                e4.Content = "S1";
+                                btnConferma.IsEnabled = true;
+
+                            }
+                            else if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino1[1] = "F4";
+                                VettSottomarino1[2] = "F5";
+                                f4.Content = "S1";
+                                f5.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+                                f3.Click += F3_Click;
+                                controllo = true;
+                            }
+                            if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
+                            {
+                                f5.IsEnabled = true;
+                                f5.Click += F5_Click;
+                                controllo = true;
+                            }
+                            if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
+                            {
+                                e4.IsEnabled = true;
+                                e4.Click += E4_Click;
+                                controllo = true;
+                            }
+                            if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
+                            {
+                                g4.IsEnabled = true;
+                                g4.Click += G4_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f4.Content = "S2";
+                                VettSottomarino2[0] = "F4";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e4")
+                            {
+                                VettSottomarino2[1] = "F4";
+                                VettSottomarino2[2] = "G4";
+                                f4.Content = "S2";
+                                g4.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f5")
+                            {
+                                VettSottomarino2[1] = "F4";
+                                VettSottomarino2[2] = "F3";
+                                f4.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g4")
+                            {
+                                VettSottomarino2[1] = "F4";
+                                VettSottomarino2[2] = "E4";
+                                f4.Content = "S2";
+                                e4.Content = "S2";
+                                btnConferma.IsEnabled = true;
+
+                            }
+                            else if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino2[1] = "F4";
+                                VettSottomarino2[2] = "F5";
+                                f4.Content = "S2";
+                                f5.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+                            f3.Click += F3_Click;
+                            controllo = true;
+                        }
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P" && i4.Content.ToString() != "CA" && i4.Content.ToString() != "CO" && i4.Content.ToString() != "S1" && i4.Content.ToString() != "S2" && i4.Content.ToString() != "P")
+                        {
+                            g4.IsEnabled = true;
+                            g4.Click += G4_Click;
+                            controllo = true;
+                        }
+                        if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
+                        {
+                            e4.IsEnabled = true;
+                            e4.Click += E4_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f4.Content = "CO";
+                            VettCorazzate[0] = "F4";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e4")
+                        {
+                            VettCorazzate[1] = "F4";
+                            VettCorazzate[2] = "G4";
+                            VettCorazzate[3] = "H4";
+                            f4.Content = "CO";
+                            g4.Content = "CO";
+                            h4.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "f5")
+                        {
+                            VettCorazzate[1] = "F4";
+                            VettCorazzate[2] = "F3";
+                            VettCorazzate[3] = "F2";
+                            f4.Content = "CO";
+                            f3.Content = "CO";
+                            f2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "f3")
+                        {
+                            VettCorazzate[1] = "F4";
+                            VettCorazzate[2] = "F5";
+                            VettCorazzate[3] = "F6";
+                            f4.Content = "CO";
+                            f5.Content = "CO";
+                            f6.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "f5")
+                        {
+                            VettCorazzate[1] = "F4";
+                            VettCorazzate[2] = "F3";
+                            VettCorazzate[3] = "F2";
+                            f4.Content = "CO";
+                            f3.Content = "CO";
+                            f2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P" && i4.Content.ToString() != "CA" && i4.Content.ToString() != "CO" && i4.Content.ToString() != "S1" && i4.Content.ToString() != "S2" && i4.Content.ToString() != "P" && j4.Content.ToString() != "CA" && j4.Content.ToString() != "CO" && j4.Content.ToString() != "S1" && j4.Content.ToString() != "S2" && j4.Content.ToString() != "P")
+                        {
+                            g4.IsEnabled = true;
+                            g4.Click += G4_Click;
+                            controllo = true;
+                        }
+                        if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
+                        {
+                            e4.IsEnabled = true;
+                            e4.Click += E4_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f4.Content = "P";
+                            VettPortaerei[0] = "F4";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e4")
+                        {
+                            VettPortaerei[1] = "F4";
+                            VettPortaerei[2] = "G4";
+                            VettPortaerei[3] = "H4";
+                            VettPortaerei[4] = "I4";
+                            f4.Content = "P";
+                            g4.Content = "P";
+                            h4.Content = "P";
+                            i4.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "f5")
+                        {
+                            VettPortaerei[1] = "F4";
+                            VettPortaerei[2] = "F3";
+                            VettPortaerei[3] = "F2";
+                            VettPortaerei[4] = "F1";
+                            f4.Content = "P";
+                            f3.Content = "P";
+                            f2.Content = "P";
+                            f1.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        else if (bottoneScelto == "35")
+                        {
+                            VettPortaerei[1] = "F4";
+                            VettPortaerei[2] = "F5";
+                            VettPortaerei[3] = "F6";
+                            VettPortaerei[4] = "F7";
+                            f4.Content = "P";
+                            f5.Content = "P";
+                            f6.Content = "P";
+                            f7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f4";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G4_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void F3_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+                            f2.Click += F2_Click;
+                            controllo = true;
+                        }
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += C3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "CA";
+                            VettCacciatorpediniere[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f3.Content = "CA";
+                        VettCacciatorpediniere[1] = "F3";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f4.IsEnabled = true;
+                                f4.Click += F4_Click;
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
+                            {
+                                e3.IsEnabled = true;
+                                e3.Click += E3_Click;
+                                controllo = true;
+                            }
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+                                g3.Click += G3_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f3.Content = "S1";
+                                VettSottomarino1[0] = "F3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "G3";
+                                f3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f4")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "F2";
+                                f2.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "E3";
+                                e3.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "F4";
+                                f3.Content = "S1";
+                                f4.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f4.IsEnabled = true;
+                                f4.Click += F4_Click;
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
+                            {
+                                e3.IsEnabled = true;
+                                e3.Click += E3_Click;
+                                controllo = true;
+                            }
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+                                g3.Click += G3_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f3.Content = "S1";
+                                VettSottomarino2[0] = "F3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e3")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "G3";
+                                f3.Content = "S2";
+                                g3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f4")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "F2";
+                                f2.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "E3";
+                                e3.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "F4";
+                                f3.Content = "S2";
+                                f4.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += G3_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "CO";
+                            VettCorazzate[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e3")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "H3";
+                            f3.Content = "CO";
+                            f3.Content = "CO";
+                            g3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f2")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "F4";
+                            VettCorazzate[3] = "F5";
+                            f3.Content = "CO";
+                            f4.Content = "CO";
+                            f5.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f4")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "F2";
+                            VettCorazzate[3] = "F1";
+                            f3.Content = "CO";
+                            f2.Content = "CO";
+                            f1.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g3")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "D3";
+                            VettCorazzate[3] = "C3";
+                            f3.Content = "CO";
+                            d3.Content = "CO";
+                            c3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && j3.Content.ToString() != "CA" && j3.Content.ToString() != "CO" && j3.Content.ToString() != "S1" && j3.Content.ToString() != "S2" && j3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += G3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "P";
+                            VettPortaerei[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e3")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "G3";
+                            VettPortaerei[3] = "H3";
+                            VettPortaerei[4] = "I3";
+                            f3.Content = "P";
+                            g3.Content = "P";
+                            h3.Content = "P";
+                            i3.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f2")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "F4";
+                            VettPortaerei[3] = "F5";
+                            VettPortaerei[4] = "F6";
+                            f6.Content = "P";
+                            f3.Content = "P";
+                            f4.Content = "P";
+                            f5.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g3")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "E3";
+                            VettPortaerei[3] = "D3";
+                            VettPortaerei[4] = "C3";
+                            f3.Content = "P";
+                            e3.Content = "P";
+                            d3.Content = "P";
+                            c3.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f3";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G3_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void F5_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+                            f2.Click += F2_Click;
+                            controllo = true;
+                        }
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += C3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "CA";
+                            VettCacciatorpediniere[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f3.Content = "CA";
+                        VettCacciatorpediniere[1] = "F3";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f4.IsEnabled = true;
+                                f4.Click += F4_Click;
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
+                            {
+                                e3.IsEnabled = true;
+                                e3.Click += E3_Click;
+                                controllo = true;
+                            }
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+                                g3.Click += G3_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f3.Content = "S1";
+                                VettSottomarino1[0] = "F3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "G3";
+                                f3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f4")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "F2";
+                                f2.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "E3";
+                                e3.Content = "S1";
+                                f3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "F4";
+                                f3.Content = "S1";
+                                f4.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+                                f2.Click += F2_Click;
+                                controllo = true;
+                            }
+                            if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f4.IsEnabled = true;
+                                f4.Click += F4_Click;
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
+                            {
+                                e3.IsEnabled = true;
+                                e3.Click += E3_Click;
+                                controllo = true;
+                            }
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+                                g3.Click += G3_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f3.Content = "S1";
+                                VettSottomarino2[0] = "F3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e3")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "G3";
+                                f3.Content = "S2";
+                                g3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f4")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "F2";
+                                f2.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "E3";
+                                e3.Content = "S2";
+                                f3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino2[1] = "F3";
+                                VettSottomarino2[2] = "F4";
+                                f3.Content = "S2";
+                                f4.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += G3_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "CO";
+                            VettCorazzate[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e3")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "H3";
+                            f3.Content = "CO";
+                            f3.Content = "CO";
+                            g3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f2")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "F4";
+                            VettCorazzate[3] = "F5";
+                            f3.Content = "CO";
+                            f4.Content = "CO";
+                            f5.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f4")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "F2";
+                            VettCorazzate[3] = "F1";
+                            f3.Content = "CO";
+                            f2.Content = "CO";
+                            f1.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g3")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "D3";
+                            VettCorazzate[3] = "C3";
+                            f3.Content = "CO";
+                            d3.Content = "CO";
+                            c3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f4.IsEnabled = true;
+                            f4.Click += F4_Click;
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
+                        {
+                            e3.IsEnabled = true;
+                            e3.Click += E3_Click;
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && j3.Content.ToString() != "CA" && j3.Content.ToString() != "CO" && j3.Content.ToString() != "S1" && j3.Content.ToString() != "S2" && j3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+                            g3.Click += G3_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f3.Content = "P";
+                            VettPortaerei[0] = "F3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e3")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "G3";
+                            VettPortaerei[3] = "H3";
+                            VettPortaerei[4] = "I3";
+                            f3.Content = "P";
+                            g3.Content = "P";
+                            h3.Content = "P";
+                            i3.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f2")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "F4";
+                            VettPortaerei[3] = "F5";
+                            VettPortaerei[4] = "F6";
+                            f6.Content = "P";
+                            f3.Content = "P";
+                            f4.Content = "P";
+                            f5.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g3")
+                        {
+                            VettPortaerei[1] = "F3";
+                            VettPortaerei[2] = "E3";
+                            VettPortaerei[3] = "D3";
+                            VettPortaerei[4] = "C3";
+                            f3.Content = "P";
+                            e3.Content = "P";
+                            d3.Content = "P";
+                            c3.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f3";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void F6_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
+                        {
+                            e6.IsEnabled = true;
+                            e6.Click += E6_Click;
+                            controllo = true;
+                        }
+                        if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
+                        {
+                            g6.IsEnabled = true;
+                            g6.Click += G6_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f6.Content = "CA";
+                            VettCacciatorpediniere[0] = "F6";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f6.Content = "CA";
+                        VettCacciatorpediniere[1] = "F6";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                            {
+                                f5.IsEnabled = true;
+                                f5.Click += F5_Click;
+                                controllo = true;
+                            }
+                            if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
+                            {
+                                f7.IsEnabled = true;
+                                f7.Click += F7_Click;
+                                controllo = true;
+                            }
+                            if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
+                            {
+                                e6.IsEnabled = true;
+                                e6.Click += E6_Click;
+                                controllo = true;
+                            }
+                            if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
+                            {
+                                g6.IsEnabled = true;
+                                g6.Click += G6_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f6.Content = "S1";
+                                VettSottomarino1[0] = "F6";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e6")
+                            {
+                                VettSottomarino1[1] = "F6";
+                                VettSottomarino1[2] = "G6";
+                                f6.Content = "S1";
+                                g6.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f5")
+                            {
+                                VettSottomarino1[1] = "F6";
+                                VettSottomarino1[2] = "F7";
+                                f6.Content = "S1";
+                                f7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g6")
+                            {
+                                VettSottomarino1[1] = "F6";
+                                VettSottomarino1[2] = "E6";
+                                e6.Content = "S1";
+                                f6.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f7")
+                            {
+                                VettSottomarino1[1] = "F6";
+                                VettSottomarino1[2] = "F5";
+                                f6.Content = "S1";
+                                f5.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                            {
+                                f5.IsEnabled = true;
+                                f5.Click += F5_Click;
+                                controllo = true;
+                            }
+                            if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
+                            {
+                                f7.IsEnabled = true;
+                                f7.Click += F7_Click;
+                                controllo = true;
+                            }
+                            if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
+                            {
+                                e6.IsEnabled = true;
+                                e6.Click += E6_Click;
+                                controllo = true;
+                            }
+                            if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
+                            {
+                                g6.IsEnabled = true;
+                                g6.Click += G6_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f6.Content = "S2";
+                                VettSottomarino2[0] = "F6";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e6")
+                            {
+                                VettSottomarino2[1] = "F6";
+                                VettSottomarino2[2] = "G6";
+                                f6.Content = "S2";
+                                g6.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f5")
+                            {
+                                VettSottomarino2[1] = "F6";
+                                VettSottomarino2[2] = "F7";
+                                f6.Content = "S2";
+                                f7.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g6")
+                            {
+                                VettSottomarino2[1] = "F6";
+                                VettSottomarino2[2] = "E6";
+                                e6.Content = "S2";
+                                f6.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f7")
+                            {
+                                VettSottomarino2[1] = "F6";
+                                VettSottomarino2[2] = "F5";
+                                f6.Content = "S2";
+                                f5.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P" && i6.Content.ToString() != "CA" && i6.Content.ToString() != "CO" && i6.Content.ToString() != "S1" && i6.Content.ToString() != "S2" && i6.Content.ToString() != "P")
+                        {
+                            g6.IsEnabled = true;
+                            g6.Click += G6_Click;
+                            controllo = true;
+                        }
+                        if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
+                        {
+                            e6.IsEnabled = true;
+                            e6.Click += E6_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f6.Content = "CO";
+                            VettCorazzate[0] = "F6";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e6")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "G6";
+                            VettCorazzate[3] = "H6";
+                            f6.Content = "CO";
+                            h6.Content = "CO";
+                            g6.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f5")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "F7";
+                            VettCorazzate[3] = "F5";
+                            f6.Content = "CO";
+                            f7.Content = "CO";
+                            f5.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f7")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "F5";
+                            VettCorazzate[3] = "F4";
+                            f6.Content = "CO";
+                            f5.Content = "CO";
+                            f4.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g6")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "D6";
+                            VettCorazzate[3] = "C6";
+                            f6.Content = "CO";
+                            d6.Content = "CO";
+                            c6.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
+                        {
+                            e6.IsEnabled = true;
+                            e6.Click += E6_Click;
+                            controllo = true;
+                        }
+                        if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P" && i6.Content.ToString() != "CA" && i6.Content.ToString() != "CO" && i6.Content.ToString() != "S1" && i6.Content.ToString() != "S2" && i6.Content.ToString() != "P" && j6.Content.ToString() != "CA" && j6.Content.ToString() != "CO" && j6.Content.ToString() != "S1" && j6.Content.ToString() != "S2" && j6.Content.ToString() != "P")
+                        {
+                            g6.IsEnabled = true;
+                            g6.Click += G6_Click;
+                            controllo = true;
+                        }
+                        if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f5.IsEnabled = true;
+                            f5.Click += F5_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f6.Content = "P";
+                            VettPortaerei[0] = "F6";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e6")
+                        {
+                            VettPortaerei[1] = "F6";
+                            VettPortaerei[2] = "G6";
+                            VettPortaerei[3] = "H6";
+                            VettPortaerei[4] = "I6";
+                            f6.Content = "P";
+                            g6.Content = "P";
+                            h6.Content = "P";
+                            i6.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f5")
+                        {
+                            VettPortaerei[1] = "F6";
+                            VettPortaerei[2] = "F7";
+                            VettPortaerei[3] = "F8";
+                            VettPortaerei[4] = "F9";
+                            f6.Content = "P";
+                            f7.Content = "P";
+                            f8.Content = "P";
+                            f9.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g6")
+                        {
+                            VettPortaerei[1] = "F6";
+                            VettPortaerei[2] = "E6";
+                            VettPortaerei[3] = "D6";
+                            VettPortaerei[4] = "C6";
+                            f6.Content = "P";
+                            e6.Content = "P";
+                            d6.Content = "P";
+                            c6.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f7")
+                        {
+                            VettPortaerei[1] = "F6";
+                            VettPortaerei[2] = "F5";
+                            VettPortaerei[3] = "F4";
+                            VettPortaerei[4] = "F3";
+                            f6.Content = "P";
+                            f5.Content = "P";
+                            f4.Content = "P";
+                            f3.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f6";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void F7_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
+                        {
+                            f6.IsEnabled = true;
+                            f6.Click += F6_Click;
+                            controllo = true;
+                        }
+                        if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
+                        {
+                            e7.IsEnabled = true;
+                            e7.Click += E7_Click;
+                            controllo = true;
+                        }
+                        if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
+                        {
+                            g7.IsEnabled = true;
+                            g7.Click += G7_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f7.Content = "CA";
+                            VettCacciatorpediniere[0] = "F7";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f7.Content = "CA";
+                        VettCacciatorpediniere[1] = "F7";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f8.IsEnabled = true;
+                                f8.Click += F8_Click;
+                                controllo = true;
+                            }
+                            if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f6.IsEnabled = true;
+                                f6.Click += F6_Click;
+                                controllo = true;
+                            }
+                            if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
+                            {
+                                e7.IsEnabled = true;
+                                e7.Click += E7_Click;
+                                controllo = true;
+                            }
+                            if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
+                            {
+                                g7.IsEnabled = true;
+                                g7.Click += G7_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f7.Content = "S1";
+                                VettSottomarino1[0] = "F7";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e7")
+                            {
+                                VettSottomarino1[1] = "F7";
+                                VettSottomarino1[2] = "G7";
+                                f7.Content = "S1";
+                                g7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f6")
+                            {
+                                VettSottomarino1[1] = "F7";
+                                VettSottomarino1[2] = "F8";
+                                f7.Content = "S1";
+                                f8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g7")
+                            {
+                                VettSottomarino1[1] = "F7";
+                                VettSottomarino1[2] = "E7";
+                                e7.Content = "S1";
+                                f7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f8")
+                            {
+                                VettSottomarino1[1] = "F6";
+                                VettSottomarino1[2] = "F7";
+                                f6.Content = "S1";
+                                f7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f8.IsEnabled = true;
+                                f8.Click += F8_Click;
+                                controllo = true;
+                            }
+                            if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                            {
+                                f6.IsEnabled = true;
+                                f6.Click += F6_Click;
+                                controllo = true;
+                            }
+                            if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
+                            {
+                                e7.IsEnabled = true;
+                                e7.Click += E7_Click;
+                                controllo = true;
+                            }
+                            if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
+                            {
+                                g7.IsEnabled = true;
+                                g7.Click += G7_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f7.Content = "S2";
+                                VettSottomarino2[0] = "F7";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e7")
+                            {
+                                VettSottomarino2[1] = "F7";
+                                VettSottomarino2[2] = "G7";
+                                f7.Content = "S2";
+                                g7.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f6")
+                            {
+                                VettSottomarino2[1] = "F7";
+                                VettSottomarino2[2] = "F8";
+                                f7.Content = "S2";
+                                f8.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g7")
+                            {
+                                VettSottomarino2[1] = "F7";
+                                VettSottomarino2[2] = "E7";
+                                e7.Content = "S2";
+                                f7.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f8")
+                            {
+                                VettSottomarino2[1] = "F6";
+                                VettSottomarino2[2] = "F7";
+                                f6.Content = "S2";
+                                f7.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f6.IsEnabled = true;
+                            f6.Click += F6_Click;
+                            controllo = true;
+                        }
+                        if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P" && i7.Content.ToString() != "CA" && i7.Content.ToString() != "CO" && i7.Content.ToString() != "S1" && i7.Content.ToString() != "S2" && i7.Content.ToString() != "P")
+                        {
+                            g7.IsEnabled = true;
+                            g7.Click += G7_Click;
+                            controllo = true;
+                        }
+                        if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
+                        {
+                            e7.IsEnabled = true;
+                            e7.Click += E7_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f7.Content = "CO";
+                            VettCorazzate[0] = "F7";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e7")
+                        {
+                            VettCorazzate[1] = "F7";
+                            VettCorazzate[2] = "G7";
+                            VettCorazzate[3] = "H7";
+                            f7.Content = "CO";
+                            h7.Content = "CO";
+                            g7.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f6")
+                        {
+                            VettCorazzate[1] = "F9";
+                            VettCorazzate[2] = "F7";
+                            VettCorazzate[3] = "F8";
+                            f9.Content = "CO";
+                            f7.Content = "CO";
+                            f8.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f8")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "F5";
+                            VettCorazzate[3] = "F7";
+                            f6.Content = "CO";
+                            f5.Content = "CO";
+                            f7.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g7")
+                        {
+                            VettCorazzate[1] = "F7";
+                            VettCorazzate[2] = "D7";
+                            VettCorazzate[3] = "C7";
+                            f7.Content = "CO";
+                            d7.Content = "CO";
+                            c7.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
+                        {
+                            f6.IsEnabled = true;
+                            f6.Click += F6_Click;
+                            controllo = true;
+                        }
+                        if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
+                        {
+                            e7.IsEnabled = true;
+                            e7.Click += E7_Click;
+                            controllo = true;
+                        }
+                        if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P" && i7.Content.ToString() != "CA" && i7.Content.ToString() != "CO" && i7.Content.ToString() != "S1" && i7.Content.ToString() != "S2" && i7.Content.ToString() != "P" && j7.Content.ToString() != "CA" && j7.Content.ToString() != "CO" && j7.Content.ToString() != "S1" && j7.Content.ToString() != "S2" && j7.Content.ToString() != "P")
+                        {
+                            g7.IsEnabled = true;
+                            g7.Click += G7_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f7.Content = "P";
+                            VettPortaerei[0] = "F7";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e7")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "G7";
+                            VettPortaerei[3] = "H7";
+                            VettPortaerei[4] = "I7";
+                            f7.Content = "P";
+                            g7.Content = "P";
+                            h7.Content = "P";
+                            i7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f6")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "F8";
+                            VettPortaerei[3] = "F9";
+                            VettPortaerei[4] = "F10";
+                            f7.Content = "P";
+                            f8.Content = "P";
+                            f9.Content = "P";
+                            f10.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g7")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "E7";
+                            VettPortaerei[3] = "D7";
+                            VettPortaerei[4] = "C7";
+                            f7.Content = "P";
+                            e7.Content = "P";
+                            d7.Content = "P";
+                            c7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f8")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "F6";
+                            VettPortaerei[3] = "F5";
+                            VettPortaerei[4] = "F4";
+                            f6.Content = "P";
+                            f5.Content = "P";
+                            f4.Content = "P";
+                            f7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f7";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G7_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void F8_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                        {
+                            f9.IsEnabled = true;
+                            f9.Click += F9_Click;
+                            controllo = true;
+                        }
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
+                        {
+                            e8.IsEnabled = true;
+                            e8.Click += E8_Click;
+                            controllo = true;
+                        }
+                        if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
+                        {
+                            g8.IsEnabled = true;
+                            g8.Click += G8_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f8.Content = "CA";
+                            VettCacciatorpediniere[0] = "F8";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f8.Content = "CA";
+                        VettCacciatorpediniere[1] = "F8";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f9.IsEnabled = true;
+                                f9.Click += F9_Click;
+                                controllo = true;
+                            }
+                            if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                            {
+                                f7.IsEnabled = true;
+                                f7.Click += F7_Click;
+                                controllo = true;
+                            }
+                            if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
+                            {
+                                e8.IsEnabled = true;
+                                e8.Click += E8_Click;
+                                controllo = true;
+                            }
+                            if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
+                            {
+                                g8.IsEnabled = true;
+                                g8.Click += G8_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f8.Content = "S1";
+                                VettSottomarino1[0] = "F8";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e8")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "G8";
+                                f8.Content = "S1";
+                                g8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f7")
+                            {
+                                VettSottomarino1[1] = "F9";
+                                VettSottomarino1[2] = "F8";
+                                f9.Content = "S1";
+                                f8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g8")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "E8";
+                                e8.Content = "S1";
+                                f8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f9")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "F7";
+                                f8.Content = "S1";
+                                f7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f9.IsEnabled = true;
+                                f9.Click += F9_Click;
+                                controllo = true;
+                            }
+                            if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                            {
+                                f7.IsEnabled = true;
+                                f7.Click += F7_Click;
+                                controllo = true;
+                            }
+                            if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
+                            {
+                                e8.IsEnabled = true;
+                                e8.Click += E8_Click;
+                                controllo = true;
+                            }
+                            if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
+                            {
+                                g8.IsEnabled = true;
+                                g8.Click += G8_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f8.Content = "S2";
+                                VettSottomarino2[0] = "F8";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e8")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "G8";
+                                f8.Content = "S1";
+                                g8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f7")
+                            {
+                                VettSottomarino1[1] = "F9";
+                                VettSottomarino1[2] = "F8";
+                                f9.Content = "S1";
+                                f8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g8")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "E8";
+                                e8.Content = "S1";
+                                f8.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f9")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "F7";
+                                f8.Content = "S1";
+                                f7.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P" && i8.Content.ToString() != "CA" && i8.Content.ToString() != "CO" && i8.Content.ToString() != "S1" && i8.Content.ToString() != "S2" && i8.Content.ToString() != "P")
+                        {
+                            g8.IsEnabled = true;
+                            g8.Click += G8_Click;
+                            controllo = true;
+                        }
+                        if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
+                        {
+                            e8.IsEnabled = true;
+                            e8.Click += E8_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f8.Content = "CO";
+                            VettCorazzate[0] = "F8";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e8")
+                        {
+                            VettCorazzate[1] = "F8";
+                            VettCorazzate[2] = "G8";
+                            VettCorazzate[3] = "H8";
+                            f8.Content = "CO";
+                            h8.Content = "CO";
+                            g8.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f7")
+                        {
+                            VettCorazzate[1] = "F9";
+                            VettCorazzate[2] = "F10";
+                            VettCorazzate[3] = "F8";
+                            f9.Content = "CO";
+                            f10.Content = "CO";
+                            f8.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f9")
+                        {
+                            VettCorazzate[1] = "F6";
+                            VettCorazzate[2] = "F8";
+                            VettCorazzate[3] = "F7";
+                            f6.Content = "CO";
+                            f8.Content = "CO";
+                            f7.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g8")
+                        {
+                            VettCorazzate[1] = "F8";
+                            VettCorazzate[2] = "D8";
+                            VettCorazzate[3] = "C8";
+                            f8.Content = "CO";
+                            d8.Content = "CO";
+                            c8.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
+                        {
+                            f7.IsEnabled = true;
+                            f7.Click += F7_Click;
+                            controllo = true;
+                        }
+                        if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
+                        {
+                            e8.IsEnabled = true;
+                            e8.Click += E8_Click;
+                            controllo = true;
+                        }
+                        if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P" && i8.Content.ToString() != "CA" && i8.Content.ToString() != "CO" && i8.Content.ToString() != "S1" && i8.Content.ToString() != "S2" && i8.Content.ToString() != "P" && j8.Content.ToString() != "CA" && j8.Content.ToString() != "CO" && j8.Content.ToString() != "S1" && j8.Content.ToString() != "S2" && j8.Content.ToString() != "P")
+                        {
+                            g8.IsEnabled = true;
+                            g8.Click += G8_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f8.Content = "P";
+                            VettPortaerei[0] = "F8";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e8")
+                        {
+                            VettPortaerei[1] = "F8";
+                            VettPortaerei[2] = "G8";
+                            VettPortaerei[3] = "H8";
+                            VettPortaerei[4] = "I8";
+                            f8.Content = "P";
+                            g8.Content = "P";
+                            h8.Content = "P";
+                            i8.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+
+                        if (bottoneScelto == "g8")
+                        {
+                            VettPortaerei[1] = "F8";
+                            VettPortaerei[2] = "E8";
+                            VettPortaerei[3] = "D8";
+                            VettPortaerei[4] = "C8";
+                            f8.Content = "P";
+                            e8.Content = "P";
+                            d8.Content = "P";
+                            c8.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f9")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "F6";
+                            VettPortaerei[3] = "F5";
+                            VettPortaerei[4] = "F8";
+                            f6.Content = "P";
+                            f5.Content = "P";
+                            f8.Content = "P";
+                            f7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f8";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void F9_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
+                        {
+                            f10.IsEnabled = true;
+                            f10.Click += F10_Click;
+                            controllo = true;
+                        }
+                        if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
+                        {
+                            e9.IsEnabled = true;
+                            e9.Click += E9_Click;
+                            controllo = true;
+                        }
+                        if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
+                        {
+                            g9.IsEnabled = true;
+                            g9.Click += G9_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f9.Content = "CA";
+                            VettCacciatorpediniere[0] = "F9";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f9.Content = "CA";
+                        VettCacciatorpediniere[1] = "F9";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                            {
+                                f8.IsEnabled = true;
+                                f8.Click += F8_Click;
+                                controllo = true;
+                            }
+                            if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
+                            {
+                                e9.IsEnabled = true;
+                                e9.Click += E9_Click;
+                                controllo = true;
+                            }
+                            if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
+                            {
+                                g9.IsEnabled = true;
+                                g9.Click += G9_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f9.Content = "S1";
+                                VettSottomarino1[0] = "F9";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e9")
+                            {
+                                VettSottomarino1[1] = "F9";
+                                VettSottomarino1[2] = "G9";
+                                f9.Content = "S1";
+                                g9.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f8")
+                            {
+                                VettSottomarino1[1] = "F9";
+                                VettSottomarino1[2] = "F10";
+                                f9.Content = "S1";
+                                f10.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g9")
+                            {
+                                VettSottomarino1[1] = "F9";
+                                VettSottomarino1[2] = "E9";
+                                e9.Content = "S1";
+                                f9.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f10")
+                            {
+                                VettSottomarino1[1] = "F8";
+                                VettSottomarino1[2] = "F9";
+                                f8.Content = "S1";
+                                f9.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                            {
+                                f8.IsEnabled = true;
+                                f8.Click += F8_Click;
+                                controllo = true;
+                            }
+                            if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
+                            {
+                                e9.IsEnabled = true;
+                                e9.Click += E9_Click;
+                                controllo = true;
+                            }
+                            if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
+                            {
+                                g9.IsEnabled = true;
+                                g9.Click += G9_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f9.Content = "S2";
+                                VettSottomarino2[0] = "F9";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e9")
+                            {
+                                VettSottomarino2[1] = "F9";
+                                VettSottomarino2[2] = "G9";
+                                f9.Content = "S2";
+                                g9.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f8")
+                            {
+                                VettSottomarino2[1] = "F9";
+                                VettSottomarino2[2] = "F10";
+                                f9.Content = "S2";
+                                f10.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g9")
+                            {
+                                VettSottomarino2[1] = "F9";
+                                VettSottomarino2[2] = "E9";
+                                e9.Content = "S2";
+                                f9.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "f10")
+                            {
+                                VettSottomarino2[1] = "F8";
+                                VettSottomarino2[2] = "F9";
+                                f8.Content = "S2";
+                                f9.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P" && i9.Content.ToString() != "CA" && i9.Content.ToString() != "CO" && i9.Content.ToString() != "S1" && i9.Content.ToString() != "S2" && i9.Content.ToString() != "P")
+                        {
+                            g9.IsEnabled = true;
+                            g9.Click += G9_Click;
+                            controllo = true;
+                        }
+                        if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
+                        {
+                            e9.IsEnabled = true;
+                            e9.Click += E9_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f9.Content = "CO";
+                            VettCorazzate[0] = "F9";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e9")
+                        {
+                            VettCorazzate[1] = "F9";
+                            VettCorazzate[2] = "G9";
+                            VettCorazzate[3] = "H9";
+                            f9.Content = "CO";
+                            h9.Content = "CO";
+                            g9.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f10")
+                        {
+                            VettCorazzate[1] = "F9";
+                            VettCorazzate[2] = "F8";
+                            VettCorazzate[3] = "F7";
+                            f9.Content = "CO";
+                            f8.Content = "CO";
+                            f7.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g9")
+                        {
+                            VettCorazzate[1] = "F9";
+                            VettCorazzate[2] = "D9";
+                            VettCorazzate[3] = "C9";
+                            f9.Content = "CO";
+                            d9.Content = "CO";
+                            c9.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f8.IsEnabled = true;
+                            f8.Click += F8_Click;
+                            controllo = true;
+                        }
+                        if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
+                        {
+                            e9.IsEnabled = true;
+                            e9.Click += E9_Click;
+                            controllo = true;
+                        }
+                        if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P" && i9.Content.ToString() != "CA" && i9.Content.ToString() != "CO" && i9.Content.ToString() != "S1" && i9.Content.ToString() != "S2" && i9.Content.ToString() != "P" && j9.Content.ToString() != "CA" && j9.Content.ToString() != "CO" && j9.Content.ToString() != "S1" && j9.Content.ToString() != "S2" && j9.Content.ToString() != "P")
+                        {
+                            g9.IsEnabled = true;
+                            g9.Click += G9_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f9.Content = "P";
+                            VettPortaerei[0] = "F9";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e9")
+                        {
+                            VettPortaerei[1] = "F9";
+                            VettPortaerei[2] = "G9";
+                            VettPortaerei[3] = "H9";
+                            VettPortaerei[4] = "I9";
+                            f9.Content = "P";
+                            g9.Content = "P";
+                            h9.Content = "P";
+                            i9.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+
+                        if (bottoneScelto == "g9")
+                        {
+                            VettPortaerei[1] = "F9";
+                            VettPortaerei[2] = "E9";
+                            VettPortaerei[3] = "D9";
+                            VettPortaerei[4] = "C9";
+                            f9.Content = "P";
+                            e9.Content = "P";
+                            d9.Content = "P";
+                            c9.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "f10")
+                        {
+                            VettPortaerei[1] = "F7";
+                            VettPortaerei[2] = "F6";
+                            VettPortaerei[3] = "F9";
+                            VettPortaerei[4] = "F8";
+                            f6.Content = "P";
+                            f9.Content = "P";
+                            f8.Content = "P";
+                            f7.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f9";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G9_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void F10_Click(object sender, RoutedEventArgs e)
+        {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                        {
+                            f9.IsEnabled = true;
+                            f9.Click += F9_Click;
+                            controllo = true;
+                        }
+                        if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
+                        {
+                            e10.IsEnabled = true;
+                            e10.Click += E10_Click;
+                            controllo = true;
+                        }
+                        if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
+                        {
+                            g10.IsEnabled = true;
+                            g10.Click += G10_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f10.Content = "CA";
+                            VettCacciatorpediniere[0] = "F10";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        f10.Content = "CA";
+                        VettCacciatorpediniere[1] = "F10";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f9.IsEnabled = true;
+                                f9.Click += F9_Click;
+                                controllo = true;
+                            }
+                            if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
+                            {
+                                e10.IsEnabled = true;
+                                e10.Click += E10_Click;
+                                controllo = true;
+                            }
+                            if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
+                            {
+                                g10.IsEnabled = true;
+                                g10.Click += G10_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f10.Content = "S1";
+                                VettSottomarino1[0] = "F10";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e10")
+                            {
+                                VettSottomarino1[1] = "F10";
+                                VettSottomarino1[2] = "G10";
+                                f10.Content = "S1";
+                                g10.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g10")
+                            {
+                                VettSottomarino1[1] = "F10";
+                                VettSottomarino1[2] = "E10";
+                                e10.Content = "S1";
+                                f10.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
+                            {
+                                f9.IsEnabled = true;
+                                f9.Click += F9_Click;
+                                controllo = true;
+                            }
+                            if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
+                            {
+                                e10.IsEnabled = true;
+                                e10.Click += E10_Click;
+                                controllo = true;
+                            }
+                            if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
+                            {
+                                g10.IsEnabled = true;
+                                g10.Click += G10_Click;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                f10.Content = "S2";
+                                VettSottomarino2[0] = "F10";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "e10")
+                            {
+                                VettSottomarino1[1] = "F10";
+                                VettSottomarino1[2] = "G10";
+                                f10.Content = "S1";
+                                g10.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g10")
+                            {
+                                VettSottomarino1[1] = "F10";
+                                VettSottomarino1[2] = "E10";
+                                e10.Content = "S1";
+                                f10.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f9.IsEnabled = true;
+                            f9.Click += F9_Click;
+                            controllo = true;
+                        }
+                        if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P" && i10.Content.ToString() != "CA" && i10.Content.ToString() != "CO" && i10.Content.ToString() != "S1" && i10.Content.ToString() != "S2" && i10.Content.ToString() != "P")
+                        {
+                            g10.IsEnabled = true;
+                            g10.Click += G10_Click;
+                            controllo = true;
+                        }
+                        if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
+                        {
+                            e10.IsEnabled = true;
+                            e10.Click += E10_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f10.Content = "CO";
+                            VettCorazzate[0] = "F10";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e10")
+                        {
+                            VettCorazzate[1] = "F10";
+                            VettCorazzate[2] = "G10";
+                            VettCorazzate[3] = "H10";
+                            f10.Content = "CO";
+                            h10.Content = "CO";
+                            g10.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g10")
+                        {
+                            VettCorazzate[1] = "F10";
+                            VettCorazzate[2] = "D10";
+                            VettCorazzate[3] = "C10";
+                            f10.Content = "CO";
+                            d10.Content = "CO";
+                            c10.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
+                        {
+                            f9.IsEnabled = true;
+                            f9.Click += F9_Click;
+                            controllo = true;
+                        }
+                        if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
+                        {
+                            e10.IsEnabled = true;
+                            e10.Click += E10_Click;
+                            controllo = true;
+                        }
+                        if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P" && i10.Content.ToString() != "CA" && i10.Content.ToString() != "CO" && i10.Content.ToString() != "S1" && i10.Content.ToString() != "S2" && i10.Content.ToString() != "P" && j10.Content.ToString() != "CA" && j10.Content.ToString() != "CO" && j10.Content.ToString() != "S1" && j10.Content.ToString() != "S2" && j10.Content.ToString() != "P")
+                        {
+                            g10.IsEnabled = true;
+                            g10.Click += G10_Click;
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            f10.Content = "P";
+                            VettPortaerei[0] = "F10";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "e10")
+                        {
+                            VettPortaerei[1] = "F10";
+                            VettPortaerei[2] = "G10";
+                            VettPortaerei[3] = "H10";
+                            VettPortaerei[4] = "I10";
+                            f10.Content = "P";
+                            g10.Content = "P";
+                            h10.Content = "P";
+                            i10.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+
+                        if (bottoneScelto == "g10")
+                        {
+                            VettPortaerei[1] = "F10";
+                            VettPortaerei[2] = "E10";
+                            VettPortaerei[3] = "D10";
+                            VettPortaerei[4] = "C10";
+                            f10.Content = "P";
+                            e10.Content = "P";
+                            d10.Content = "P";
+                            c10.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "f10";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void G8_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void G6_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+        private void G10_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -17892,6 +21518,16 @@ namespace progetto_Battaglia_Navale
             e8.Click += E8_Click;
             e9.Click += E9_Click;
             e10.Click += E10_Click;
+            f1.Click += F1_Click;
+            f2.Click += F2_Click;
+            f3.Click += F3_Click;
+            f4.Click += F4_Click;
+            f5.Click += F5_Click;
+            f6.Click += F6_Click;
+            f7.Click += F7_Click;
+            f8.Click += F8_Click;
+            f9.Click += F9_Click;
+            f10.Click += F10_Click;
         }
 
         private void btnSot_Click(object sender, RoutedEventArgs e)
@@ -17956,6 +21592,16 @@ namespace progetto_Battaglia_Navale
             e8.Click += E8_Click;
             e9.Click += E9_Click;
             e10.Click += E10_Click;
+            f1.Click += F1_Click;
+            f2.Click += F2_Click;
+            f3.Click += F3_Click;
+            f4.Click += F4_Click;
+            f5.Click += F5_Click;
+            f6.Click += F6_Click;
+            f7.Click += F7_Click;
+            f8.Click += F8_Click;
+            f9.Click += F9_Click;
+            f10.Click += F10_Click;
         }
 
         private void btnCor_Click(object sender, RoutedEventArgs e)
@@ -18017,6 +21663,16 @@ namespace progetto_Battaglia_Navale
             e8.Click += E8_Click;
             e9.Click += E9_Click;
             e10.Click += E10_Click;
+            f1.Click += F1_Click;
+            f2.Click += F2_Click;
+            f3.Click += F3_Click;
+            f4.Click += F4_Click;
+            f5.Click += F5_Click;
+            f6.Click += F6_Click;
+            f7.Click += F7_Click;
+            f8.Click += F8_Click;
+            f9.Click += F9_Click;
+            f10.Click += F10_Click;
         }
 
         private void btnPor_Click(object sender, RoutedEventArgs e)
@@ -18078,6 +21734,16 @@ namespace progetto_Battaglia_Navale
             e8.Click += E8_Click;
             e9.Click += E9_Click;
             e10.Click += E10_Click;
+            f1.Click += F1_Click;
+            f2.Click += F2_Click;
+            f3.Click += F3_Click;
+            f4.Click += F4_Click;
+            f5.Click += F5_Click;
+            f6.Click += F6_Click;
+            f7.Click += F7_Click;
+            f8.Click += F8_Click;
+            f9.Click += F9_Click;
+            f10.Click += F10_Click;
         }
 
         private void btnAnnulla_Click(object sender, RoutedEventArgs e)
