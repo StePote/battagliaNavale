@@ -1,0 +1,18 @@
+﻿<Window x:Class="progetto_Battaglia_Navale.accesso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:progetto_Battaglia_Navale"
+        mc:Ignorable="d"
+        Title="accesso" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnAccesso" Content="Accedi" HorizontalAlignment="Left" Margin="354,287,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="Button_Click"/>
+        <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="415,247,0,0" VerticalAlignment="Top" Width="68" Height="24"/>
+        <TextBox x:Name="txtNomeUtente" HorizontalAlignment="Left" Height="23" Margin="283,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+        <Label Content="Nome utente:" HorizontalAlignment="Left" Margin="284,219,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="418,221,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnIndietro" Content="Torna indietro" HorizontalAlignment="Left" Height="30" Margin="701,0,0,0" VerticalAlignment="Top" Width="81" Click="BtnIndietro_Click"/>
+
+    </Grid>
+</Window>

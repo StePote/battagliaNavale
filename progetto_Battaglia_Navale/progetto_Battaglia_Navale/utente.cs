@@ -53,19 +53,24 @@ namespace progetto_Battaglia_Navale
 
         public bool controlloDuplicati(string _email,string _nomeUtente)
         {
+            string nU;
+            string n;
+            string cn;
+            string e;
+            string p;
             bool controllo = false;
-            foreach(string line in System.IO.File.ReadLines(@"progetto_Battaglia_Navale\bin\Debug1\utenti.txt"))
+            foreach(string line in System.IO.File.ReadLines(@"utenti.txt"))
             {
                 if (line != "")
                 {
                     string[] str = line.Split(';');
-                    nomeUtente = str[0];
-                    nome = str[1];
-                    cognome = str[2];
-                    email = str[3];
-                    password = str[4];
+                    nU = str[0];
+                    n = str[1];
+                    cn = str[2];
+                    e = str[3];
+                    p = str[4];
 
-                    if (email == _email || nomeUtente == _nomeUtente)
+                    if (e == _email || nU == _nomeUtente)
                         controllo = true;
                 }
             }

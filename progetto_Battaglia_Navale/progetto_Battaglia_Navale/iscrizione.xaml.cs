@@ -39,16 +39,15 @@ namespace progetto_Battaglia_Navale
             utente.Email = txtEmail.Text;
             utente.Password = txtPassword.Text;
 
-            if (txtNome.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtCognome.Text != ""&& txtNomeUtente.Text != "")
+            if (txtNome.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtCognome.Text != "" && txtNomeUtente.Text != "")
             {
                 if (utente.controlloDuplicati(txtEmail.Text, txtNomeUtente.Text) == true)
                     MessageBox.Show("Nome utente e password già presenti", "Error");
                 else
-                Scrittura();
+                    Scrittura();
             }
             else
                 MessageBox.Show("Errore nella registrazione.\nAssicurarsi di aver inserito tutti i campi e riprovare.", "Error");
-
             MainWindow finestra2 = new MainWindow();
             finestra2.Show();
             this.Close();
@@ -62,12 +61,12 @@ namespace progetto_Battaglia_Navale
         }
         private void Scrittura()
         {
-            string cont=utente.ReadUtenti(fileName);
-            if(cont != "")
-            File.WriteAllText(fileName, cont + "\n" + utente.ToCSV());
+            string cont = utente.ReadUtenti(fileName);
+            if (cont != "")
+                File.WriteAllText(fileName, cont + "\n" + utente.ToCSV());
             else
                 File.WriteAllText(fileName, utente.ToCSV());
-            
+
             MessageBox.Show("Registrazione effettuata con successo", "Completed!");
 
         }

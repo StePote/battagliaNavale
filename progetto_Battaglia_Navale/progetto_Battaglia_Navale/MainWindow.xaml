@@ -8,13 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="305*"/>
-            <RowDefinition Height="114*"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="224"/>
+            <RowDefinition Height="115"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnInizia" Content="Gioca" HorizontalAlignment="Left" Height="50" Margin="306,300,0,0" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Click="btnInizia_Click"/>
-        <Label Content="BATTAGLIA NAVALE" HorizontalAlignment="Left" Height="42" Margin="256,21,0,0" VerticalAlignment="Top" Width="344" FontSize="30" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
-        <TextBox x:Name="nomeUtente" HorizontalAlignment="Left" Height="38" Margin="64,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Grid.Row="1"/>
-        <Label Content="Inserisci il nome utente del tuo avversario:" HorizontalAlignment="Left" Height="28" Margin="14,286,0,0" VerticalAlignment="Top" Width="235" Grid.RowSpan="2" Background="White"/>
-        <Button x:Name="btnIscrizione" HorizontalAlignment="Left" Margin="479,301,0,0" VerticalAlignment="Top" Width="110" Height="50" Grid.RowSpan="2" Content="Iscriviti al nostro &#xD;&#xA;         gioco!" Click="btnIscrizione_Click"/>
+        <Button x:Name="btnInizia" Content="Gioca" HorizontalAlignment="Left" Height="50" Margin="176,4,0,0" VerticalAlignment="Top" Width="110" Click="btnInizia_Click" Grid.Row="3"/>
+        <Label Content="BATTAGLIA NAVALE" HorizontalAlignment="Left" Height="42" Margin="256,2,0,0" VerticalAlignment="Top" Width="344" FontSize="30" FontWeight="Bold" Foreground="White" FontStyle="Italic" Grid.Row="1"/>
+        <Button x:Name="btnIscrizione" HorizontalAlignment="Left" Margin="349,5,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Iscriviti al nostro &#xD;&#xA;         gioco!" Click="btnIscrizione_Click" Grid.Row="3"/>
+        <Button x:Name="btnAccedi" HorizontalAlignment="Left" Margin="505,4,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Accedi" Click="btnAccedi_Click" Grid.Row="3"/>
     </Grid>
 </Window>

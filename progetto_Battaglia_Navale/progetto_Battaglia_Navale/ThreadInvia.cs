@@ -11,10 +11,10 @@ namespace progetto_Battaglia_Navale
 {
     public class ThreadInvia
     {
-        public void inviaInvito() {
+        public void invia(string nU) {
 
             UdpClient client = new UdpClient();
-            byte[] data = Encoding.ASCII.GetBytes("a;utente");
+            byte[] data = Encoding.ASCII.GetBytes("a;"+ nU);
             client.Send(data, data.Length, "localhost", 666);
 
             IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 666);

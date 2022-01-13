@@ -23,26 +23,42 @@ namespace progetto_Battaglia_Navale
     {
         ThreadInvia ti;
         ThreadRicevi tr;
+        string nomeUtente = "";
         public MainWindow()
         {
-            btnInizia.IsEnabled = false;
+            //btnInizia.IsEnabled = false;
             InitializeComponent();
             ti = new ThreadInvia();
             tr = new ThreadRicevi();
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
-            
-            Thread tRicevi= new Thread(new ThreadStart(tr.ricevi));
-            tRicevi.Start();
+            //Thread tInvito = new Thread(new ThreadStart(ti.invia));
+            //Thread tRicevi= new Thread(new ThreadStart(tr.ricevi));
+            //tRicevi.Start();
+        }
+        public MainWindow(string _nomeUtente)
+        {
+            nomeUtente = _nomeUtente;
+            if (nomeUtente != "")
+                MessageBox.Show("Bentornato " + nomeUtente + " !");
         }
         private void btnInizia_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Attendere avversario...", "Connecting");
-            Thread tInvito = new Thread(new ThreadStart(ti.inviaInvito));
-            tInvito.Start();
+            //tInvito.Start(nomeUtente);
+            paginaDiGioco finestra = new paginaDiGioco();
+            finestra.Show();
+            this.Close();
         }
         private void btnIscrizione_Click(object sender, RoutedEventArgs e)
         {
             iscrizione finestra = new iscrizione();
+            finestra.Show();
+            this.Close();
+        }
+
+        private void btnAccedi_Click(object sender, RoutedEventArgs e)
+        {
+            accesso finestra = new accesso();
             finestra.Show();
             this.Close();
         }
