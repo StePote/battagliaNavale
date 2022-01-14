@@ -62,8 +62,8 @@
     <Compile Include="paginaDiGioco.xaml.cs">
       <DependentUpon>paginaDiGioco.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThreadInvia.cs" />
-    <Compile Include="ThreadRicevi.cs" />
+    <Compile Include="Invia.cs" />
+    <Compile Include="Ricevi.cs" />
     <Compile Include="Utente.cs" />
     <Page Include="accesso.xaml">
       <SubType>Designer</SubType>

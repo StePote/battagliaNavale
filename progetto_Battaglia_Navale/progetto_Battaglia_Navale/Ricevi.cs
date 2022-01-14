@@ -9,9 +9,19 @@ using System.Windows.Forms;
 
 namespace progetto_Battaglia_Navale
 {
-    class ThreadRicevi
+    class Ricevi
     {
-        public void ricevi()
+        private string nomeUtente;
+
+        public Ricevi()
+        {
+            this.nomeUtente = "";
+        }
+        public void setNomeUtente(string nomeUtente)
+        {
+            this.nomeUtente = nomeUtente;
+        }
+        public void riceviInvito()
         {
             UdpClient client = new UdpClient(666);
 
@@ -21,7 +31,7 @@ namespace progetto_Battaglia_Navale
             string[] str = risposta.Split(';');
             string apertura = str[0];
             string nomeUtente = str[1];
-            
+            string indirizzo=riceveEP.Address.ToString();
             string message = "L'utente "+ nomeUtente +" vorrebbe gicare con te";
             string caption = "Invito ad una partita";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -31,13 +41,13 @@ namespace progetto_Battaglia_Navale
             result = MessageBox.Show(message, caption, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                byte[] data = Encoding.ASCII.GetBytes("y;utente");
-                client.Send(data, data.Length, "localhost", 666);
+                byte[] data = Encoding.ASCII.GetBytes("y;"+ nomeUtente);
+                client.Send(data, data.Length, indirizzo, 666);
             }
             else if (result == System.Windows.Forms.DialogResult.No)
             {
                 byte[] data = Encoding.ASCII.GetBytes("n;");
-                client.Send(data, data.Length, "localhost", 666);
+                client.Send(data, data.Length, indirizzo, 666);
             }
 
         }

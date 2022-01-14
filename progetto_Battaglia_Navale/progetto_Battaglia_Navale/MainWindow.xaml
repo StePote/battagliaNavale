@@ -13,9 +13,12 @@
             <RowDefinition Height="115"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnInizia" Content="Gioca" HorizontalAlignment="Left" Height="50" Margin="176,4,0,0" VerticalAlignment="Top" Width="110" Click="btnInizia_Click" Grid.Row="3"/>
+        <Button x:Name="btnInizia" Content="Avvia match" HorizontalAlignment="Left" Height="50" Margin="118,11,0,0" VerticalAlignment="Top" Width="110" Click="btnInizia_Click" Grid.Row="3"/>
         <Label Content="BATTAGLIA NAVALE" HorizontalAlignment="Left" Height="42" Margin="256,2,0,0" VerticalAlignment="Top" Width="344" FontSize="30" FontWeight="Bold" Foreground="White" FontStyle="Italic" Grid.Row="1"/>
-        <Button x:Name="btnIscrizione" HorizontalAlignment="Left" Margin="349,5,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Iscriviti al nostro &#xD;&#xA;         gioco!" Click="btnIscrizione_Click" Grid.Row="3"/>
-        <Button x:Name="btnAccedi" HorizontalAlignment="Left" Margin="505,4,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Accedi" Click="btnAccedi_Click" Grid.Row="3"/>
+        <Button x:Name="btnIscrizione" HorizontalAlignment="Left" Margin="421,11,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Iscriviti al nostro &#xD;&#xA;         gioco!" Click="btnIscrizione_Click" Grid.Row="3"/>
+        <Button x:Name="btnAccedi" HorizontalAlignment="Left" Margin="577,10,0,0" VerticalAlignment="Top" Width="110" Height="50" Content="Accedi" Click="btnAccedi_Click" Grid.Row="3"/>
+        <Button x:Name="btnRiceviInvito" Content="Ricevi invito a &#xD;&#xA;      partita" HorizontalAlignment="Left" Margin="274,11,0,0" Grid.Row="3" VerticalAlignment="Top" Width="110" Height="50" Click="btnRiceviInvito_Click"/>
+        <TextBox x:Name="txtIp" HorizontalAlignment="Left" Height="30" Margin="128,91,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.RowSpan="2"/>
+        <Label Content="Inserisci l'ip dell'avversario per avviare il match" HorizontalAlignment="Left" Margin="46,60,0,0" Grid.Row="2" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -77,3 +77,5 @@ C:\Users\Kevin\Desktop\kevin\tecnologie\5c\battagliaNavale-main\battagliaNavale\
 C:\Users\Kevin\Desktop\kevin\tecnologie\5c\battagliaNavale-main\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\Desktop\kevin\tecnologie\5c\battagliaNavale-main\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.exe
 C:\Users\Kevin\Desktop\kevin\tecnologie\5c\battagliaNavale-main\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\progetto_Battaglia_Navale.pdb
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\accesso.g.cs
+E:\potenza\battagliaNavale\progetto_Battaglia_Navale\progetto_Battaglia_Navale\obj\Debug\accesso.baml
