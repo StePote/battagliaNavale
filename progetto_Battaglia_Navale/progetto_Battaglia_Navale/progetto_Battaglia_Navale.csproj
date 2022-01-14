@@ -59,6 +59,9 @@
     <Compile Include="accesso.xaml.cs">
       <DependentUpon>accesso.xaml</DependentUpon>
     </Compile>
+    <Compile Include="campoBattaglia.xaml.cs">
+      <DependentUpon>campoBattaglia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="paginaDiGioco.xaml.cs">
       <DependentUpon>paginaDiGioco.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,10 @@
     <Compile Include="Ricevi.cs" />
     <Compile Include="Utente.cs" />
     <Page Include="accesso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="campoBattaglia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

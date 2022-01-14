@@ -12,7 +12,7 @@ namespace progetto_Battaglia_Navale
     class Ricevi
     {
         private string nomeUtente;
-
+        campoBattaglia c = new campoBattaglia();
         public Ricevi()
         {
             this.nomeUtente = "";
@@ -43,6 +43,11 @@ namespace progetto_Battaglia_Navale
             {
                 byte[] data = Encoding.ASCII.GetBytes("y;"+ nomeUtente);
                 client.Send(data, data.Length, indirizzo, 666);
+                paginaDiGioco finestra = new paginaDiGioco();
+                MainWindow finestra2 = new MainWindow();
+                finestra.Show();
+                finestra2.Close();
+                finestra.modalitaAvvioPartita("invito");
             }
             else if (result == System.Windows.Forms.DialogResult.No)
             {
@@ -50,6 +55,29 @@ namespace progetto_Battaglia_Navale
                 client.Send(data, data.Length, indirizzo, 666);
             }
 
+        }
+
+        public string ricezioneCoordinate()
+        {
+            UdpClient client = new UdpClient(666);
+
+            IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 666);
+            byte[] dataReceived = client.Receive(ref riceveEP);
+            String risposta = Encoding.ASCII.GetString(dataReceived);
+            string[] str = risposta.Split(';');
+            string coordinata = str[0]+str[1];
+            return coordinata;
+        }
+        public void ricezioneCoordinatePerPrimo()
+        {
+            UdpClient client = new UdpClient(666);
+
+            IPEndPoint riceveEP = new IPEndPoint(IPAddress.Any, 666);
+            byte[] dataReceived = client.Receive(ref riceveEP);
+            String risposta = Encoding.ASCII.GetString(dataReceived);
+            string[] str = risposta.Split(';');
+            string coordinata = str[0] + str[1];
+            //c.ricezionePrimaVolta();
         }
     }
 }

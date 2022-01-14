@@ -25,5 +25,6 @@
         <Label Content="Legenda:&#xD;&#xA;- Cacciatorpediniere:&#xD;&#xA;grandezza= 2 caselle | num. navi disponibili=1&#xD;&#xA;&#xD;&#xA;-Sottomarino:&#xD;&#xA;grandezza=3 caselle | num. navi disponibili=2&#xD;&#xA;&#xD;&#xA;-Corazzate:&#xD;&#xA;grandezza=4 caselle | num. navi disponibili=1&#xD;&#xA;&#xD;&#xA;-Portaerei:&#xD;&#xA;grandezza=5 caselle | num. navi disponibili=1" HorizontalAlignment="Left" Height="209" Margin="523,208,-2,0" VerticalAlignment="Top" Width="271"/>
         <Button x:Name="btnConferma" Content="Conferma" HorizontalAlignment="Left" Margin="570,37,0,0" VerticalAlignment="Top" Width="75" Click="btnConferma_Click"/>
         <Button x:Name="btnAnnulla" Content="Annulla" HorizontalAlignment="Left" Margin="666,38,0,0" VerticalAlignment="Top" Width="75" Click="btnAnnulla_Click"/>
+        <Button x:Name="btnGioca" Content="Inizia match" HorizontalAlignment="Left" Margin="482,36,0,0" VerticalAlignment="Top" Width="75" Click="btnGioca_Click"/>
     </Grid>
 </Window>

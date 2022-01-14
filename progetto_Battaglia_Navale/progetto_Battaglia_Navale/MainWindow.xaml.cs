@@ -54,6 +54,7 @@ namespace progetto_Battaglia_Navale
             else
                 MessageBox.Show("Inserisci ip avversario","Errore di comunicazione");
         }
+
         private void btnIscrizione_Click(object sender, RoutedEventArgs e)
         {
             iscrizione finestra = new iscrizione();
@@ -72,6 +73,13 @@ namespace progetto_Battaglia_Navale
         {
             MessageBox.Show("Attendere avversario...", "Connecting");
             tr.riceviInvito();
+        }
+
+        private void btnProva_Click(object sender, RoutedEventArgs e)
+        {
+            campoBattaglia finestra = new campoBattaglia("");
+            finestra.Show();
+            this.Close();
         }
     }
 }

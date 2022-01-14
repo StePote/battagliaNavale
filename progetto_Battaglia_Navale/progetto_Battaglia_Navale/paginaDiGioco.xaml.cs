@@ -137,6 +137,7 @@ namespace progetto_Battaglia_Navale
         int countSott;
         string bottoneScelto;
         bool c;
+        string modAvvio;
         public paginaDiGioco()
         {
             InitializeComponent();
@@ -154,7 +155,9 @@ namespace progetto_Battaglia_Navale
             VettPortaerei = new string[5];
             countSott = 0;
             btnConferma.IsEnabled = false;
+            btnGioca.IsEnabled = false;
             bottoneScelto = "";
+            modAvvio = "";
             c = false;
             //this.Background = new ImageBrush(new BitmapImage(new Uri(@"pack://application:,,,/progetto_Battaglia_Navale;component/battaglia-navale.png")));
             a1.Click += A1_Click;
@@ -1338,25 +1341,21 @@ namespace progetto_Battaglia_Navale
                         if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             b1.IsEnabled = true;
-                            b1.Click += B1_Click;
                             controllo = true;
                         }
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
                             controllo = true;
                         }
                         if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             a2.IsEnabled = true;
-                            a2.Click += A2_Click;
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1391,13 +1390,11 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -1451,13 +1448,11 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -1512,13 +1507,11 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1567,13 +1560,11 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1638,25 +1629,25 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1691,19 +1682,19 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
+
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -1756,19 +1747,17 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -1822,13 +1811,13 @@ namespace progetto_Battaglia_Navale
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1877,13 +1866,13 @@ namespace progetto_Battaglia_Navale
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1932,25 +1921,25 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -1985,19 +1974,19 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2051,19 +2040,19 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2118,19 +2107,19 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2189,13 +2178,13 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2272,25 +2261,25 @@ namespace progetto_Battaglia_Navale
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2325,25 +2314,25 @@ namespace progetto_Battaglia_Navale
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2404,25 +2393,25 @@ namespace progetto_Battaglia_Navale
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2484,19 +2473,19 @@ namespace progetto_Battaglia_Navale
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2565,13 +2554,13 @@ namespace progetto_Battaglia_Navale
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2647,25 +2636,25 @@ namespace progetto_Battaglia_Navale
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2700,25 +2689,25 @@ namespace progetto_Battaglia_Navale
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2779,25 +2768,25 @@ namespace progetto_Battaglia_Navale
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -2859,25 +2848,25 @@ namespace progetto_Battaglia_Navale
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -2946,13 +2935,13 @@ namespace progetto_Battaglia_Navale
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3040,25 +3029,25 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3093,25 +3082,25 @@ namespace progetto_Battaglia_Navale
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3172,25 +3161,25 @@ namespace progetto_Battaglia_Navale
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3252,25 +3241,25 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3339,19 +3328,19 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P" && i4.Content.ToString() != "CA" && i4.Content.ToString() != "CO" && i4.Content.ToString() != "S1" && i4.Content.ToString() != "S2" && i4.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3392,7 +3381,8 @@ namespace progetto_Battaglia_Navale
                             d4.Content = "P";
                             e4.Content = "P";
                             btnConferma.IsEnabled = true;
-                        }else if (bottoneScelto == "e5")
+                        }
+                        else if (bottoneScelto == "e5")
                         {
                             VettPortaerei[1] = "E4";
                             VettPortaerei[2] = "E3";
@@ -3427,25 +3417,25 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3480,19 +3470,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3546,19 +3536,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3613,13 +3603,13 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3678,13 +3668,13 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3749,25 +3739,25 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -3802,25 +3792,25 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3881,25 +3871,25 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -3961,13 +3951,13 @@ namespace progetto_Battaglia_Navale
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4036,13 +4026,13 @@ namespace progetto_Battaglia_Navale
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4091,25 +4081,25 @@ namespace progetto_Battaglia_Navale
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4144,25 +4134,25 @@ namespace progetto_Battaglia_Navale
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4223,25 +4213,25 @@ namespace progetto_Battaglia_Navale
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 c3.IsEnabled = true;
-                                c3.Click += C3_Click;
+
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4303,19 +4293,19 @@ namespace progetto_Battaglia_Navale
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             c3.IsEnabled = true;
-                            c3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4384,13 +4374,13 @@ namespace progetto_Battaglia_Navale
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4467,25 +4457,25 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4520,25 +4510,25 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4599,25 +4589,25 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4679,19 +4669,19 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4760,19 +4750,19 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4837,13 +4827,13 @@ namespace progetto_Battaglia_Navale
                         if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             b1.IsEnabled = true;
-                            b1.Click += B1_Click;
+
                             controllo = true;
                         }
                         if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             a2.IsEnabled = true;
-                            a2.Click += A2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4878,13 +4868,13 @@ namespace progetto_Battaglia_Navale
                             if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 b1.IsEnabled = true;
-                                b1.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 a2.IsEnabled = true;
-                                a2.Click += A2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4913,13 +4903,13 @@ namespace progetto_Battaglia_Navale
                             if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 b1.IsEnabled = true;
-                                b1.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 a2.IsEnabled = true;
-                                a2.Click += A2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -4949,13 +4939,13 @@ namespace progetto_Battaglia_Navale
                         if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             b1.IsEnabled = true;
-                            b1.Click += B1_Click;
+
                             controllo = true;
                         }
                         if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a2.IsEnabled = true;
-                            a2.Click += A2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -4984,13 +4974,13 @@ namespace progetto_Battaglia_Navale
                         if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             b1.IsEnabled = true;
-                            b1.Click += B1_Click;
+
                             controllo = true;
                         }
                         if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a2.IsEnabled = true;
-                            a2.Click += A2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5030,19 +5020,19 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                         {
                             a1.IsEnabled = true;
-                            a1.Click += A1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5077,13 +5067,13 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
+
                                 controllo = true;
                             }
                             if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 a3.IsEnabled = true;
-                                a3.Click += A3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5129,13 +5119,13 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
+
                                 controllo = true;
                             }
                             if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 a3.IsEnabled = true;
-                                a3.Click += A3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5182,13 +5172,13 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5224,13 +5214,13 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5280,19 +5270,19 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             a2.IsEnabled = true;
-                            a2.Click += A2_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5327,19 +5317,19 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 a4.IsEnabled = true;
-                                a4.Click += A4_Click;
+
                                 controllo = true;
                             }
                             if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                             {
                                 a2.IsEnabled = true;
-                                a2.Click += A2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5385,19 +5375,19 @@ namespace progetto_Battaglia_Navale
                             if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 b3.IsEnabled = true;
-                                b3.Click += B3_Click;
+
                                 controllo = true;
                             }
                             if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 a4.IsEnabled = true;
-                                a4.Click += A4_Click;
+
                                 controllo = true;
                             }
                             if (a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                             {
                                 a2.IsEnabled = true;
-                                a2.Click += A2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5444,13 +5434,13 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5499,13 +5489,13 @@ namespace progetto_Battaglia_Navale
                         if (b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             b3.IsEnabled = true;
-                            b3.Click += B3_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5555,19 +5545,19 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5602,19 +5592,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 a5.IsEnabled = true;
-                                a5.Click += A5_Click;
+
                                 controllo = true;
                             }
                             if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                             {
                                 a3.IsEnabled = true;
-                                a3.Click += A3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5660,19 +5650,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 a5.IsEnabled = true;
-                                a5.Click += A5_Click;
+
                                 controllo = true;
                             }
                             if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                             {
                                 a3.IsEnabled = true;
-                                a3.Click += A3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5719,19 +5709,19 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                         {
                             a3.IsEnabled = true;
-                            a3.Click += A3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5780,13 +5770,13 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5851,19 +5841,19 @@ namespace progetto_Battaglia_Navale
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -5898,19 +5888,19 @@ namespace progetto_Battaglia_Navale
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 a6.IsEnabled = true;
-                                a6.Click += A6_Click;
+
                                 controllo = true;
                             }
                             if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 a4.IsEnabled = true;
-                                a4.Click += A4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -5956,19 +5946,19 @@ namespace progetto_Battaglia_Navale
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 a6.IsEnabled = true;
-                                a6.Click += A6_Click;
+
                                 controllo = true;
                             }
                             if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                             {
                                 a4.IsEnabled = true;
-                                a4.Click += A4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6015,19 +6005,19 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6076,19 +6066,19 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                         {
                             a4.IsEnabled = true;
-                            a4.Click += A4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6154,19 +6144,19 @@ namespace progetto_Battaglia_Navale
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6201,19 +6191,19 @@ namespace progetto_Battaglia_Navale
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 a7.IsEnabled = true;
-                                a7.Click += A7_Click;
+
                                 controllo = true;
                             }
                             if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 a5.IsEnabled = true;
-                                a5.Click += A5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6259,19 +6249,19 @@ namespace progetto_Battaglia_Navale
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 a6.IsEnabled = true;
-                                a6.Click += A6_Click;
+
                                 controllo = true;
                             }
                             if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                             {
                                 a5.IsEnabled = true;
-                                a5.Click += A5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6318,19 +6308,19 @@ namespace progetto_Battaglia_Navale
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6379,19 +6369,19 @@ namespace progetto_Battaglia_Navale
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6456,19 +6446,19 @@ namespace progetto_Battaglia_Navale
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6503,19 +6493,19 @@ namespace progetto_Battaglia_Navale
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                             {
                                 a8.IsEnabled = true;
-                                a8.Click += A8_Click;
+
                                 controllo = true;
                             }
                             if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 a6.IsEnabled = true;
-                                a6.Click += A6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6561,19 +6551,19 @@ namespace progetto_Battaglia_Navale
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                             {
                                 a8.IsEnabled = true;
-                                a8.Click += A8_Click;
+
                                 controllo = true;
                             }
                             if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 a6.IsEnabled = true;
-                                a6.Click += A6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6620,19 +6610,19 @@ namespace progetto_Battaglia_Navale
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6681,13 +6671,13 @@ namespace progetto_Battaglia_Navale
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P" && a3.Content.ToString() != "CA" && a3.Content.ToString() != "CO" && a3.Content.ToString() != "S1" && a3.Content.ToString() != "S2" && a3.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6737,19 +6727,19 @@ namespace progetto_Battaglia_Navale
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a9.IsEnabled = true;
-                            a9.Click += A9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6784,19 +6774,19 @@ namespace progetto_Battaglia_Navale
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                             {
                                 a9.IsEnabled = true;
-                                a9.Click += A9_Click;
+
                                 controllo = true;
                             }
                             if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 a7.IsEnabled = true;
-                                a7.Click += A7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6842,19 +6832,19 @@ namespace progetto_Battaglia_Navale
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                             {
                                 a9.IsEnabled = true;
-                                a9.Click += A9_Click;
+
                                 controllo = true;
                             }
                             if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 a7.IsEnabled = true;
-                                a7.Click += A7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -6901,13 +6891,13 @@ namespace progetto_Battaglia_Navale
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -6956,13 +6946,13 @@ namespace progetto_Battaglia_Navale
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P" && a4.Content.ToString() != "CA" && a4.Content.ToString() != "CO" && a4.Content.ToString() != "S1" && a4.Content.ToString() != "S2" && a4.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7012,19 +7002,19 @@ namespace progetto_Battaglia_Navale
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                         {
                             a10.IsEnabled = true;
-                            a10.Click += A10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7059,13 +7049,13 @@ namespace progetto_Battaglia_Navale
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 a8.IsEnabled = true;
-                                a8.Click += A8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7110,13 +7100,13 @@ namespace progetto_Battaglia_Navale
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 a8.IsEnabled = true;
-                                a8.Click += A8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7163,13 +7153,13 @@ namespace progetto_Battaglia_Navale
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7205,13 +7195,13 @@ namespace progetto_Battaglia_Navale
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7261,13 +7251,13 @@ namespace progetto_Battaglia_Navale
                         if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a9.IsEnabled = true;
-                            a9.Click += A9_Click;
+
                             controllo = true;
                         }
                         if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b10.IsEnabled = true;
-                            b10.Click += B10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7302,13 +7292,13 @@ namespace progetto_Battaglia_Navale
                             if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 b10.IsEnabled = true;
-                                b10.Click += B10_Click;
+
                                 controllo = true;
                             }
                             if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 a9.IsEnabled = true;
-                                a9.Click += A9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7338,13 +7328,13 @@ namespace progetto_Battaglia_Navale
                             if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 b10.IsEnabled = true;
-                                b10.Click += B10_Click;
+
                                 controllo = true;
                             }
                             if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 a9.IsEnabled = true;
-                                a9.Click += A9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7376,13 +7366,13 @@ namespace progetto_Battaglia_Navale
                         if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                         {
                             b10.IsEnabled = true;
-                            b10.Click += B10_Click;
+
                             controllo = true;
                         }
                         if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a9.IsEnabled = true;
-                            a9.Click += A9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7412,13 +7402,13 @@ namespace progetto_Battaglia_Navale
                         if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             b10.IsEnabled = true;
-                            b10.Click += B10_Click;
+
                             controllo = true;
                         }
                         if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a9.IsEnabled = true;
-                            a9.Click += A9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7460,19 +7450,19 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                         {
                             a1.IsEnabled = true;
-                            a1.Click += A1_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7507,13 +7497,13 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
+
                                 controllo = true;
                             }
                             if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 c1.IsEnabled = true;
-                                c1.Click += C1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7558,13 +7548,13 @@ namespace progetto_Battaglia_Navale
                             if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 b2.IsEnabled = true;
-                                b2.Click += B2_Click;
+
                                 controllo = true;
                             }
                             if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 c1.IsEnabled = true;
-                                c1.Click += C1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7610,13 +7600,13 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7652,13 +7642,13 @@ namespace progetto_Battaglia_Navale
                         if (b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b2.IsEnabled = true;
-                            b2.Click += B2_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7707,19 +7697,19 @@ namespace progetto_Battaglia_Navale
                         if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             b1.IsEnabled = true;
-                            b1.Click += B1_Click;
+
                             controllo = true;
                         }
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7754,19 +7744,19 @@ namespace progetto_Battaglia_Navale
                             if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                             {
                                 b1.IsEnabled = true;
-                                b1.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                             {
                                 d1.IsEnabled = true;
-                                d1.Click += D1_Click;
+
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7811,19 +7801,19 @@ namespace progetto_Battaglia_Navale
                             if (b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                             {
                                 b1.IsEnabled = true;
-                                b1.Click += B1_Click;
+
                                 controllo = true;
                             }
                             if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                             {
                                 d1.IsEnabled = true;
-                                d1.Click += D1_Click;
+
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -7869,13 +7859,13 @@ namespace progetto_Battaglia_Navale
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7924,13 +7914,13 @@ namespace progetto_Battaglia_Navale
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -7979,19 +7969,19 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8026,19 +8016,19 @@ namespace progetto_Battaglia_Navale
                             if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 e1.IsEnabled = true;
-                                e1.Click += E1_Click;
+
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
+
                                 controllo = true;
                             }
                             if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                             {
                                 c1.IsEnabled = true;
-                                c1.Click += C1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8083,19 +8073,19 @@ namespace progetto_Battaglia_Navale
                             if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 e1.IsEnabled = true;
-                                e1.Click += E1_Click;
+
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
+
                                 controllo = true;
                             }
                             if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                             {
                                 c1.IsEnabled = true;
-                                c1.Click += C1_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8141,19 +8131,19 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && a1.Content.ToString() != "CA" && a1.Content.ToString() != "CO" && a1.Content.ToString() != "S1" && a1.Content.ToString() != "S2" && a1.Content.ToString() != "P")
                         {
                             c1.IsEnabled = true;
-                            c1.Click += C1_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8202,13 +8192,13 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8273,19 +8263,19 @@ namespace progetto_Battaglia_Navale
                         if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                         {
                             f1.IsEnabled = true;
-                            f1.Click += F1_Click;
+
                             controllo = true;
                         }
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8320,19 +8310,19 @@ namespace progetto_Battaglia_Navale
                             if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
                             {
                                 f1.IsEnabled = true;
-                                f1.Click += F1_Click;
+
                                 controllo = true;
                             }
                             if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 d1.IsEnabled = true;
-                                d1.Click += D1_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8377,19 +8367,19 @@ namespace progetto_Battaglia_Navale
                             if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
                             {
                                 f1.IsEnabled = true;
-                                f1.Click += F1_Click;
+
                                 controllo = true;
                             }
                             if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                             {
                                 d1.IsEnabled = true;
-                                d1.Click += D1_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8435,19 +8425,19 @@ namespace progetto_Battaglia_Navale
                         if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
                         {
                             f1.IsEnabled = true;
-                            f1.Click += F1_Click;
+
                             controllo = true;
                         }
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8496,19 +8486,19 @@ namespace progetto_Battaglia_Navale
                         if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P")
                         {
                             f1.IsEnabled = true;
-                            f1.Click += F1_Click;
+
                             controllo = true;
                         }
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8573,25 +8563,25 @@ namespace progetto_Battaglia_Navale
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             d1.IsEnabled = true;
-                            d1.Click += D1_Click;
+
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8626,19 +8616,19 @@ namespace progetto_Battaglia_Navale
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
+
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8699,19 +8689,16 @@ namespace progetto_Battaglia_Navale
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
                                 controllo = true;
                             }
                             if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 d3.IsEnabled = true;
-                                d3.Click += D3_Click;
                                 controllo = true;
                             }
                             if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                             {
                                 c2.IsEnabled = true;
-                                c2.Click += C2_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -8773,19 +8760,16 @@ namespace progetto_Battaglia_Navale
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
                             controllo = true;
                         }
                         if (c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && a2.Content.ToString() != "CA" && a2.Content.ToString() != "CO" && a2.Content.ToString() != "S1" && a2.Content.ToString() != "S2" && a2.Content.ToString() != "P")
                         {
                             c2.IsEnabled = true;
-                            c2.Click += C2_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8844,13 +8828,13 @@ namespace progetto_Battaglia_Navale
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d3.IsEnabled = true;
-                            d3.Click += D3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8927,25 +8911,23 @@ namespace progetto_Battaglia_Navale
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
                             controllo = true;
                         }
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -8980,19 +8962,17 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9037,19 +9017,16 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
                                 controllo = true;
                             }
                             if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                             {
                                 d2.IsEnabled = true;
-                                d2.Click += D2_Click;
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9095,19 +9072,19 @@ namespace progetto_Battaglia_Navale
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9156,19 +9133,19 @@ namespace progetto_Battaglia_Navale
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             d2.IsEnabled = true;
-                            d2.Click += D2_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9233,19 +9210,18 @@ namespace progetto_Battaglia_Navale
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
                             controllo = true;
                         }
                         if (a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a10.IsEnabled = true;
-                            a10.Click += A10_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9280,13 +9256,13 @@ namespace progetto_Battaglia_Navale
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 c10.IsEnabled = true;
-                                c10.Click += C10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9332,13 +9308,13 @@ namespace progetto_Battaglia_Navale
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 c10.IsEnabled = true;
-                                c10.Click += C10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9385,13 +9361,13 @@ namespace progetto_Battaglia_Navale
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9430,13 +9406,13 @@ namespace progetto_Battaglia_Navale
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9489,20 +9465,20 @@ namespace progetto_Battaglia_Navale
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click; ;
+
                             controllo = true;
                         }
 
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b10.IsEnabled = true;
-                            b10.Click += B10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9537,19 +9513,19 @@ namespace progetto_Battaglia_Navale
                             if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                             {
                                 d10.IsEnabled = true;
-                                d10.Click += D10_Click; ;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                             {
                                 b10.IsEnabled = true;
-                                b10.Click += B10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9610,19 +9586,19 @@ namespace progetto_Battaglia_Navale
                             if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                             {
                                 d10.IsEnabled = true;
-                                d10.Click += D10_Click; ;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                             {
                                 b10.IsEnabled = true;
-                                b10.Click += B10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9684,13 +9660,13 @@ namespace progetto_Battaglia_Navale
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click; ;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9739,13 +9715,13 @@ namespace progetto_Battaglia_Navale
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click; ;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9809,19 +9785,18 @@ namespace progetto_Battaglia_Navale
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -9856,19 +9831,19 @@ namespace progetto_Battaglia_Navale
                             if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                             {
                                 e10.IsEnabled = true;
-                                e10.Click += E10_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                             {
                                 c10.IsEnabled = true;
-                                c10.Click += C10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9914,19 +9889,19 @@ namespace progetto_Battaglia_Navale
                             if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                             {
                                 e10.IsEnabled = true;
-                                e10.Click += E10_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                             {
                                 c10.IsEnabled = true;
-                                c10.Click += C10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -9972,19 +9947,19 @@ namespace progetto_Battaglia_Navale
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && a10.Content.ToString() != "CA" && a10.Content.ToString() != "CO" && a10.Content.ToString() != "S1" && a10.Content.ToString() != "S2" && a10.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10033,13 +10008,12 @@ namespace progetto_Battaglia_Navale
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10105,19 +10079,19 @@ namespace progetto_Battaglia_Navale
                         if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f10.IsEnabled = true;
-                            f10.Click += F10_Click;
+
                             controllo = true;
                         }
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10152,19 +10126,19 @@ namespace progetto_Battaglia_Navale
                             if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
                             {
                                 f10.IsEnabled = true;
-                                f10.Click += F10_Click;
+
                                 controllo = true;
                             }
                             if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 d10.IsEnabled = true;
-                                d10.Click += D10_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10209,19 +10183,19 @@ namespace progetto_Battaglia_Navale
                             if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
                             {
                                 f10.IsEnabled = true;
-                                f10.Click += F10_Click;
+
                                 controllo = true;
                             }
                             if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 d10.IsEnabled = true;
-                                d10.Click += D10_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10267,19 +10241,19 @@ namespace progetto_Battaglia_Navale
                         if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
                         {
                             f10.IsEnabled = true;
-                            f10.Click += F10_Click;
+
                             controllo = true;
                         }
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10328,19 +10302,19 @@ namespace progetto_Battaglia_Navale
                         if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P" && i10.Content.ToString() != "CA" && i10.Content.ToString() != "CO" && i10.Content.ToString() != "S1" && i10.Content.ToString() != "S2" && i10.Content.ToString() != "P")
                         {
                             f10.IsEnabled = true;
-                            f10.Click += F10_Click;
+
                             controllo = true;
                         }
                         if (d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             d10.IsEnabled = true;
-                            d10.Click += D10_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10404,25 +10378,25 @@ namespace progetto_Battaglia_Navale
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b10.IsEnabled = true;
-                            b10.Click += B10_Click;
+
                             controllo = true;
                         }
                         if (a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             a9.IsEnabled = true;
-                            a9.Click += A9_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10457,13 +10431,13 @@ namespace progetto_Battaglia_Navale
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10525,13 +10499,13 @@ namespace progetto_Battaglia_Navale
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10594,13 +10568,13 @@ namespace progetto_Battaglia_Navale
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10649,13 +10623,13 @@ namespace progetto_Battaglia_Navale
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10720,25 +10694,25 @@ namespace progetto_Battaglia_Navale
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             c10.IsEnabled = true;
-                            c10.Click += C10_Click;
+
                             controllo = true;
                         }
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10773,19 +10747,19 @@ namespace progetto_Battaglia_Navale
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10846,19 +10820,19 @@ namespace progetto_Battaglia_Navale
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -10920,13 +10894,13 @@ namespace progetto_Battaglia_Navale
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -10995,13 +10969,13 @@ namespace progetto_Battaglia_Navale
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11065,25 +11039,25 @@ namespace progetto_Battaglia_Navale
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11118,19 +11092,19 @@ namespace progetto_Battaglia_Navale
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11191,19 +11165,19 @@ namespace progetto_Battaglia_Navale
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11265,19 +11239,19 @@ namespace progetto_Battaglia_Navale
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && a9.Content.ToString() != "CA" && a9.Content.ToString() != "CO" && a9.Content.ToString() != "S1" && a9.Content.ToString() != "S2" && a9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11336,13 +11310,13 @@ namespace progetto_Battaglia_Navale
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11420,25 +11394,25 @@ namespace progetto_Battaglia_Navale
                         if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11473,19 +11447,19 @@ namespace progetto_Battaglia_Navale
                             if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11546,19 +11520,19 @@ namespace progetto_Battaglia_Navale
                             if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11620,19 +11594,19 @@ namespace progetto_Battaglia_Navale
                         if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11691,19 +11665,19 @@ namespace progetto_Battaglia_Navale
                         if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P" && i9.Content.ToString() != "CA" && i9.Content.ToString() != "CO" && i9.Content.ToString() != "S1" && i9.Content.ToString() != "S2" && i9.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11780,25 +11754,25 @@ namespace progetto_Battaglia_Navale
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b9.IsEnabled = true;
-                            b9.Click += B9_Click;
+
                             controllo = true;
                         }
                         if (a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             a8.IsEnabled = true;
-                            a8.Click += A8_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -11833,19 +11807,19 @@ namespace progetto_Battaglia_Navale
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11907,19 +11881,19 @@ namespace progetto_Battaglia_Navale
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                             {
                                 b9.IsEnabled = true;
-                                b9.Click += B9_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -11982,13 +11956,13 @@ namespace progetto_Battaglia_Navale
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12047,13 +12021,13 @@ namespace progetto_Battaglia_Navale
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12118,25 +12092,25 @@ namespace progetto_Battaglia_Navale
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c9.IsEnabled = true;
-                            c9.Click += C9_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12171,25 +12145,25 @@ namespace progetto_Battaglia_Navale
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -12250,25 +12224,25 @@ namespace progetto_Battaglia_Navale
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                             {
                                 c9.IsEnabled = true;
-                                c9.Click += C9_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -12330,13 +12304,13 @@ namespace progetto_Battaglia_Navale
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12405,13 +12379,13 @@ namespace progetto_Battaglia_Navale
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12475,25 +12449,25 @@ namespace progetto_Battaglia_Navale
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d9.IsEnabled = true;
-                            d9.Click += D9_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12528,25 +12502,25 @@ namespace progetto_Battaglia_Navale
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -12607,25 +12581,25 @@ namespace progetto_Battaglia_Navale
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 d9.IsEnabled = true;
-                                d9.Click += D9_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -12687,19 +12661,19 @@ namespace progetto_Battaglia_Navale
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && a8.Content.ToString() != "CA" && a8.Content.ToString() != "CO" && a8.Content.ToString() != "S1" && a8.Content.ToString() != "S2" && a8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12768,13 +12742,12 @@ namespace progetto_Battaglia_Navale
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12851,25 +12824,25 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -12904,25 +12877,25 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -12983,25 +12956,25 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -13063,19 +13036,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13144,19 +13117,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P" && i8.Content.ToString() != "CA" && i8.Content.ToString() != "CO" && i8.Content.ToString() != "S1" && i8.Content.ToString() != "S2" && i8.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13233,25 +13206,25 @@ namespace progetto_Battaglia_Navale
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             a7.IsEnabled = true;
-                            a7.Click += A7_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13286,19 +13259,19 @@ namespace progetto_Battaglia_Navale
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -13360,19 +13333,18 @@ namespace progetto_Battaglia_Navale
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                             {
                                 b8.IsEnabled = true;
-                                b8.Click += B8_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -13435,19 +13407,19 @@ namespace progetto_Battaglia_Navale
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b8.IsEnabled = true;
-                            b8.Click += B8_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13506,13 +13478,13 @@ namespace progetto_Battaglia_Navale
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13589,25 +13561,25 @@ namespace progetto_Battaglia_Navale
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13642,25 +13614,25 @@ namespace progetto_Battaglia_Navale
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -13721,25 +13693,25 @@ namespace progetto_Battaglia_Navale
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                             {
                                 c8.IsEnabled = true;
-                                c8.Click += C8_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -13801,19 +13773,19 @@ namespace progetto_Battaglia_Navale
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             c8.IsEnabled = true;
-                            c8.Click += C8_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13882,13 +13854,12 @@ namespace progetto_Battaglia_Navale
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -13964,25 +13935,25 @@ namespace progetto_Battaglia_Navale
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14017,25 +13988,25 @@ namespace progetto_Battaglia_Navale
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+                                ;
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14096,25 +14067,24 @@ namespace progetto_Battaglia_Navale
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
                                 controllo = true;
                             }
                             if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 d8.IsEnabled = true;
-                                d8.Click += D8_Click;
+
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14176,25 +14146,25 @@ namespace progetto_Battaglia_Navale
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                         {
                             d8.IsEnabled = true;
-                            d8.Click += D8_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && a7.Content.ToString() != "CA" && a7.Content.ToString() != "CO" && a7.Content.ToString() != "S1" && a7.Content.ToString() != "S2" && a7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14263,13 +14233,13 @@ namespace progetto_Battaglia_Navale
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14358,25 +14328,25 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14411,25 +14381,25 @@ namespace progetto_Battaglia_Navale
                             if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14490,25 +14460,25 @@ namespace progetto_Battaglia_Navale
                             if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14570,25 +14540,25 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14657,19 +14627,19 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P" && i7.Content.ToString() != "CA" && i7.Content.ToString() != "CO" && i7.Content.ToString() != "S1" && i7.Content.ToString() != "S2" && i7.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14758,25 +14728,25 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
+
                             controllo = true;
                         }
                         if (a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             a6.IsEnabled = true;
-                            a6.Click += A6_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -14811,19 +14781,19 @@ namespace progetto_Battaglia_Navale
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14885,19 +14855,19 @@ namespace progetto_Battaglia_Navale
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                             {
                                 b7.IsEnabled = true;
-                                b7.Click += B7_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -14960,19 +14930,16 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
                             controllo = true;
                         }
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15031,19 +14998,16 @@ namespace progetto_Battaglia_Navale
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
                             controllo = true;
                         }
                         if (b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             b7.IsEnabled = true;
-                            b7.Click += B7_Click;
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15120,25 +15084,25 @@ namespace progetto_Battaglia_Navale
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15173,25 +15137,25 @@ namespace progetto_Battaglia_Navale
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -15252,25 +15216,25 @@ namespace progetto_Battaglia_Navale
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                             {
                                 c7.IsEnabled = true;
-                                c7.Click += C7_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -15332,19 +15296,19 @@ namespace progetto_Battaglia_Navale
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15413,19 +15377,19 @@ namespace progetto_Battaglia_Navale
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             c7.IsEnabled = true;
-                            c7.Click += C7_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15501,25 +15465,25 @@ namespace progetto_Battaglia_Navale
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15554,25 +15518,25 @@ namespace progetto_Battaglia_Navale
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -15633,25 +15597,25 @@ namespace progetto_Battaglia_Navale
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 d7.IsEnabled = true;
-                                d7.Click += D7_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -15713,25 +15677,25 @@ namespace progetto_Battaglia_Navale
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && a6.Content.ToString() != "CA" && a6.Content.ToString() != "CO" && a6.Content.ToString() != "S1" && a6.Content.ToString() != "S2" && a6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15800,19 +15764,19 @@ namespace progetto_Battaglia_Navale
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                         {
                             d7.IsEnabled = true;
-                            d7.Click += D7_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15901,25 +15865,25 @@ namespace progetto_Battaglia_Navale
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -15954,25 +15918,25 @@ namespace progetto_Battaglia_Navale
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
                             {
                                 f6.IsEnabled = true;
-                                f6.Click += F6_Click;
+
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16033,25 +15997,25 @@ namespace progetto_Battaglia_Navale
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
                             {
                                 f6.IsEnabled = true;
-                                f6.Click += F6_Click;
+
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16113,25 +16077,25 @@ namespace progetto_Battaglia_Navale
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16200,25 +16164,24 @@ namespace progetto_Battaglia_Navale
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P" && i6.Content.ToString() != "CA" && i6.Content.ToString() != "CO" && i6.Content.ToString() != "S1" && i6.Content.ToString() != "S2" && i6.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16307,25 +16270,25 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             a5.IsEnabled = true;
-                            a5.Click += A5_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16360,19 +16323,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16434,19 +16397,19 @@ namespace progetto_Battaglia_Navale
                             if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                             {
                                 b4.IsEnabled = true;
-                                b4.Click += B4_Click;
+
                                 controllo = true;
                             }
                             if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                             {
                                 b6.IsEnabled = true;
-                                b6.Click += B6_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16509,19 +16472,18 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
+
                             controllo = true;
                         }
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16580,19 +16542,16 @@ namespace progetto_Battaglia_Navale
                         if (b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && b1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             b4.IsEnabled = true;
-                            b4.Click += B4_Click;
                             controllo = true;
                         }
                         if (b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             b6.IsEnabled = true;
-                            b6.Click += B6_Click;
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16669,25 +16628,25 @@ namespace progetto_Battaglia_Navale
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             b5.IsEnabled = true;
-                            b5.Click += B5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16722,25 +16681,25 @@ namespace progetto_Battaglia_Navale
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16801,25 +16760,25 @@ namespace progetto_Battaglia_Navale
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                             {
                                 c6.IsEnabled = true;
-                                c6.Click += C6_Click;
+
                                 controllo = true;
                             }
                             if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                             {
                                 c4.IsEnabled = true;
-                                c4.Click += C4_Click;
+
                                 controllo = true;
                             }
                             if (b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                             {
                                 b5.IsEnabled = true;
-                                b5.Click += B5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -16881,19 +16840,19 @@ namespace progetto_Battaglia_Navale
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -16962,19 +16921,19 @@ namespace progetto_Battaglia_Navale
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             c6.IsEnabled = true;
-                            c6.Click += C6_Click;
+
                             controllo = true;
                         }
                         if (c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             c4.IsEnabled = true;
-                            c4.Click += C4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17050,25 +17009,23 @@ namespace progetto_Battaglia_Navale
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17103,25 +17060,25 @@ namespace progetto_Battaglia_Navale
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17182,25 +17139,25 @@ namespace progetto_Battaglia_Navale
                             if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 e5.IsEnabled = true;
-                                e5.Click += E5_Click;
+
                                 controllo = true;
                             }
                             if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 d6.IsEnabled = true;
-                                d6.Click += D6_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 d4.IsEnabled = true;
-                                d4.Click += D4_Click;
+
                                 controllo = true;
                             }
                             if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                             {
                                 c5.IsEnabled = true;
-                                c5.Click += C5_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17262,25 +17219,25 @@ namespace progetto_Battaglia_Navale
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && a5.Content.ToString() != "CA" && a5.Content.ToString() != "CO" && a5.Content.ToString() != "S1" && a5.Content.ToString() != "S2" && a5.Content.ToString() != "P")
                         {
                             c5.IsEnabled = true;
-                            c5.Click += C5_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17349,19 +17306,19 @@ namespace progetto_Battaglia_Navale
                         if (e5.Content.ToString() != "CA" && e5.Content.ToString() != "CO" && e5.Content.ToString() != "S1" && e5.Content.ToString() != "S2" && e5.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && h5.Content.ToString() != "CA" && h5.Content.ToString() != "CO" && h5.Content.ToString() != "S1" && h5.Content.ToString() != "S2" && h5.Content.ToString() != "P")
                         {
                             e5.IsEnabled = true;
-                            e5.Click += E5_Click;
+
                             controllo = true;
                         }
                         if (d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                         {
                             d6.IsEnabled = true;
-                            d6.Click += D6_Click;
+
                             controllo = true;
                         }
                         if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                         {
                             d4.IsEnabled = true;
-                            d4.Click += D4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17450,25 +17407,25 @@ namespace progetto_Battaglia_Navale
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17503,25 +17460,24 @@ namespace progetto_Battaglia_Navale
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17582,25 +17538,25 @@ namespace progetto_Battaglia_Navale
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                             {
                                 d5.IsEnabled = true;
-                                d5.Click += D5_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17662,25 +17618,25 @@ namespace progetto_Battaglia_Navale
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && h5.Content.ToString() != "CA" && h5.Content.ToString() != "CO" && h5.Content.ToString() != "S1" && h5.Content.ToString() != "S2" && h5.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17749,25 +17705,25 @@ namespace progetto_Battaglia_Navale
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && h5.Content.ToString() != "CA" && h5.Content.ToString() != "CO" && h5.Content.ToString() != "S1" && h5.Content.ToString() != "S2" && h5.Content.ToString() != "P" && i5.Content.ToString() != "CA" && i5.Content.ToString() != "CO" && i5.Content.ToString() != "S1" && i5.Content.ToString() != "S2" && i5.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (d5.Content.ToString() != "CA" && d5.Content.ToString() != "CO" && d5.Content.ToString() != "S1" && d5.Content.ToString() != "S2" && d5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P" && b5.Content.ToString() != "CA" && b5.Content.ToString() != "CO" && b5.Content.ToString() != "S1" && b5.Content.ToString() != "S2" && b5.Content.ToString() != "P" && c5.Content.ToString() != "CA" && c5.Content.ToString() != "CO" && c5.Content.ToString() != "S1" && c5.Content.ToString() != "S2" && c5.Content.ToString() != "P")
                         {
                             d5.IsEnabled = true;
-                            d5.Click += D5_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17856,19 +17812,19 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
                         {
                             g1.IsEnabled = true;
-                            g1.Click += G1_Click;
+
                             controllo = true;
                         }
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -17903,19 +17859,19 @@ namespace progetto_Battaglia_Navale
                             if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 e1.IsEnabled = true;
-                                e1.Click += E1_Click;
+
                                 controllo = true;
                             }
                             if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
                             {
                                 g1.IsEnabled = true;
-                                g1.Click += G1_Click;
+
                                 controllo = true;
                             }
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17949,19 +17905,18 @@ namespace progetto_Battaglia_Navale
                             if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P")
                             {
                                 e1.IsEnabled = true;
-                                e1.Click += E1_Click;
                                 controllo = true;
                             }
                             if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
                             {
                                 g1.IsEnabled = true;
-                                g1.Click += G1_Click;
+
                                 controllo = true;
                             }
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -17996,19 +17951,19 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P")
                         {
                             g1.IsEnabled = true;
-                            g1.Click += G1_Click;
+
                             controllo = true;
                         }
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18044,19 +17999,19 @@ namespace progetto_Battaglia_Navale
                         if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && b1.Content.ToString() != "CA" && b1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && b1.Content.ToString() != "S2" && b1.Content.ToString() != "P")
                         {
                             e1.IsEnabled = true;
-                            e1.Click += E1_Click;
+
                             controllo = true;
                         }
                         if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P" && j1.Content.ToString() != "CA" && j1.Content.ToString() != "CO" && j1.Content.ToString() != "S1" && j1.Content.ToString() != "S2" && j1.Content.ToString() != "P")
                         {
                             g1.IsEnabled = true;
-                            g1.Click += G1_Click;
+
                             controllo = true;
                         }
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18094,6 +18049,248 @@ namespace progetto_Battaglia_Navale
 
         private void G1_Click(object sender, RoutedEventArgs e)
         {
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                        {
+                            f1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
+                        {
+                            h1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g1.Content = "CA";
+                            VettCacciatorpediniere[0] = "G1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        g1.Content = "CA";
+                        VettCacciatorpediniere[1] = "G1";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            bool controllo = false;
+                            ButtonsNotEnabled();
+                            if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f1.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
+                            {
+                                h1.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g1.Content = "S1";
+                                VettSottomarino1[0] = "G1";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            VettSottomarino1[1] = "G1";
+                            VettSottomarino1[2] = "H1";
+                            h1.Content = "S1";
+                            g1.Content = "S1";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            bool controllo = false;
+                            ButtonsNotEnabled();
+                            if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                            {
+                                f1.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P")
+                            {
+                                h1.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g1.Content = "S1";
+                                VettSottomarino2[0] = "G1";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            VettSottomarino2[1] = "G1";
+                            VettSottomarino2[2] = "H1";
+                            h1.Content = "S2";
+                            g1.Content = "S2";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                        {
+                            f1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (j1.Content.ToString() != "CA" && j1.Content.ToString() != "CO" && j1.Content.ToString() != "S1" && j1.Content.ToString() != "S2" && j1.Content.ToString() != "P" && h1.Content.ToString() != "CA" && h1.Content.ToString() != "CO" && h1.Content.ToString() != "S1" && h1.Content.ToString() != "S2" && h1.Content.ToString() != "P" && i1.Content.ToString() != "CA" && i1.Content.ToString() != "CO" && i1.Content.ToString() != "S1" && i1.Content.ToString() != "S2" && i1.Content.ToString() != "P")
+                        {
+                            h1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g1.Content = "CO";
+                            VettCorazzate[0] = "G1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        VettCorazzate[1] = "I1";
+                        VettCorazzate[2] = "G1";
+                        VettCorazzate[3] = "H1";
+                        i1.Content = "CO";
+                        g1.Content = "CO";
+                        h1.Content = "CO";
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e1.Content.ToString() != "CA" && e1.Content.ToString() != "CO" && e1.Content.ToString() != "S1" && e1.Content.ToString() != "S2" && e1.Content.ToString() != "P" && d1.Content.ToString() != "CA" && d1.Content.ToString() != "CO" && d1.Content.ToString() != "S1" && d1.Content.ToString() != "S2" && d1.Content.ToString() != "P" && c1.Content.ToString() != "CA" && c1.Content.ToString() != "CO" && c1.Content.ToString() != "S1" && c1.Content.ToString() != "S2" && c1.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
+                        {
+                            f1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g1.Content = "P";
+                            VettPortaerei[0] = "G1";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        VettPortaerei[1] = "J1";
+                        VettPortaerei[2] = "G1";
+                        VettPortaerei[3] = "H1";
+                        VettPortaerei[4] = "I1";
+                        j1.Content = "P";
+                        g1.Content = "P";
+                        h1.Content = "P";
+                        i1.Content = "P";
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                bottoneScelto = "g1";
+                c = true;
+            }
+            else
+                c = false;
+        }
+
+        private void H1_Click(object sender, RoutedEventArgs e)
+        {
             throw new NotImplementedException();
         }
 
@@ -18110,25 +18307,25 @@ namespace progetto_Battaglia_Navale
                         if (f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                         {
                             f1.IsEnabled = true;
-                            f1.Click += F1_Click;
+
                             controllo = true;
                         }
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
                         {
                             g2.IsEnabled = true;
-                            g2.Click += G2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18163,19 +18360,19 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
                             {
                                 g2.IsEnabled = true;
-                                g2.Click += G2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -18237,19 +18434,19 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P")
                             {
                                 e2.IsEnabled = true;
-                                e2.Click += E2_Click;
+
                                 controllo = true;
                             }
                             if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
                             {
                                 g2.IsEnabled = true;
-                                g2.Click += G2_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -18312,19 +18509,19 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P")
                         {
                             g2.IsEnabled = true;
-                            g2.Click += G2_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18383,13 +18580,13 @@ namespace progetto_Battaglia_Navale
                         if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P" && j2.Content.ToString() != "CA" && j2.Content.ToString() != "CO" && j2.Content.ToString() != "S1" && j2.Content.ToString() != "S2" && j2.Content.ToString() != "P")
                         {
                             g2.IsEnabled = true;
-                            g2.Click += G2_Click;
+
                             controllo = true;
                         }
                         if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && b2.Content.ToString() != "CA" && b2.Content.ToString() != "CO" && b2.Content.ToString() != "S1" && b2.Content.ToString() != "S2" && b2.Content.ToString() != "P")
                         {
                             e2.IsEnabled = true;
-                            e2.Click += E2_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18455,7 +18652,358 @@ namespace progetto_Battaglia_Navale
 
         private void G2_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
+                        {
+                            g1.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
+                        {
+                            h2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g2.Content = "CA";
+                            VettCacciatorpediniere[0] = "G2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        g2.Content = "CA";
+                        VettCacciatorpediniere[1] = "G2";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
+                            {
+                                h2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g2.Content = "S1";
+                                VettSottomarino1[0] = "G2";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino1[1] = "H2";
+                                VettSottomarino1[2] = "G2";
+                                h2.Content = "S1";
+                                g2.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino1[1] = "G2";
+                                VettSottomarino1[2] = "G1";
+                                g2.Content = "S1";
+                                g1.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "h2")
+                            {
+                                VettSottomarino1[1] = "F2";
+                                VettSottomarino1[2] = "G2";
+                                f2.Content = "S1";
+                                g2.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g1")
+                            {
+                                VettSottomarino1[1] = "G2";
+                                VettSottomarino1[2] = "G3";
+                                g2.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                            {
+                                g3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                            {
+                                f2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P")
+                            {
+                                h2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g2.Content = "S2";
+                                VettSottomarino2[0] = "GF2";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "f2")
+                            {
+                                VettSottomarino2[1] = "H2";
+                                VettSottomarino2[2] = "G2";
+                                h2.Content = "S2";
+                                g2.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g3")
+                            {
+                                VettSottomarino2[1] = "G2";
+                                VettSottomarino2[2] = "G1";
+                                g2.Content = "S2";
+                                g1.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "h2")
+                            {
+                                VettSottomarino2[1] = "F2";
+                                VettSottomarino2[2] = "G2";
+                                f2.Content = "S2";
+                                g2.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g1")
+                            {
+                                VettSottomarino2[1] = "G2";
+                                VettSottomarino2[2] = "G3";
+                                g2.Content = "S2";
+                                g3.Content = "S2";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (j2.Content.ToString() != "CA" && j2.Content.ToString() != "CO" && j2.Content.ToString() != "S1" && j2.Content.ToString() != "S2" && j2.Content.ToString() != "P" && h2.Content.ToString() != "CA" && h2.Content.ToString() != "CO" && h2.Content.ToString() != "S1" && h2.Content.ToString() != "S2" && h2.Content.ToString() != "P" && i2.Content.ToString() != "CA" && i2.Content.ToString() != "CO" && i2.Content.ToString() != "S1" && i2.Content.ToString() != "S2" && i2.Content.ToString() != "P")
+                        {
+                            h2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g2.Content = "CO";
+                            VettCorazzate[0] = "G2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "F2")
+                        {
+                            VettCorazzate[1] = "I2";
+                            VettCorazzate[2] = "G2";
+                            VettCorazzate[3] = "H2";
+                            i2.Content = "CO";
+                            g2.Content = "CO";
+                            h2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g1")
+                        {
+                            VettCorazzate[1] = "G2";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "G4";
+                            g2.Content = "CO";
+                            g3.Content = "CO";
+                            g4.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "h2")
+                        {
+                            VettCorazzate[1] = "F2";
+                            VettCorazzate[2] = "E2";
+                            VettCorazzate[3] = "G2";
+                            f2.Content = "CO";
+                            e2.Content = "CO";
+                            g2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g2.Content = "P";
+                            VettPortaerei[0] = "G2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "F2")
+                        {
+                            VettPortaerei[1] = "J2";
+                            VettPortaerei[2] = "G2";
+                            VettPortaerei[3] = "H2";
+                            VettPortaerei[4] = "I2";
+                            j2.Content = "P";
+                            g2.Content = "P";
+                            h2.Content = "P";
+                            i2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g1")
+                        {
+                            VettPortaerei[1] = "G2";
+                            VettPortaerei[2] = "G3";
+                            VettPortaerei[3] = "G4";
+                            VettPortaerei[4] = "G5";
+                            g2.Content = "P";
+                            g3.Content = "P";
+                            g4.Content = "P";
+                            g5.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "h2")
+                        {
+                            VettPortaerei[1] = "F2";
+                            VettPortaerei[2] = "E2";
+                            VettPortaerei[3] = "D2";
+                            VettPortaerei[4] = "H2";
+                            f2.Content = "P";
+                            e2.Content = "P";
+                            d2.Content = "P";
+                            h2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "g2";
+                c = true;
+            }
+            else
+                c = false;
         }
 
         private void F4_Click(object sender, RoutedEventArgs e)
@@ -18471,25 +19019,25 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
+
                             controllo = true;
                         }
                         if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
                         {
                             g4.IsEnabled = true;
-                            g4.Click += G4_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18524,25 +19072,25 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
                             {
                                 g4.IsEnabled = true;
-                                g4.Click += G4_Click;
+
                                 controllo = true;
                             }
                             if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -18605,25 +19153,25 @@ namespace progetto_Battaglia_Navale
                             if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                             {
                                 f3.IsEnabled = true;
-                                f3.Click += F3_Click;
+
                                 controllo = true;
                             }
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P")
                             {
                                 e4.IsEnabled = true;
-                                e4.Click += E4_Click;
+
                                 controllo = true;
                             }
                             if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P")
                             {
                                 g4.IsEnabled = true;
-                                g4.Click += G4_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -18687,25 +19235,23 @@ namespace progetto_Battaglia_Navale
                         if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                         {
                             f3.IsEnabled = true;
-                            f3.Click += F3_Click;
+
                             controllo = true;
                         }
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P" && i4.Content.ToString() != "CA" && i4.Content.ToString() != "CO" && i4.Content.ToString() != "S1" && i4.Content.ToString() != "S2" && i4.Content.ToString() != "P")
                         {
                             g4.IsEnabled = true;
-                            g4.Click += G4_Click;
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18774,19 +19320,16 @@ namespace progetto_Battaglia_Navale
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
                             controllo = true;
                         }
                         if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && h4.Content.ToString() != "CA" && h4.Content.ToString() != "CO" && h4.Content.ToString() != "S1" && h4.Content.ToString() != "S2" && h4.Content.ToString() != "P" && i4.Content.ToString() != "CA" && i4.Content.ToString() != "CO" && i4.Content.ToString() != "S1" && i4.Content.ToString() != "S2" && i4.Content.ToString() != "P" && j4.Content.ToString() != "CA" && j4.Content.ToString() != "CO" && j4.Content.ToString() != "S1" && j4.Content.ToString() != "S2" && j4.Content.ToString() != "P")
                         {
                             g4.IsEnabled = true;
-                            g4.Click += G4_Click;
                             controllo = true;
                         }
                         if (e4.Content.ToString() != "CA" && e4.Content.ToString() != "CO" && e4.Content.ToString() != "S1" && e4.Content.ToString() != "S2" && e4.Content.ToString() != "P" && d4.Content.ToString() != "CA" && d4.Content.ToString() != "CO" && d4.Content.ToString() != "S1" && d4.Content.ToString() != "S2" && d4.Content.ToString() != "P" && c4.Content.ToString() != "CA" && c4.Content.ToString() != "CO" && c4.Content.ToString() != "S1" && c4.Content.ToString() != "S2" && c4.Content.ToString() != "P" && b4.Content.ToString() != "CA" && b4.Content.ToString() != "CO" && b4.Content.ToString() != "S1" && b4.Content.ToString() != "S2" && b4.Content.ToString() != "P")
                         {
                             e4.IsEnabled = true;
-                            e4.Click += E4_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18868,25 +19411,25 @@ namespace progetto_Battaglia_Navale
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
+
                             controllo = true;
                         }
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += C3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -18921,25 +19464,25 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
+
                                 controllo = true;
                             }
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
+
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                             {
                                 g3.IsEnabled = true;
-                                g3.Click += G3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19001,25 +19544,21 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
                                 controllo = true;
                             }
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
                                 controllo = true;
                             }
                             if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                             {
                                 g3.IsEnabled = true;
-                                g3.Click += G3_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19082,19 +19621,16 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += G3_Click;
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19163,19 +19699,16 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && j3.Content.ToString() != "CA" && j3.Content.ToString() != "CO" && j3.Content.ToString() != "S1" && j3.Content.ToString() != "S2" && j3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += G3_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19241,7 +19774,380 @@ namespace progetto_Battaglia_Navale
 
         private void G3_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (c == false)
+            {
+                if (NaveScelta == "Cacciatorpediniere")
+                {
+                    if (VettCacciatorpediniere[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P")
+                        {
+                            g2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                        {
+                            g4.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                        {
+                            h3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g3.Content = "CA";
+                            VettCacciatorpediniere[0] = "G3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        g3.Content = "CA";
+                        VettCacciatorpediniere[1] = "G3";
+                        btnCac.IsEnabled = false;
+                        btnConferma.IsEnabled = true;
+                    }
+                }
+                else if (NaveScelta == "Sottomarino")
+                {
+                    if (countSott == 1)
+                    {
+                        if (VettSottomarino1[0] == null)
+                        {
+                            ButtonsNotEnabled();
+                            bool controllo = false;
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                            {
+                                g4.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                h3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g3.Content = "S1";
+                                VettSottomarino1[0] = "G3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino1[1] = "H3";
+                                VettSottomarino1[2] = "G3";
+                                h3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g4")
+                            {
+                                VettSottomarino1[1] = "G2";
+                                VettSottomarino1[2] = "G3";
+                                g2.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "h3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "G3";
+                                f3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g2")
+                            {
+                                VettSottomarino1[1] = "G4";
+                                VettSottomarino1[2] = "G3";
+                                g4.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                    else if (countSott == 2)
+                    {
+                        if (VettSottomarino2[0] == null)
+                        {
+                            ButtonsNotEnabled();
+
+                            bool controllo = false;
+                            if (g2.Content.ToString() != "CA" && g2.Content.ToString() != "CO" && g2.Content.ToString() != "S1" && g2.Content.ToString() != "S2" && g2.Content.ToString() != "P" && g1.Content.ToString() != "CA" && g1.Content.ToString() != "CO" && g1.Content.ToString() != "S1" && g1.Content.ToString() != "S2" && g1.Content.ToString() != "P")
+                            {
+                                g2.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P")
+                            {
+                                g4.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                            {
+                                f3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
+                            {
+                                h3.IsEnabled = true;
+
+                                controllo = true;
+                            }
+                            if (controllo == false)
+                            {
+                                MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                                ButtonsEnabled();
+                                controlloBottoniGiaSelezionati();
+                            }
+                            else
+                            {
+                                g3.Content = "S2";
+                                VettSottomarino2[0] = "G3";
+                            }
+                        }
+                        else
+                        {
+                            ButtonsNotEnabled();
+                            if (bottoneScelto == "f3")
+                            {
+                                VettSottomarino1[1] = "H3";
+                                VettSottomarino1[2] = "G3";
+                                h3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g4")
+                            {
+                                VettSottomarino1[1] = "G2";
+                                VettSottomarino1[2] = "G3";
+                                g2.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "h3")
+                            {
+                                VettSottomarino1[1] = "F3";
+                                VettSottomarino1[2] = "G3";
+                                f3.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                            else if (bottoneScelto == "g2")
+                            {
+                                VettSottomarino1[1] = "G4";
+                                VettSottomarino1[2] = "G3";
+                                g4.Content = "S1";
+                                g3.Content = "S1";
+                                btnConferma.IsEnabled = true;
+                            }
+                        }
+                    }
+                }
+                else if (NaveScelta == "Corazzate")
+                {
+                    if (VettCorazzate[0] == null)
+                    {
+                        bool controllo = false;
+
+                        ButtonsNotEnabled();
+                        if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P")
+                        {
+                            g4.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (j3.Content.ToString() != "CA" && j3.Content.ToString() != "CO" && j3.Content.ToString() != "S1" && j3.Content.ToString() != "S2" && j3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
+                        {
+                            h3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
+                        {
+                            f3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g3.Content = "CO";
+                            VettCorazzate[0] = "G3";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "F3")
+                        {
+                            VettCorazzate[1] = "I3";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "H3";
+                            i3.Content = "CO";
+                            g3.Content = "CO";
+                            h3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g2")
+                        {
+                            VettCorazzate[1] = "G5";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "G4";
+                            g5.Content = "CO";
+                            g3.Content = "CO";
+                            g4.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g4")
+                        {
+                            VettCorazzate[1] = "G2";
+                            VettCorazzate[2] = "G3";
+                            VettCorazzate[3] = "G1";
+                            g1.Content = "CO";
+                            g3.Content = "CO";
+                            g2.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "h3")
+                        {
+                            VettCorazzate[1] = "F3";
+                            VettCorazzate[2] = "E3";
+                            VettCorazzate[3] = "G3";
+                            f3.Content = "CO";
+                            e3.Content = "CO";
+                            g3.Content = "CO";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+                }
+                else if (NaveScelta == "Portaerei")
+                {
+                    if (VettPortaerei[0] == null)
+                    {
+                        bool controllo = false;
+                        ButtonsNotEnabled();
+                        if (e2.Content.ToString() != "CA" && e2.Content.ToString() != "CO" && e2.Content.ToString() != "S1" && e2.Content.ToString() != "S2" && e2.Content.ToString() != "P" && d2.Content.ToString() != "CA" && d2.Content.ToString() != "CO" && d2.Content.ToString() != "S1" && d2.Content.ToString() != "S2" && d2.Content.ToString() != "P" && c2.Content.ToString() != "CA" && c2.Content.ToString() != "CO" && c2.Content.ToString() != "S1" && c2.Content.ToString() != "S2" && c2.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
+                        {
+                            f2.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && g4.Content.ToString() != "CA" && g4.Content.ToString() != "CO" && g4.Content.ToString() != "S1" && g4.Content.ToString() != "S2" && g4.Content.ToString() != "P" && g5.Content.ToString() != "CA" && g5.Content.ToString() != "CO" && g5.Content.ToString() != "S1" && g5.Content.ToString() != "S2" && g5.Content.ToString() != "P" && g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
+                        {
+                            g3.IsEnabled = true;
+
+                            controllo = true;
+                        }
+                        if (controllo == false)
+                        {
+                            MessageBox.Show("Non ci sono caselle disponibili intorno alla casella selezionata", "Error");
+                            ButtonsEnabled();
+                            controlloBottoniGiaSelezionati();
+                        }
+                        else
+                        {
+                            g2.Content = "P";
+                            VettPortaerei[0] = "G2";
+                        }
+                    }
+                    else
+                    {
+                        ButtonsNotEnabled();
+                        if (bottoneScelto == "F2")
+                        {
+                            VettPortaerei[1] = "J2";
+                            VettPortaerei[2] = "G2";
+                            VettPortaerei[3] = "H2";
+                            VettPortaerei[4] = "I2";
+                            j2.Content = "P";
+                            g2.Content = "P";
+                            h2.Content = "P";
+                            i2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "g1")
+                        {
+                            VettPortaerei[1] = "G2";
+                            VettPortaerei[2] = "G3";
+                            VettPortaerei[3] = "G4";
+                            VettPortaerei[4] = "G5";
+                            g2.Content = "P";
+                            g3.Content = "P";
+                            g4.Content = "P";
+                            g5.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                        if (bottoneScelto == "h2")
+                        {
+                            VettPortaerei[1] = "F2";
+                            VettPortaerei[2] = "E2";
+                            VettPortaerei[3] = "D2";
+                            VettPortaerei[4] = "H2";
+                            f2.Content = "P";
+                            e2.Content = "P";
+                            d2.Content = "P";
+                            h2.Content = "P";
+                            btnConferma.IsEnabled = true;
+                        }
+                    }
+
+                }
+                bottoneScelto = "g3";
+                c = true;
+            }
+            else
+                c = false;
         }
 
         private void F5_Click(object sender, RoutedEventArgs e)
@@ -19257,25 +20163,23 @@ namespace progetto_Battaglia_Navale
                         if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             f2.IsEnabled = true;
-                            f2.Click += F2_Click;
                             controllo = true;
                         }
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += C3_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19310,25 +20214,24 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
+
                                 controllo = true;
                             }
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
+
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                             {
                                 g3.IsEnabled = true;
-                                g3.Click += G3_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19390,25 +20293,24 @@ namespace progetto_Battaglia_Navale
                             if (f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P" && f1.Content.ToString() != "CA" && f1.Content.ToString() != "CO" && f1.Content.ToString() != "S1" && f1.Content.ToString() != "S2" && f1.Content.ToString() != "P")
                             {
                                 f2.IsEnabled = true;
-                                f2.Click += F2_Click;
                                 controllo = true;
                             }
                             if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f4.IsEnabled = true;
-                                f4.Click += F4_Click;
+
                                 controllo = true;
                             }
                             if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P")
                             {
                                 e3.IsEnabled = true;
-                                e3.Click += E3_Click;
+
                                 controllo = true;
                             }
                             if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P")
                             {
                                 g3.IsEnabled = true;
-                                g3.Click += G3_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19471,19 +20373,19 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += G3_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19552,19 +20454,19 @@ namespace progetto_Battaglia_Navale
                         if (f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f4.IsEnabled = true;
-                            f4.Click += F4_Click;
+
                             controllo = true;
                         }
                         if (e3.Content.ToString() != "CA" && e3.Content.ToString() != "CO" && e3.Content.ToString() != "S1" && e3.Content.ToString() != "S2" && e3.Content.ToString() != "P" && d3.Content.ToString() != "CA" && d3.Content.ToString() != "CO" && d3.Content.ToString() != "S1" && d3.Content.ToString() != "S2" && d3.Content.ToString() != "P" && c3.Content.ToString() != "CA" && c3.Content.ToString() != "CO" && c3.Content.ToString() != "S1" && c3.Content.ToString() != "S2" && c3.Content.ToString() != "P" && b3.Content.ToString() != "CA" && b3.Content.ToString() != "CO" && b3.Content.ToString() != "S1" && b3.Content.ToString() != "S2" && b3.Content.ToString() != "P")
                         {
                             e3.IsEnabled = true;
-                            e3.Click += E3_Click;
+
                             controllo = true;
                         }
                         if (g3.Content.ToString() != "CA" && g3.Content.ToString() != "CO" && g3.Content.ToString() != "S1" && g3.Content.ToString() != "S2" && g3.Content.ToString() != "P" && h3.Content.ToString() != "CA" && h3.Content.ToString() != "CO" && h3.Content.ToString() != "S1" && h3.Content.ToString() != "S2" && h3.Content.ToString() != "P" && i3.Content.ToString() != "CA" && i3.Content.ToString() != "CO" && i3.Content.ToString() != "S1" && i3.Content.ToString() != "S2" && i3.Content.ToString() != "P" && j3.Content.ToString() != "CA" && j3.Content.ToString() != "CO" && j3.Content.ToString() != "S1" && j3.Content.ToString() != "S2" && j3.Content.ToString() != "P")
                         {
                             g3.IsEnabled = true;
-                            g3.Click += G3_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19641,25 +20543,25 @@ namespace progetto_Battaglia_Navale
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
+
                             controllo = true;
                         }
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
+
                             controllo = true;
                         }
                         if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P")
                         {
                             g6.IsEnabled = true;
-                            g6.Click += G6_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19694,25 +20596,25 @@ namespace progetto_Battaglia_Navale
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
                             {
                                 g6.IsEnabled = true;
-                                g6.Click += G6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19774,25 +20676,25 @@ namespace progetto_Battaglia_Navale
                             if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                             {
                                 f5.IsEnabled = true;
-                                f5.Click += F5_Click;
+
                                 controllo = true;
                             }
                             if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
+
                                 controllo = true;
                             }
                             if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P")
                             {
                                 e6.IsEnabled = true;
-                                e6.Click += E6_Click;
+
                                 controllo = true;
                             }
                             if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P")
                             {
                                 g6.IsEnabled = true;
-                                g6.Click += G6_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -19855,25 +20757,21 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
                             controllo = true;
                         }
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
                             controllo = true;
                         }
                         if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P" && i6.Content.ToString() != "CA" && i6.Content.ToString() != "CO" && i6.Content.ToString() != "S1" && i6.Content.ToString() != "S2" && i6.Content.ToString() != "P")
                         {
                             g6.IsEnabled = true;
-                            g6.Click += G6_Click;
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -19942,25 +20840,22 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (e6.Content.ToString() != "CA" && e6.Content.ToString() != "CO" && e6.Content.ToString() != "S1" && e6.Content.ToString() != "S2" && e6.Content.ToString() != "P" && d6.Content.ToString() != "CA" && d6.Content.ToString() != "CO" && d6.Content.ToString() != "S1" && d6.Content.ToString() != "S2" && d6.Content.ToString() != "P" && c6.Content.ToString() != "CA" && c6.Content.ToString() != "CO" && c6.Content.ToString() != "S1" && c6.Content.ToString() != "S2" && c6.Content.ToString() != "P" && b6.Content.ToString() != "CA" && b6.Content.ToString() != "CO" && b6.Content.ToString() != "S1" && b6.Content.ToString() != "S2" && b6.Content.ToString() != "P")
                         {
                             e6.IsEnabled = true;
-                            e6.Click += E6_Click;
                             controllo = true;
                         }
                         if (g6.Content.ToString() != "CA" && g6.Content.ToString() != "CO" && g6.Content.ToString() != "S1" && g6.Content.ToString() != "S2" && g6.Content.ToString() != "P" && h6.Content.ToString() != "CA" && h6.Content.ToString() != "CO" && h6.Content.ToString() != "S1" && h6.Content.ToString() != "S2" && h6.Content.ToString() != "P" && i6.Content.ToString() != "CA" && i6.Content.ToString() != "CO" && i6.Content.ToString() != "S1" && i6.Content.ToString() != "S2" && i6.Content.ToString() != "P" && j6.Content.ToString() != "CA" && j6.Content.ToString() != "CO" && j6.Content.ToString() != "S1" && j6.Content.ToString() != "S2" && j6.Content.ToString() != "P")
                         {
                             g6.IsEnabled = true;
-                            g6.Click += G6_Click;
                             controllo = true;
                         }
                         if (f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f3.Content.ToString() != "CA" && f3.Content.ToString() != "CO" && f3.Content.ToString() != "S1" && f3.Content.ToString() != "S2" && f3.Content.ToString() != "P" && f2.Content.ToString() != "CA" && f2.Content.ToString() != "CO" && f2.Content.ToString() != "S1" && f2.Content.ToString() != "S2" && f2.Content.ToString() != "P")
                         {
                             f5.IsEnabled = true;
-                            f5.Click += F5_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20049,25 +20944,25 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P")
                         {
                             g7.IsEnabled = true;
-                            g7.Click += G7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20102,25 +20997,25 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f6.IsEnabled = true;
-                                f6.Click += F6_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
                             {
                                 g7.IsEnabled = true;
-                                g7.Click += G7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -20182,25 +21077,25 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                             {
                                 f6.IsEnabled = true;
-                                f6.Click += F6_Click;
+
                                 controllo = true;
                             }
                             if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P")
                             {
                                 e7.IsEnabled = true;
-                                e7.Click += E7_Click;
+
                                 controllo = true;
                             }
                             if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P")
                             {
                                 g7.IsEnabled = true;
-                                g7.Click += G7_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -20263,25 +21158,25 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P" && i7.Content.ToString() != "CA" && i7.Content.ToString() != "CO" && i7.Content.ToString() != "S1" && i7.Content.ToString() != "S2" && i7.Content.ToString() != "P")
                         {
                             g7.IsEnabled = true;
-                            g7.Click += G7_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20350,19 +21245,19 @@ namespace progetto_Battaglia_Navale
                         if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f6.IsEnabled = true;
-                            f6.Click += F6_Click;
+
                             controllo = true;
                         }
                         if (e7.Content.ToString() != "CA" && e7.Content.ToString() != "CO" && e7.Content.ToString() != "S1" && e7.Content.ToString() != "S2" && e7.Content.ToString() != "P" && d7.Content.ToString() != "CA" && d7.Content.ToString() != "CO" && d7.Content.ToString() != "S1" && d7.Content.ToString() != "S2" && d7.Content.ToString() != "P" && c7.Content.ToString() != "CA" && c7.Content.ToString() != "CO" && c7.Content.ToString() != "S1" && c7.Content.ToString() != "S2" && c7.Content.ToString() != "P" && b7.Content.ToString() != "CA" && b7.Content.ToString() != "CO" && b7.Content.ToString() != "S1" && b7.Content.ToString() != "S2" && b7.Content.ToString() != "P")
                         {
                             e7.IsEnabled = true;
-                            e7.Click += E7_Click;
+
                             controllo = true;
                         }
                         if (g7.Content.ToString() != "CA" && g7.Content.ToString() != "CO" && g7.Content.ToString() != "S1" && g7.Content.ToString() != "S2" && g7.Content.ToString() != "P" && h7.Content.ToString() != "CA" && h7.Content.ToString() != "CO" && h7.Content.ToString() != "S1" && h7.Content.ToString() != "S2" && h7.Content.ToString() != "P" && i7.Content.ToString() != "CA" && i7.Content.ToString() != "CO" && i7.Content.ToString() != "S1" && i7.Content.ToString() != "S2" && i7.Content.ToString() != "P" && j7.Content.ToString() != "CA" && j7.Content.ToString() != "CO" && j7.Content.ToString() != "S1" && j7.Content.ToString() != "S2" && j7.Content.ToString() != "P")
                         {
                             g7.IsEnabled = true;
-                            g7.Click += G7_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20456,25 +21351,25 @@ namespace progetto_Battaglia_Navale
                         if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
+
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
+
                             controllo = true;
                         }
                         if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P")
                         {
                             g8.IsEnabled = true;
-                            g8.Click += G8_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20509,25 +21404,25 @@ namespace progetto_Battaglia_Navale
                             if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
+
                                 controllo = true;
                             }
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
+
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
+
                                 controllo = true;
                             }
                             if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
                             {
                                 g8.IsEnabled = true;
-                                g8.Click += G8_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -20589,25 +21484,21 @@ namespace progetto_Battaglia_Navale
                             if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
                                 controllo = true;
                             }
                             if (f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 f7.IsEnabled = true;
-                                f7.Click += F7_Click;
                                 controllo = true;
                             }
                             if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P")
                             {
                                 e8.IsEnabled = true;
-                                e8.Click += E8_Click;
                                 controllo = true;
                             }
                             if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P")
                             {
                                 g8.IsEnabled = true;
-                                g8.Click += G8_Click;
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -20670,25 +21561,21 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
                             controllo = true;
                         }
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
                             controllo = true;
                         }
                         if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P" && i8.Content.ToString() != "CA" && i8.Content.ToString() != "CO" && i8.Content.ToString() != "S1" && i8.Content.ToString() != "S2" && i8.Content.ToString() != "P")
                         {
                             g8.IsEnabled = true;
-                            g8.Click += G8_Click;
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20757,19 +21644,16 @@ namespace progetto_Battaglia_Navale
                         if (f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f4.Content.ToString() != "CA" && f4.Content.ToString() != "CO" && f4.Content.ToString() != "S1" && f4.Content.ToString() != "S2" && f4.Content.ToString() != "P")
                         {
                             f7.IsEnabled = true;
-                            f7.Click += F7_Click;
                             controllo = true;
                         }
                         if (e8.Content.ToString() != "CA" && e8.Content.ToString() != "CO" && e8.Content.ToString() != "S1" && e8.Content.ToString() != "S2" && e8.Content.ToString() != "P" && d8.Content.ToString() != "CA" && d8.Content.ToString() != "CO" && d8.Content.ToString() != "S1" && d8.Content.ToString() != "S2" && d8.Content.ToString() != "P" && c8.Content.ToString() != "CA" && c8.Content.ToString() != "CO" && c8.Content.ToString() != "S1" && c8.Content.ToString() != "S2" && c8.Content.ToString() != "P" && b8.Content.ToString() != "CA" && b8.Content.ToString() != "CO" && b8.Content.ToString() != "S1" && b8.Content.ToString() != "S2" && b8.Content.ToString() != "P")
                         {
                             e8.IsEnabled = true;
-                            e8.Click += E8_Click;
                             controllo = true;
                         }
                         if (g8.Content.ToString() != "CA" && g8.Content.ToString() != "CO" && g8.Content.ToString() != "S1" && g8.Content.ToString() != "S2" && g8.Content.ToString() != "P" && h8.Content.ToString() != "CA" && h8.Content.ToString() != "CO" && h8.Content.ToString() != "S1" && h8.Content.ToString() != "S2" && h8.Content.ToString() != "P" && i8.Content.ToString() != "CA" && i8.Content.ToString() != "CO" && i8.Content.ToString() != "S1" && i8.Content.ToString() != "S2" && i8.Content.ToString() != "P" && j8.Content.ToString() != "CA" && j8.Content.ToString() != "CO" && j8.Content.ToString() != "S1" && j8.Content.ToString() != "S2" && j8.Content.ToString() != "P")
                         {
                             g8.IsEnabled = true;
-                            g8.Click += G8_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20847,25 +21731,21 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
                             controllo = true;
                         }
                         if (f10.Content.ToString() != "CA" && f10.Content.ToString() != "CO" && f10.Content.ToString() != "S1" && f10.Content.ToString() != "S2" && f10.Content.ToString() != "P")
                         {
                             f10.IsEnabled = true;
-                            f10.Click += F10_Click;
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
                             controllo = true;
                         }
                         if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P")
                         {
                             g9.IsEnabled = true;
-                            g9.Click += G9_Click;
                             controllo = true;
                         }
                         if (controllo == false)
@@ -20900,19 +21780,19 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
                             {
                                 g9.IsEnabled = true;
-                                g9.Click += G9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -20974,19 +21854,19 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                             {
                                 f8.IsEnabled = true;
-                                f8.Click += F8_Click;
+
                                 controllo = true;
                             }
                             if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P")
                             {
                                 e9.IsEnabled = true;
-                                e9.Click += E9_Click;
+
                                 controllo = true;
                             }
                             if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P")
                             {
                                 g9.IsEnabled = true;
-                                g9.Click += G9_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -21049,19 +21929,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P" && i9.Content.ToString() != "CA" && i9.Content.ToString() != "CO" && i9.Content.ToString() != "S1" && i9.Content.ToString() != "S2" && i9.Content.ToString() != "P")
                         {
                             g9.IsEnabled = true;
-                            g9.Click += G9_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -21120,19 +22000,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f5.Content.ToString() != "CA" && f5.Content.ToString() != "CO" && f5.Content.ToString() != "S1" && f5.Content.ToString() != "S2" && f5.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f8.IsEnabled = true;
-                            f8.Click += F8_Click;
+
                             controllo = true;
                         }
                         if (e9.Content.ToString() != "CA" && e9.Content.ToString() != "CO" && e9.Content.ToString() != "S1" && e9.Content.ToString() != "S2" && e9.Content.ToString() != "P" && d9.Content.ToString() != "CA" && d9.Content.ToString() != "CO" && d9.Content.ToString() != "S1" && d9.Content.ToString() != "S2" && d9.Content.ToString() != "P" && c9.Content.ToString() != "CA" && c9.Content.ToString() != "CO" && c9.Content.ToString() != "S1" && c9.Content.ToString() != "S2" && c9.Content.ToString() != "P" && b9.Content.ToString() != "CA" && b9.Content.ToString() != "CO" && b9.Content.ToString() != "S1" && b9.Content.ToString() != "S2" && b9.Content.ToString() != "P")
                         {
                             e9.IsEnabled = true;
-                            e9.Click += E9_Click;
+
                             controllo = true;
                         }
                         if (g9.Content.ToString() != "CA" && g9.Content.ToString() != "CO" && g9.Content.ToString() != "S1" && g9.Content.ToString() != "S2" && g9.Content.ToString() != "P" && h9.Content.ToString() != "CA" && h9.Content.ToString() != "CO" && h9.Content.ToString() != "S1" && h9.Content.ToString() != "S2" && h9.Content.ToString() != "P" && i9.Content.ToString() != "CA" && i9.Content.ToString() != "CO" && i9.Content.ToString() != "S1" && i9.Content.ToString() != "S2" && i9.Content.ToString() != "P" && j9.Content.ToString() != "CA" && j9.Content.ToString() != "CO" && j9.Content.ToString() != "S1" && j9.Content.ToString() != "S2" && j9.Content.ToString() != "P")
                         {
                             g9.IsEnabled = true;
-                            g9.Click += G9_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -21215,19 +22095,19 @@ namespace progetto_Battaglia_Navale
                         if (f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
+
                             controllo = true;
                         }
                         if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P")
                         {
                             g10.IsEnabled = true;
-                            g10.Click += G10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -21262,19 +22142,19 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
+
                                 controllo = true;
                             }
                             if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 e10.IsEnabled = true;
-                                e10.Click += E10_Click;
+
                                 controllo = true;
                             }
                             if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
                             {
                                 g10.IsEnabled = true;
-                                g10.Click += G10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -21320,19 +22200,19 @@ namespace progetto_Battaglia_Navale
                             if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P")
                             {
                                 f9.IsEnabled = true;
-                                f9.Click += F9_Click;
+
                                 controllo = true;
                             }
                             if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P")
                             {
                                 e10.IsEnabled = true;
-                                e10.Click += E10_Click;
+
                                 controllo = true;
                             }
                             if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P")
                             {
                                 g10.IsEnabled = true;
-                                g10.Click += G10_Click;
+
                                 controllo = true;
                             }
                             if (controllo == false)
@@ -21379,19 +22259,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P" && i10.Content.ToString() != "CA" && i10.Content.ToString() != "CO" && i10.Content.ToString() != "S1" && i10.Content.ToString() != "S2" && i10.Content.ToString() != "P")
                         {
                             g10.IsEnabled = true;
-                            g10.Click += G10_Click;
+
                             controllo = true;
                         }
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -21440,19 +22320,19 @@ namespace progetto_Battaglia_Navale
                         if (f8.Content.ToString() != "CA" && f8.Content.ToString() != "CO" && f8.Content.ToString() != "S1" && f8.Content.ToString() != "S2" && f8.Content.ToString() != "P" && f6.Content.ToString() != "CA" && f6.Content.ToString() != "CO" && f6.Content.ToString() != "S1" && f6.Content.ToString() != "S2" && f6.Content.ToString() != "P" && f9.Content.ToString() != "CA" && f9.Content.ToString() != "CO" && f9.Content.ToString() != "S1" && f9.Content.ToString() != "S2" && f9.Content.ToString() != "P" && f7.Content.ToString() != "CA" && f7.Content.ToString() != "CO" && f7.Content.ToString() != "S1" && f7.Content.ToString() != "S2" && f7.Content.ToString() != "P")
                         {
                             f9.IsEnabled = true;
-                            f9.Click += F9_Click;
+
                             controllo = true;
                         }
                         if (e10.Content.ToString() != "CA" && e10.Content.ToString() != "CO" && e10.Content.ToString() != "S1" && e10.Content.ToString() != "S2" && e10.Content.ToString() != "P" && d10.Content.ToString() != "CA" && d10.Content.ToString() != "CO" && d10.Content.ToString() != "S1" && d10.Content.ToString() != "S2" && d10.Content.ToString() != "P" && c10.Content.ToString() != "CA" && c10.Content.ToString() != "CO" && c10.Content.ToString() != "S1" && c10.Content.ToString() != "S2" && c10.Content.ToString() != "P" && b10.Content.ToString() != "CA" && b10.Content.ToString() != "CO" && b10.Content.ToString() != "S1" && b10.Content.ToString() != "S2" && b10.Content.ToString() != "P")
                         {
                             e10.IsEnabled = true;
-                            e10.Click += E10_Click;
+
                             controllo = true;
                         }
                         if (g10.Content.ToString() != "CA" && g10.Content.ToString() != "CO" && g10.Content.ToString() != "S1" && g10.Content.ToString() != "S2" && g10.Content.ToString() != "P" && h10.Content.ToString() != "CA" && h10.Content.ToString() != "CO" && h10.Content.ToString() != "S1" && h10.Content.ToString() != "S2" && h10.Content.ToString() != "P" && i10.Content.ToString() != "CA" && i10.Content.ToString() != "CO" && i10.Content.ToString() != "S1" && i10.Content.ToString() != "S2" && i10.Content.ToString() != "P" && j10.Content.ToString() != "CA" && j10.Content.ToString() != "CO" && j10.Content.ToString() != "S1" && j10.Content.ToString() != "S2" && j10.Content.ToString() != "P")
                         {
                             g10.IsEnabled = true;
-                            g10.Click += G10_Click;
+
                             controllo = true;
                         }
                         if (controllo == false)
@@ -21617,6 +22497,8 @@ namespace progetto_Battaglia_Navale
             btnConferma.IsEnabled = false;
 
             NaveScelta = "";
+            if (lblCac.Content.ToString() == "0" && lblCor.Content.ToString() == "0" && lblPor.Content.ToString() == "0" && lblSot.Content.ToString() == "0")
+                btnGioca.IsEnabled = true;
         }
 
         private void controlloBottoniGiaSelezionati()
@@ -22141,5 +23023,15 @@ namespace progetto_Battaglia_Navale
             }
         }
 
+        private void btnGioca_Click(object sender, RoutedEventArgs e)
+        {
+            campoBattaglia finestra = new campoBattaglia(modAvvio);
+            finestra.Show();
+            this.Close();
+        }
+        public  void modalitaAvvioPartita(string modAvvio)
+        {
+            this.modAvvio = modAvvio;
+        }
     }
 }

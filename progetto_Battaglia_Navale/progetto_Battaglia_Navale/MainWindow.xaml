@@ -20,5 +20,6 @@
         <Button x:Name="btnRiceviInvito" Content="Ricevi invito a &#xD;&#xA;      partita" HorizontalAlignment="Left" Margin="274,11,0,0" Grid.Row="3" VerticalAlignment="Top" Width="110" Height="50" Click="btnRiceviInvito_Click"/>
         <TextBox x:Name="txtIp" HorizontalAlignment="Left" Height="30" Margin="128,91,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Grid.RowSpan="2"/>
         <Label Content="Inserisci l'ip dell'avversario per avviare il match" HorizontalAlignment="Left" Margin="46,60,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Button x:Name="btnProva" Content="Button" HorizontalAlignment="Left" Margin="536,47,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="btnProva_Click"/>
     </Grid>
 </Window>

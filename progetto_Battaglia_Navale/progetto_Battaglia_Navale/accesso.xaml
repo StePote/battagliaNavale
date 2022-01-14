@@ -10,8 +10,8 @@
         <Button x:Name="btnAccesso" Content="Accedi" HorizontalAlignment="Left" Margin="354,287,0,0" VerticalAlignment="Top" Width="75" Height="36" Click="Button_Click"/>
         <PasswordBox x:Name="password" HorizontalAlignment="Left" Margin="415,247,0,0" VerticalAlignment="Top" Width="68" Height="24"/>
         <TextBox x:Name="txtNomeUtente" HorizontalAlignment="Left" Height="23" Margin="283,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
-        <Label Content="Nome utente:" HorizontalAlignment="Left" Margin="284,219,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="418,221,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nome utente:" HorizontalAlignment="Left" Margin="284,219,0,0" VerticalAlignment="Top" Background="White"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="418,221,0,0" VerticalAlignment="Top" Background="White"/>
         <Button x:Name="btnIndietro" Content="Torna indietro" HorizontalAlignment="Left" Height="30" Margin="701,0,0,0" VerticalAlignment="Top" Width="81" Click="BtnIndietro_Click"/>
 
     </Grid>
